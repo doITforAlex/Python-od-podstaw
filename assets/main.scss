@@ -1,0 +1,95 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+$nodegreen: #4CAF50;
+
+$green: #4dd05f;
+// $green: #7ddbba;
+$yellow: #f7d600;
+
+@import "minima";
+@import "step-nav";
+@import "reference-table";
+@import "solution";
+@import "draft";
+
+div.nav {
+  display: inline-block;
+  width: 250px;
+  vertical-align: top;
+  float: right;
+}
+
+div.post-content {
+  display: inline-block;
+  max-width: $content-width - 350;
+  vertical-align: top;
+}
+
+
+div.home {
+  display: block;
+
+}
+
+div.page-nav {
+  padding: 30px 0px 50px 0px;
+
+}
+
+a.go-link {
+  background: $green;
+  padding: 9px 14px 8px 14px;
+  border-radius: 30px;
+  border: 2px solid $green;
+  color: white !important;
+  text-decoration: none;
+  &:hover {
+    box-shadow: 0 6px 16px 0 darken($green, 5%);
+  }
+}
+
+code {
+  font-size: inherit;
+}
+
+pre {
+  code {
+    font-size: 14px;
+  }
+}
+
+.imgbox {
+  box-shadow: black 0px 0px 10px;
+  border-radius: 5px;
+}
+
+
+/***************************
+  LOGO
+***************************/
+svg {
+  height: 60%;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+svg.small {
+  height: 35%;
+  width: 35%;
+  margin-top: 5px;
+}
+
+.nav-logo {
+  width: 50px;
+  padding-bottom:6px;
+}
+
+.site-title {
+  letter-spacing: 2px;
+}
+.site-title span {
+  margin-left: 100px;
+  letter-spacing: 1.5px;
+}

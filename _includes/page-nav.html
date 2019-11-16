@@ -1,0 +1,7 @@
+{% assign next = page.number | plus: 1 %}
+
+{% unless page.end %}
+<div class="page-nav">
+  <a class='go-link' href='../step{{next}}'>Przejdź do kroku → {{next}}</a>
+</div>
+{% endunless %}
