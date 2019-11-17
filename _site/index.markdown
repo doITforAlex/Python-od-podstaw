@@ -18,7 +18,7 @@ Python jest używany wszędzie! Do tworzenia aplikacji webowych (Instagram, Netf
 
 Język programowania Python powstał pod koniec lat 80, ale po raz pierwszy został wydany w roku 1991. Jego autorem jest Guido van Rossum, który pracował wówczas dla Narodowego Instytutu Badań Matematycznych i Informatycznych w Holandii. Python został stworzony jako następca (wówczas popularnego) języka ABC. Interpreter Pythona został opracowany jako jeden z hobby projektów Guido, a jego nazwa pochodzi od Latającego Cyrku Monty Pythona. 
 
-## Co będziemy robić
+## Co będziemy robić? 💾
 
 Ten warsztat składa się z kilku kroków. Po zapoznaniu się z konsolą, każdy krok wprowadza nowy aspekt Pythona krok po kroku uczymy się przez zadania.
 
