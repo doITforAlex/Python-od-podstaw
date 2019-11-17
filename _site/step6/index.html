@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Python: Instrukcje warunkowe</title>
-  <meta name="description" content="Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie w...">
+  <title>Python: Edytor</title>
+  <meta name="description" content="Pisanie kodu w trybie interaktywnym jest dobre na start, jednak nie nadaje się do tworzenia większych programów. Przechodzimy więc do używania edytora.">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   
   <link rel="stylesheet" href="/assets/main.css">
@@ -120,19 +120,19 @@
   
       <li class='active'>
         <a href="/step6/">
-          6 - Instrukcje warunkowe
+          6 - Edytor
         </a>
       </li>
   
       <li class=''>
         <a href="/step7/">
-          7 - Obiekty
+          7 - Instrukcje warunkowe
         </a>
       </li>
   
       <li class=''>
-        <a href="/step7/">
-          7 - Funkcje
+        <a href="/step8/">
+          8 - Funkcje
         </a>
       </li>
   
@@ -181,224 +181,88 @@
   
   <header class="post-header">
       
-    <h2 class="post-title"> Step 6 - Instrukcje warunkowe</h2>
+    <h2 class="post-title"> Step 6 - Edytor</h2>
     </header>
 
   <div class="post-content">
-    <p>Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie wpisał użytkownik.</p>
+    <p>Pisanie kodu w trybie interaktywnym jest dobre na start, jednak nie nadaje się do tworzenia większych programów. Przechodzimy więc do używania edytora.</p>
 
-<p>Ale jak możemy kontrolować, co robi nasz program?</p>
+<p>Niestety, normalne edytory tekstu (właściwie procesory tekstu) jak Microsoft Word, Apple Page czy Google Docs nie nadają się do edycji kodu źródłowego strony web.</p>
 
-<p>Za pomocą <strong>instrukcji warunkowych</strong>.</p>
+<p>Nie używamy programu do edycji dokumentów tekstowych (np. Word), ponieważ tego typu programy zapisują do plików znacznie więcej informacji niż tylko czysty tekst. W formatach dokumentów pojawiają się niewidoczne dla nas informacje o formatowaniu treści (styl tekstu, czcionka, rozkład marginesów itp.) zbędnych dla pliku pisanego w html. Niektóre z edytorów owszem, pozwalają na zapisanie pliku na potrzeby webowe, ale wynik będzie daleki od oczekiwanego.</p>
 
-<p>Najpopularniejszą instrukcją jest wyrażenie <code class="highlighter-rouge">if</code>.</p>
-
-<p>Spójrz na przykład poniżej - sprawdzamy, czy użytkownik podał swoje imię i jeżeli tego nie zrobił, ustawiamy odpowiednią treść wiadomości z błędem.</p>
-
-<pre><code class="language-Javascript">if(imie == ''){
-  wiadomoscOBledzie = 'Musisz podać swoje imię!';
-}
-</code></pre>
-
-<p><code class="highlighter-rouge">if</code> składa się z dwóch części:</p>
+<p>Program, którego potrzebujesz to edytor tekstu lub edytor kodu. Na start polecamy przyjazny początkującym program PyCharm, albo VSC.</p>
 
 <ul>
-  <li>warunku w nawiasach okrągłych (możesz sobie wyobrazić, że to pytanie, które zadajemy naszemu kodowi, na przykład <em>“Czy imię użytkownika to pusty string?”</em>),</li>
-  <li>kodu w nawiasach klamerkowych, zawierającego instrukcje, które mają się wykonać, jeżeli nasz warunek jest prawdziwy (czyli jeżeli odpowiedzią na nasze pytanie jest <em>“Tak”</em>).</li>
+  <li>
+    <p>Na pulpicie (lub w dowolnej innej lokalizacji) utwórz folder dla dzisiejszych zajęć o nazwie <code class="highlighter-rouge">python_od_podstaw</code>.</p>
+  </li>
+  <li>
+    <p>Otwórz edytor. Wybierz <code class="highlighter-rouge">Open</code> &gt; <code class="highlighter-rouge">twój folder</code></p>
+  </li>
 </ul>
 
-<p>Ewentualnie na końcu możesz dodać też <code class="highlighter-rouge">else</code>, który określa, jaki kod się wykona, jeżeli nasz warunek nie zostanie spełniony.</p>
-
-<p>Warunki przyjmują wartość wyrażeń logicznych, czyli tzw. <strong>booleanów</strong>.
-Boolean to takie wyrażenie, którego wartość zostaje oszacowana jako <code class="highlighter-rouge">true</code> (prawdziwa) lub <code class="highlighter-rouge">false</code> (fałszywa) dzięki użyciu <strong>operatorów warunkowych</strong>.</p>
-
-<p>Operator warunkowy, którego użyliśmy w powyższym przykładzie to <strong>operator równości</strong>, czyli <strong>A jest równe B</strong>. Jeżeli wartości po jego obu stronach są uznawane za takie same, warunek uznawany jest za prawdziwy (przyjmuje wartość <code class="highlighter-rouge">true</code>). Jeżeli wartości po obu stronach są różne, warunek nie jest uznawany za prawdziwy i przyjmuje wartość <code class="highlighter-rouge">false</code>.</p>
-
-<h2 id="używanie-operatorów-porównania">Używanie operatorów porównania</h2>
-
-<p>Zmodyfikujmy nasz poprzedni przykład - dodamy miejsce, w którym możemy podać swoje imię, za pomocą którego strona następnie się do nas zwróci.</p>
-
-<p>Najpierw dodajmy miejsce, w którym podamy swoje imię:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"inputZImieniem"</span> <span class="na">placeholder=</span><span class="s">"Podaj swoje imię"</span> <span class="nt">/&gt;</span>
-</code></pre></div></div>
-
-<p>A teraz zmodyfikujmy nasz kod, dzięki czemu nasze funkcje <code class="highlighter-rouge">przyjdz</code> i <code class="highlighter-rouge">odejdz</code> zobaczą, jakie imię wpisaliśmy i użyją go w wiadomości.</p>
-
-<pre><code class="language-JavaScript">function przyjdz(){
-  let imie = document.getElementById('inputZImieniem').value;
-  wiadomosc = 'Witaj '+imie+'!';
-}
-
-function odejdz(){
-  let imie = document.getElementById('inputZImieniem').value;
-  wiadomosc = 'Szerokiej drogi '+imie+'!';
-}
-</code></pre>
-
-<p>Odśwież stronę, podaj swoje imię i kliknij na przycisk <code class="highlighter-rouge">Przyjdź</code> lub <code class="highlighter-rouge">Odejdź</code>.</p>
-
-<p>Ale co jeśli nie podasz żadnego imienia? W wiadomości zostanie puste miejsce, czego chcemy uniknąć.</p>
-
-<p>Dodajmy do naszego kodu instrukcję warunkową, która zapobiegnie takiej sytuacji.</p>
-
-<pre><code class="language-Javascript">function przyjdz(){
-  let imie = document.getElementById('inputZImieniem').value;
-  if(imie == ''){
-    wiadomosc = "Witaj tajemniczy nieznajomy!  Jak masz na imię?";
-  }
-  else {
-    wiadomosc = 'Witaj '+imie+'!';
-  }
-}
-
-function odejdz(){
-  let imie = document.getElementById('inputZImieniem').value;
-  if(imie == ''){
-    wiadomosc = 'Szerokiej drogi tajemniczy nieznajomy!';
-  }
-  else {
-    wiadomosc = 'Szerokiej drogi '+imie+'!';
-  }
-}
-</code></pre>
-
-<p>Jak widzisz, używamy tutaj instrukcji <code class="highlighter-rouge">else</code>. Jeżeli <code class="highlighter-rouge">imie</code> jest pustym stringiem, nasza wiadomość nie będzie go używała.
-Ale jeżeli nasze <code class="highlighter-rouge">imie</code> nie będzie pustym stringiem, wykonany zostanie kod znajdujący się w bloku <code class="highlighter-rouge">else</code>, który ustawi wiadomość, dodając do niej podane przez użytkownika imię (za pomocą znanej ci już konkatenacji - znaku <code class="highlighter-rouge">+</code>).</p>
-
-<p>Teraz nasze funkcje <code class="highlighter-rouge">przyjdz</code> i <code class="highlighter-rouge">odejdz</code> mogą się wykonać na dwa różne sposoby.</p>
-
-<p>Tak na marginesie, możesz zauważyć, że w obu funkcjach wykonywane są prawie takie same instrukcje, które różnią się jedynie małymi różnicami. Oczywiście, możemy zmodyfikować nasz kod w taki sposób, że nie będzie zawierał takich powtórzeń - ale tym zajmiemy się w jednej z kolejnych lekcji, poświęconej funkcjom.</p>
-
-<h2 id="operatory-warunkowe">Operatory warunkowe</h2>
-
-<p>Na razie używaliśmy operatora równości, <code class="highlighter-rouge">==</code>, za pomocą którego sprawdzaliśmy, czy <em>A jest równe B</em>. Podobnych operatorów jest jednak znacznie więcej.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Nazwa/Opis</th>
-      <th>Używany na</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="highlighter-rouge">==</code></td>
-      <td>Równość. Obie strony mają te same wartości.</td>
-      <td>Liczby i stringi.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">===</code></td>
-      <td>Równość ścisła. Wartość i typ obu stron musi być taka sama.</td>
-      <td>Liczby i stringi.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">!=</code></td>
-      <td>Brak równości. Strony mają różne wartości.</td>
-      <td>Liczby i stringi.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">!==</code></td>
-      <td>Brak równości ścisłej. Różne wartości ALBO różne typy.</td>
-      <td>Liczby i stringi.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">&lt;</code></td>
-      <td>Mniejszy niż.</td>
-      <td>Liczby.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">&gt;</code></td>
-      <td>Większy niż.</td>
-      <td>Liczby.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">&lt;=</code></td>
-      <td>Mniejszy lub równy.</td>
-      <td>Liczby.</td>
-    </tr>
-    <tr>
-      <td><code class="highlighter-rouge">&gt;=</code></td>
-      <td>Większy lub równy.</td>
-      <td>Liczby.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Większość z nich mówi sama za siebie - z wyjątkiem ścisłej równości i jej braku. Wyjaśnijmy sobie krótko, o co z nimi chodzi.</p>
-
-<p>Jeżeli porównywane wartości będą różnych typów, zwykłe porównania (<code class="highlighter-rouge">==</code> i <code class="highlighter-rouge">!=</code>) najpierw przekonwertują je do tego samego typu, a dopiero potem dokonają porównania. Przykładowo, <code class="highlighter-rouge">12 == '12'</code>potraktowane zostanie jak <code class="highlighter-rouge">'12' == '12'</code>.</p>
-
-<p>Porównania ścisłe nie pozwalają na konwersję typów.</p>
-
-<p>Z tego też powodu zwykle zaleca się korzystanie właśnie z porównań ścisłych.</p>
-
-<h2 id="operatory-logiczne">Operatory logiczne</h2>
-
-<p>Umiemy już radzić sobie z porównaniem dwóch rzeczy. Ale co jeżeli mamy dokonać oceny bardziej skomplikowanych warunków? Wtedy z pomocą przychodzą nam <strong>operatory logiczne</strong>.</p>
-
-<p>Spotykać się będziesz głównie z trzema z nich: <code class="highlighter-rouge">&amp;&amp;</code>, <code class="highlighter-rouge">||</code> i <code class="highlighter-rouge">!</code></p>
-
-<h3 id="operator--koniunkcja-i">Operator <code class="highlighter-rouge">&amp;&amp;</code> (<strong>koniunkcja</strong>, <code class="highlighter-rouge">i</code>)</h3>
-
-<p><code class="highlighter-rouge">&amp;&amp;</code> to operator koniunkcji - używamy go, kiedy każdy z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="nx">zgodaUzytkownika</span><span class="p">)</span> <span class="p">{</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Używając operatora <code class="highlighter-rouge">&amp;&amp;</code> możesz łączyć ze sobą tyle warunków, ile tylko zapragniesz. One następnie będą sprawdzane od lewej do prawej i jeżeli tylko jeden z nich będzie fałszywy (będzie miał wartość <code class="highlighter-rouge">false</code>), całe wyrażenie będzie fałszywe. W przeciwnym razie całe wyrażenie będzie pradziwe (będzie miało wartość <code class="highlighter-rouge">true</code>).</p>
-
-<h3 id="operator--alternatywa-albo">Operator <code class="highlighter-rouge">||</code> (<strong>alternatywa</strong>, <code class="highlighter-rouge">albo</code>)</h3>
-
-<p><code class="highlighter-rouge">||</code> to operator alternatywy - używamy go, kiedy tylko jeden z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">||</span> <span class="nx">zgodaRodzica</span><span class="p">)</span> <span class="p">{</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Tak samo jak w przypadku operatora <code class="highlighter-rouge">&amp;&amp;</code>, używając operatora <code class="highlighter-rouge">||</code> możesz łączyć ze sobą tyle warunków, ile chcesz. One również sprawdzane są od lewej do prawej - różnica polega na tym, że w przypadku alternatywy, jeżeli którykolwiek z warunków wyrażenia będzie prawdziwy, prawdziwe będzie też całe wyrażenie.</p>
-
-<h3 id="operator--negacja-nie">Operator <code class="highlighter-rouge">!</code> (<strong>negacja</strong>, <code class="highlighter-rouge">nie</code>)</h3>
-
-<p>W przeciwieństwie do operatorów <code class="highlighter-rouge">&amp;&amp;</code> i <code class="highlighter-rouge">||</code>, negacja logiczna umieszczana jest przed wyrażeniem, żeby odwrócić jego wartość logiczną (z <code class="highlighter-rouge">true</code> na <code class="highlighter-rouge">false</code> albo z <code class="highlighter-rouge">false</code> na <code class="highlighter-rouge">true</code>).</p>
-
-<pre><code class="language-Javascript">if(!zgodaUzytkownika){
-
-}
-</code></pre>
-
-<p>Ten operator przydaje się w sytuacjach, kiedy coś nie zostało zrobione albo coś poszło nie tak.</p>
-
-<h3 id="łączenie-operatorów-logicznych">Łączenie operatorów logicznych</h3>
-
-<p>Możesz połączyć ze sobą kilka operatorów logicznych w jednym wyrażeniu, ale w wyniku tego może się ono stać nieczytelne. Żeby upewnić się, że kod zachowa się tak, jak tego oczekujesz, łącz poszczególne wyrażenia w nawiasy.</p>
-
-<p>I tak, przykładowo, załóżmy, że chcemy stworzyć formularz, w którym:</p>
+<p><img src="../assets/start_pycharm.png" alt="Otworz folder" title="Terminal MacOs" class="img-responsive" /></p>
 
 <ul>
-  <li>użytkownik ma podać swój wiek (zmienna <code class="highlighter-rouge">age</code> - liczba),</li>
-  <li>użytkownik musi wyrazić zgodę na warunki korzystania z serwisu (zmienna <code class="highlighter-rouge">zgodaUzytkownika</code> - boolean),</li>
-  <li>jeżeli użytkownik ma mniej niż osiemnaście lat, zgodę na warunki korzystania z serwisu musi wyrazić też jego rodzic (zmienna <code class="highlighter-rouge">zgodaRodzica</code> - boolean).</li>
+  <li>Utwórz nowy plik</li>
 </ul>
 
-<p>Poniższe wyrażenie <code class="highlighter-rouge">if</code> nie działa jednak do końca tak, jak byśmy chcieli.</p>
+<p><img src="../assets/pycharm_new_file.png" alt="Otworz folder" title="Terminal MacOs" class="img-responsive" /></p>
 
-<pre><code class="language-Javascript">if (wiek &gt;= 18 || zgodaRodzica &amp;&amp; zgodaUzytkownika) {
+<p>Zauważysz, że w twoim folderze pojawił się nowy plik. Pliki Pythona używają rozszerzenia <code class="highlighter-rouge">.py</code>.</p>
 
-}
-</code></pre>
+<p>Dodaj następujące komendy:</p>
 
-<p>Jeżeli spełniony jest warunek <code class="highlighter-rouge">wiek &gt;= 18</code>, całe wyrażenie uznawane jest za prawdziwe po napotkaniu w nim operatora <code class="highlighter-rouge">||</code>. Nie o to nam chodziło, prawda?</p>
-
-<p>W takiej sytuacji musimy użyć nawiasów, które pokazują, między którymi wyrażeniami mają zachodzić określone zależności.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">((</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">||</span> <span class="nx">zgodaRodzica</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">zgodaUzytkownika</span><span class="p">)</span> <span class="p">{</span>
-<span class="p">}</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"Hello world"</span><span class="p">)</span>
+<span class="nb">input</span><span class="p">(</span><span class="s">"Naciśnij enter, aby zakończyć program: "</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Jeżeli chcesz odwrócić wartość logiczną wyrażenia znajdującego się w którymś nawiasie, umieść przed nim operator <code class="highlighter-rouge">!</code> (negację).</p>
+<p>Brawo! Oto twój pierwszy skrypt w Pythonie!</p>
+
+<h3 id="komentarze">Komentarze</h3>
+<p>Komentarze to linie zaczynające się od znaku #. Możesz napisać dowolną informację za znakiem #, a Python ją zignoruje. Komentarze mogą sprawić, że kod będzie łatwiejszy do zrozumienia przez innych programistów, a tekst ten nie będzie widziany przez użytkownika programu.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c"># to jest komentarz jednolinijkowy</span>
+
+<span class="s">"""
+ten komentarz
+zajmuje
+wiele
+linii
+"""</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"widać mnie"</span><span class="p">)</span>
+<span class="c"># print("a mnie nie widać")</span>
+
+</code></pre></div></div>
+
+<h4 id="zadanie">Zadanie</h4>
+
+<p>Utwórz nowy plik np. <code class="highlighter-rouge">movies.py</code>. Skopiuj poniższy kod i przeanalizuj. Potraktuj jako bazę do rozwiązania zadania. Dodaj 3 nowe oceny i wylicz srednia z ocen.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>movie = input("Tytul filmu: ")
+grade = int(input("Ocena filmu w skali 1-10: "))
+
+print("Film pt. " + movie)
+print("oceniasz na ", grade)
+
+</code></pre></div></div>
+
+<p>Spójrz tutaj jeśli potrzebujesz pomocy:</p>
+
+<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">))</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Ocena scenariusza w skali 1-10: "</span><span class="p">))</span>
+<span class="n">music</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Ocena muzyki w skali 1-10: "</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Film pt. "</span> <span class="o">+</span> <span class="n">movie</span><span class="p">)</span>
+
+<span class="n">avg</span> <span class="o">=</span> <span class="p">(</span><span class="n">grade</span> <span class="o">+</span> <span class="n">plot</span> <span class="o">+</span> <span class="n">music</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Film pt. "</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="s">"oceniasz na"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+</code></pre></div></div>
 
     
 

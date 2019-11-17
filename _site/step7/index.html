@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Python: Funkcje</title>
-  <meta name="description" content="Funkcje pozwalają nam na dzielenie jednej wielkiej listy zadań w naszym programie na kilka mniejszych list. To takie jakby pisanie małych programików w więks...">
+  <title>Python: Instrukcje warunkowe</title>
+  <meta name="description" content="Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie w...">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   
   <link rel="stylesheet" href="/assets/main.css">
@@ -120,19 +120,19 @@
   
       <li class=''>
         <a href="/step6/">
-          6 - Instrukcje warunkowe
+          6 - Edytor
         </a>
       </li>
   
       <li class='active'>
         <a href="/step7/">
-          7 - Obiekty
+          7 - Instrukcje warunkowe
         </a>
       </li>
   
-      <li class='active'>
-        <a href="/step7/">
-          7 - Funkcje
+      <li class=''>
+        <a href="/step8/">
+          8 - Funkcje
         </a>
       </li>
   
@@ -181,231 +181,236 @@
   
   <header class="post-header">
       
-    <h2 class="post-title"> Step 7 - Funkcje</h2>
+    <h2 class="post-title"> Step 7 - Instrukcje warunkowe</h2>
     </header>
 
   <div class="post-content">
-    <p>Funkcje pozwalają nam na dzielenie jednej wielkiej listy zadań w naszym programie na kilka mniejszych list. To takie jakby pisanie małych programików w większym programie.</p>
+    <p>Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie wpisał użytkownik.</p>
 
-<p>Na razie używaliśmy ich do przypisania reakcji na jakieś zdarzenia, w szczególności na kliknięcie na przycisk (<code class="highlighter-rouge">onclick</code>), ale możesz z nich korzystać również w innych przypadkach.</p>
+<p>Ale jak możemy kontrolować, co robi nasz program?</p>
 
-<p>Dzielenie całego kodu na funkcje sprawia, że zamiast jednego wielkiego programu mamy wiele małych programików. Ale co tak właściwie nam to daje?</p>
+<p>Za pomocą <strong>instrukcji warunkowych</strong>.</p>
 
-<ol>
-  <li>Małe programy łatwiej się pisze.</li>
-  <li>Małe programy są łatwiejsze do przeczytania i zrozumienia.</li>
-  <li>Oszczędzamy czas, bo jednej funkcji możemy użyć w kilku miejscach.</li>
-</ol>
+<p>Tutaj poznajemy wyrażenie <code class="highlighter-rouge">if</code>.</p>
 
-<p>A więc, pobawmy się funkcjami tworząc kolejną aplikację.
-Czego się przy okazji nauczymy?</p>
+<p>Spójrz na przykład poniżej - sprawdzamy, czy użytkownik podał swoje imię i jeżeli tego nie zrobił, ustawiamy odpowiednią treść wiadomości z błędem.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Podaj swoje imię: "</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Musisz podać swoje imię!'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">if</code> składa się z dwóch części:</p>
 
 <ul>
-  <li><strong>deklarowania</strong> funkcji,</li>
-  <li><strong>wywoływania</strong> funkcji,</li>
-  <li><strong>parametrów</strong> i <strong>argumentów</strong> funkcji,</li>
-  <li><strong>wartości zwracanych</strong> przez funkcje.</li>
+  <li>warunku (możesz sobie wyobrazić, że to pytanie, które zadajemy naszemu kodowi, na przykład <em>“Czy imię użytkownika to pusty string?”</em>),</li>
+  <li>kodu <strong>po WCIĘCIU</strong> (4 spacje lub 1 tabulacja) zawierającego instrukcje, które mają się wykonać, jeżeli nasz warunek jest prawdziwy (czyli jeżeli odpowiedzią na nasze pytanie jest <em>“Tak”</em>).</li>
 </ul>
 
-<p>Bierzmy się do roboty!</p>
+<p>Na końcu możesz dodać też <code class="highlighter-rouge">else</code>, który określa, jaki kod się wykona, jeżeli nasz warunek nie zostanie spełniony.</p>
 
-<h2 id="tworzymy-html">Tworzymy HTML</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Podaj swoje imię: "</span><span class="p">)</span>
 
-<p>Stwórz nowy plik z następującym kodem HTML.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Warsztaty z JSa!<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span>
-      <span class="na">style=</span><span class="s">"padding:10px; margin: 15px; border:1px solid grey; background-color:#ffffff"</span>
-    <span class="nt">&gt;</span>
-      Tło:
-      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"inputKolorTla"</span> <span class="na">name=</span><span class="s">"tlo"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffffff"</span> <span class="nt">/&gt;</span>
-      Rząd 1:
-      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"inputKolorRzad1"</span> <span class="na">name=</span><span class="s">"rzad1"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffffff"</span> <span class="nt">/&gt;</span>
-      Rząd 2:
-      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"inputKolorRzad2"</span> <span class="na">name=</span><span class="s">"rzad2"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffffff"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"komunikat"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"rzad1"</span> <span class="na">style=</span><span class="s">"width:100%;height:100px"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"rzad2"</span> <span class="na">style=</span><span class="s">"width:100%;height:100px"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-  <span class="nt">&lt;script&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Musisz podać swoje imię!'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"Hello {name}, co u Ciebie?"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Zapisz plik i otwórz go w przeglądarce.</p>
+<p>Warunki przyjmują wartość wyrażeń logicznych, czyli tzw. <strong>booleanów</strong>.
+Boolean pojawiło się w rozdziale o typach. To takie wyrażenie, którego wartość zostaje oszacowana jako <code class="highlighter-rouge">True</code> (prawdziwa) lub <code class="highlighter-rouge">False</code> (fałszywa) dzięki użyciu <strong>operatorów warunkowych</strong>.</p>
 
-<p>Na stronie zobaczysz trzy pola do wyboru koloru - jeśli klikniesz na któreś, otworzy się paleta kolorów. Jak to zrobiliśmy? Używając elementów <code class="highlighter-rouge">&lt;input&gt;</code> o typie (<code class="highlighter-rouge">type</code>) <code class="highlighter-rouge">color</code>.</p>
+<p>Operator warunkowy, którego użyliśmy w powyższym przykładzie to <strong>operator równości</strong>, czyli <strong>A jest równe B</strong>. Jeżeli wartości po jego obu stronach są uznawane za takie same, warunek uznawany jest za prawdziwy (przyjmuje wartość <code class="highlighter-rouge">True</code>). Jeżeli wartości po obu stronach są różne, warunek nie jest uznawany za prawdziwy i przyjmuje wartość <code class="highlighter-rouge">False</code>.</p>
 
-<p>Nasza strona zawiera też trzy puste elementy <code class="highlighter-rouge">&lt;div&gt;</code>.</p>
+<p>Oprócz else, możeby obsłużyć dodatkowy warunek, specjalne zachowanie.</p>
 
-<p>Zwróć uwagę, że każdy <code class="highlighter-rouge">&lt;input&gt;</code> ma swój atrybut <code class="highlighter-rouge">name</code>. Dwa z nich są takie same jak atrybuty <code class="highlighter-rouge">id</code> pustych divów, a trzeci to po prostu <code class="highlighter-rouge">tlo</code>. Te informacje przydadzą nam się później - będziemy wiedzieli, który input zmieniający kolor jest powiązany z którym elementem strony.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Podaj swoje imię: "</span><span class="p">)</span>
 
-<p>Teraz w tagu <code class="highlighter-rouge">&lt;script&gt;</code> dodajmy kod, dzięki któremu po wyborze koloru, taki sam kolor przybierze określony element strony.</p>
-
-<h2 id="deklarowanie-funkcji">Deklarowanie funkcji</h2>
-
-<p>Tworzenie nowej funkcji nazywamy jej <strong>deklarowaniem</strong>.</p>
-
-<p>A więc, zadeklarujmy nową funkcję <code class="highlighter-rouge">zmianaKoloru</code>:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{}</span>
+<span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Musisz podać swoje imię!'</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s">'Rita'</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Oh, to znowy ty!'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"Hello {name}, co u Ciebie?"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Do deklarowania funkcji używamy:</p>
+<p><strong>Ogólny wzór dla instrukcji warunkowej if wygląda o tak:</strong></p>
 
-<ol>
-  <li>Słowa kluczowego <code class="highlighter-rouge">function</code>.</li>
-  <li>Nazwy nowej funkcji, <code class="highlighter-rouge">zmianaKoloru</code>.</li>
-  <li>Opcjonalnie listy parametrów w nawiasach okrągłych, <code class="highlighter-rouge">(event)</code></li>
-  <li>Ciała funkcji w nawiasach klamerkowych, <code class="highlighter-rouge">{</code> <code class="highlighter-rouge">}</code></li>
-</ol>
+<p>Wcięcia mają znaczenie! Stosujemy 4 spacje albo 1 tabulację (i się tego trzymamy w całym pliku)</p>
 
-<p>Funkcja <code class="highlighter-rouge">zmianaKoloru</code> jeszcze nic nie robi, ale i tak możemy ją już przypisać do wydarzenia <code class="highlighter-rouge">onchange</code> na każdym z naszych inputów.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"inputKolorTla"</span><span class="p">).</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">zmianaKoloru</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"inputKolorRzad1"</span><span class="p">).</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">zmianaKoloru</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"inputKolorRzad2"</span><span class="p">).</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">zmianaKoloru</span><span class="p">;</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">warunek</span><span class="p">:</span>
+   <span class="c"># zrób coś</span>
+<span class="k">elif</span> <span class="n">warunek</span><span class="p">:</span>
+  <span class="c"># jeśli powyższe się nie spełniło, to zrób coś innego</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="c"># zrób coś jeśli żadne z powyższych się nie wykonało</span>
 </code></pre></div></div>
 
-<h2 id="parametry-i-argumenty">Parametry i argumenty</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = int(input("Podaj liczbę"))
+if(x &lt; 0): # nawiasy są opcjonalne
+    print("mniej niż zero") # wcięcia są obowiązkowe
+elif(x == 0): # else if
+    # ciekawostka, polecenia mogą zostać umieszczone w jednej linii
+    # jeżeli rozdzielimy je średnikiem
+    print("zerooooooo"); print("oooooooooo") 
+else:
+    print(x, "to więcej niż", 0)
+    print("Nadal jestem w warunku else!")
 
-<p><strong>Argumenty</strong> pozwalają nam na korzystanie z pewnych wartości podczas wykonywania funkcji. Nazywamy to zwykle <strong>przekazywaniem argumentów</strong>.</p>
+print("A teraz jestem poza warunkiem")
 
-<p><strong>Parametry</strong> pozwalają ci na odnoszenie się do tych wartości wewnątrz funkcji podczas jej deklarowania.</p>
-
-<p>Nasza funkcja <code class="highlighter-rouge">zmianaKoloru</code> ma jeden parametr, <code class="highlighter-rouge">event</code> (po polsku <em>zdarzenie</em>).
-Funkcje powiązane ze zdarzeniami są wykonywane, kiedy dochodzi do określonego zdarzenia. Kiedy to się wydarzy, przeglądarka przekaże informacje o tym wydarzeniu jako argument funkcji.</p>
-
-<p>Ale czym tak właściwie jest <code class="highlighter-rouge">event</code>? Umieśćmy w najszej funkcji <code class="highlighter-rouge">console.log</code>, żeby się przekonać.</p>
-
-<p>Funkcja <code class="highlighter-rouge">zmianaKoloru</code> powinna teraz wyglądać tak:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
-<span class="p">}</span>
 </code></pre></div></div>
 
-<p>Odśwież stronę, otwórz konsolę i kliknij na jeden z inputów, by zmienić kolor elementu strony.</p>
+<h2 id="operatory-warunkowe">Operatory warunkowe</h2>
 
-<p>Konsola wyświetli dane o zdarzeniu. Po kliknięciu na mały trójkąt lista danych rozwinie się, dzięki czemu poznasz jego najdrobniejsze szczegóły.</p>
+<p>Szybka powtórka i rozszerzenie na potrzeby tworzenia warunków ;)</p>
 
-<p>Jak widzisz, obiekt <code class="highlighter-rouge">event</code> ma wiele właściwości, które szczegółowo go opisują, ale nas na razie interesować będzie jedna z nich - właściwość <code class="highlighter-rouge">target</code>. <code class="highlighter-rouge">target</code> to po prostu inny obiekt, który odnosi się do elementu, który wywował określone zdarzenie. Dzięki niemu możemy dowiedzieć się, jaki jest nowy wybrany klor.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Nazwa/Opis</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">==</code></td>
+      <td>Równość. Obie strony mają te same wartości.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">is</code></td>
+      <td>Równość ścisła. Wartość i typ obu stron musi być taka sama.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">!=</code></td>
+      <td>Brak równości. Strony mają różne wartości.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">is not</code></td>
+      <td>Brak równości ścisłej. Różne wartości ALBO różne typy.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;</code></td>
+      <td>Mniejszy niż.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt;</code></td>
+      <td>Większy niż.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;=</code></td>
+      <td>Mniejszy lub równy.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt;=</code></td>
+      <td>Większy lub równy.</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>Zmieńmy więc nasz <code class="highlighter-rouge">console.log</code>, aby poznać więcej interesujących nas szczegółów.</p>
+<p>Większość z nich mówi sama za siebie - z wyjątkiem ścisłej równości i jej braku. Wyjaśnijmy sobie krótko, o co z nimi chodzi.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-<span class="p">}</span>
+<p>Jeżeli porównywane wartości będą różnych typów, zwykłe porównania (<code class="highlighter-rouge">==</code> i <code class="highlighter-rouge">!=</code>) najpierw przekonwertują je do tego samego typu, a dopiero potem dokonają porównania. Przykładowo, <code class="highlighter-rouge">12 == 12.0</code> zwróci nam <code class="highlighter-rouge">True</code> (gdyż obie strony równania mają wartość liczbową 12), ale <code class="highlighter-rouge">12 is 12.0</code> zwraca <code class="highlighter-rouge">False</code>, poniważ sprawdzana jest wartość jak i dokładnie ten sam typ.</p>
+
+<h2 id="operatory-logiczne">Operatory logiczne</h2>
+
+<p>Umiemy już radzić sobie z porównaniem dwóch rzeczy. Ale co jeżeli mamy dokonać oceny bardziej skomplikowanych warunków? Wtedy z pomocą przychodzą nam <strong>operatory logiczne</strong>.</p>
+
+<p>Spotykać się będziesz głównie z trzema z nich: <code class="highlighter-rouge">and</code>, <code class="highlighter-rouge">or</code> i <code class="highlighter-rouge">not</code></p>
+
+<h3 id="operator-and-koniunkcja-i">Operator <code class="highlighter-rouge">and</code> (<strong>koniunkcja</strong>, <code class="highlighter-rouge">i</code>)</h3>
+
+<p>Używamy go, kiedy każdy z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">and</span> <span class="n">drive_licence</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Możesz prowadzić auto"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>No dobrze, teraz nasza funkcja <code class="highlighter-rouge">zmianaKoloru</code> ma informacje, których potrzebuje - nazwę inputa i nowy kolor. Żeby uaktualnić nasz kolor stworzymy jednak nową funkcję i ją stąd wywołamy.</p>
+<p>Używając operatora <code class="highlighter-rouge">and</code> możesz łączyć ze sobą tyle warunków, ile tylko zapragniesz. One następnie będą sprawdzane od lewej do prawej i jeżeli tylko jeden z nich będzie fałszywy (będzie miał wartość <code class="highlighter-rouge">False</code>), całe wyrażenie będzie fałszywe. W przeciwnym razie całe wyrażenie będzie pradziwe (będzie miało wartość <code class="highlighter-rouge">True</code>).</p>
 
-<p>Zadeklarujmy szybko nową funkcję o pustym ciele:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">kolor</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{}</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">and</span> <span class="n">drive_licence</span> <span class="ow">and</span> <span class="n">enough_money</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Możesz kupić auto"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Zauważ, że ma ona dwa parametry, <code class="highlighter-rouge">kolor</code> i <code class="highlighter-rouge">element</code>.</p>
+<h3 id="operator-or-alternatywa-albo">Operator <code class="highlighter-rouge">or</code> (<strong>alternatywa</strong>, <code class="highlighter-rouge">albo</code>)</h3>
 
-<p>Ale w jaki sposób mamy ją wywołać w funkcji <code class="highlighter-rouge">zmianaKoloru</code>?</p>
+<p><code class="highlighter-rouge">||</code> to operator alternatywy - używamy go, kiedy tylko jeden z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
 
-<h2 id="wywoływanie-funkcji">Wywoływanie funkcji</h2>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">or</span> <span class="n">parent_agree</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Możesz brać udział w warsztatach"</span><span class="p">)</span>
+</code></pre></div></div>
 
-<p>Wywoływanie funkcji jest naprawdę proste - po prostu podajesz nazwę funkcji, a za nią wpisujesz nawiasy okrągłe. Jeżeli chcesz przekazać do funkcji jakieś argumenty, wpisz je w tych nawiasach.</p>
+<p>Tak samo jak w przypadku operatora <code class="highlighter-rouge">and</code>, używając operatora <code class="highlighter-rouge">or</code> możesz łączyć ze sobą tyle warunków, ile chcesz. One również sprawdzane są od lewej do prawej - różnica polega na tym, że w przypadku alternatywy, jeżeli którykolwiek z warunków wyrażenia będzie prawdziwy, prawdziwe będzie też całe wyrażenie.</p>
 
-<p>A więc, zmieńmy funkcję <code class="highlighter-rouge">zmianaKoloru</code>, tak, by wywoływała funkcję <code class="highlighter-rouge">ustawKolor</code>, która na razie będzie tylko wyświetlała w konsoli swoje parametry.</p>
+<h3 id="operator-not-negacja-nie">Operator <code class="highlighter-rouge">not</code> (<strong>negacja</strong>, <code class="highlighter-rouge">nie</code>)</h3>
 
-<pre><code class="language-Javascript">function ustawKolor(kolor, idElementu){
-  console.log(kolor, idElementu);
-}
+<p>W przeciwieństwie do operatorów <code class="highlighter-rouge">and</code> i <code class="highlighter-rouge">or</code>, negacja logiczna umieszczana jest przed wyrażeniem, żeby odwrócić jego wartość logiczną (z <code class="highlighter-rouge">True</code> na <code class="highlighter-rouge">False</code> albo z <code class="highlighter-rouge">False</code> na <code class="highlighter-rouge">True</code>).</p>
 
-function zmianaKoloru(event){
-  ustawKolor(event.target.value, event.target.name);
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">or</span> <span class="n">parent_agree</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Przykro nam, nie możesz wziąć udziału w warsztacie"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="zadanie">Zadanie</h4>
+
+<p>Zmodyfikuj skrypt znany z poprzedniego rozdziału tak, aby wyświetlał użytkownikowi komunikaty w zależności od średniej ocen. Dla wyniku powyżej 7 - bardzo dobry, 5-7 przeciętny, 4 i mniej nie warto oglądać.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Film pt. "</span> <span class="o">+</span> <span class="n">movie</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"oceniasz na "</span><span class="p">,</span> <span class="n">grade</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Spójrz tutaj jeśli potrzebujesz pomocy:</p>
+
+<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">))</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Ocena scenariusza w skali 1-10: "</span><span class="p">))</span>
+<span class="n">music</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Ocena muzyki w skali 1-10: "</span><span class="p">))</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Film pt. "</span> <span class="o">+</span> <span class="n">movie</span><span class="p">)</span>
+
+<span class="n">avg</span> <span class="o">=</span> <span class="p">(</span><span class="n">grade</span> <span class="o">+</span> <span class="n">plot</span> <span class="o">+</span> <span class="n">music</span> <span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Film pt. "</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="s">"oceniasz na"</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="n">avg</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Bardzo dobry"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">avg</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Przeciętny"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Nie warto oglądać"</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<h3 id="łączenie-operatorów-logicznych">Łączenie operatorów logicznych</h3>
+
+<p>Możesz połączyć ze sobą kilka operatorów logicznych w jednym wyrażeniu, ale w wyniku tego może się ono stać nieczytelne. Żeby upewnić się, że kod zachowa się tak, jak tego oczekujesz, łącz poszczególne wyrażenia w nawiasy.</p>
+
+<p>I tak, przykładowo, załóżmy, że chcemy stworzyć formularz, w którym:</p>
+
+<ul>
+  <li>użytkownik ma podać swój wiek (zmienna <code class="highlighter-rouge">age</code> - liczba),</li>
+  <li>użytkownik musi wyrazić zgodę na warunki korzystania z serwisu (zmienna <code class="highlighter-rouge">zgodaUzytkownika</code> - boolean),</li>
+  <li>jeżeli użytkownik ma mniej niż osiemnaście lat, zgodę na warunki korzystania z serwisu musi wyrazić też jego rodzic (zmienna <code class="highlighter-rouge">zgodaRodzica</code> - boolean).</li>
+</ul>
+
+<p>Poniższe wyrażenie <code class="highlighter-rouge">if</code> nie działa jednak do końca tak, jak byśmy chcieli.</p>
+
+<pre><code class="language-Javascript">if (wiek &gt;= 18 || zgodaRodzica &amp;&amp; zgodaUzytkownika) {
+
 }
 </code></pre>
 
-<p>W taki sposób przekazujemy wartości z jednej funkcji do drugiej.</p>
+<p>Jeżeli spełniony jest warunek <code class="highlighter-rouge">wiek &gt;= 18</code>, całe wyrażenie uznawane jest za prawdziwe po napotkaniu w nim operatora <code class="highlighter-rouge">||</code>. Nie o to nam chodziło, prawda?</p>
 
-<p>Nasze funkcje jednak na razie jeszcze nie są zbyt przydatne. W tym celu dodajmy do funkcji <code class="highlighter-rouge">zmianaKoloru</code> kilka warunków:</p>
+<p>W takiej sytuacji musimy użyć nawiasów, które pokazują, między którymi wyrażeniami mają zachodzić określone zależności.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="s2">"tlo"</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
-  <span class="p">}</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">((</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">||</span> <span class="nx">zgodaRodzica</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">zgodaUzytkownika</span><span class="p">)</span> <span class="p">{</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>Teraz, jeżeli spróbujesz zmienić kolor tła, funkcja <code class="highlighter-rouge">ustawKolor</code> zostanie wywołana tylko z jednym parametrem? A jaką wartość przyjmie wtedy drugi parametr?</p>
-
-<p>Spróbuj to zrobić i wyświetl efekty w konsoli.</p>
-
-<p>Jeżeli wywołując funkcję przekazano do niej mniej argumentów niż zadeklarowano w niej parametrów, “nadliczbowe” parametry przyjmą wartość <code class="highlighter-rouge">undefined</code>, taką samą jak niezainicjalizowane zmienne!</p>
-
-<p>Wykorzystamy tę właściwość w funkcji <code class="highlighter-rouge">ustawKolor</code>, ponieważ zmiana koloru tła strony odbędzie się trochę inaczej niż zmiana koloru poszczególnych divów.</p>
-
-<p>Zmieńmy w takim razie ciało naszej funkcji <code class="highlighter-rouge">ustawKolor</code>:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">kolor</span><span class="p">,</span> <span class="nx">idElementu</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">idElementu</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">bgColor</span> <span class="o">=</span> <span class="nx">kolor</span><span class="p">;</span>
-  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">idElementu</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="nx">kolor</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Teraz, jeżeli nasze <code class="highlighter-rouge">idElementu</code> ma wartość undefined, tło strony zmieni się na wybrany przez nas <code class="highlighter-rouge">kolor</code>.
-W przeciwnym razie zmieni się kolor wybranego przez nas elementu.</p>
-
-<p>Wypróbuj to!</p>
-
-<h2 id="wartości-zwracane-przez-funkcje">Wartości zwracane przez funkcje</h2>
-
-<p>Funkcje mają jeszcze jedną cechę, z której na razie nie korzystaliśmy - <strong>zwracają określone wartości</strong>.
-Dzięki tym wartościom możemy przekazywać dane z wewnątrz funkcji z powrotem do elementu, który je wywołał. Czasem nazywamy je więc wynikami funkcji.</p>
-
-<p>Określoną wartość zwracamy używając słowa kluczowego <code class="highlighter-rouge">return</code>.</p>
-
-<p>Żeby przekonać się, jak to działa, przekażmy nasze argumenty <code class="highlighter-rouge">idElementu</code> i <code class="highlighter-rouge">kolor</code> do innej funkcji, która wyświetli informacje o dokonanej zmianie.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">pokazKomunikat</span><span class="p">(</span><span class="nx">kolor</span><span class="p">,</span> <span class="nx">idElementu</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">idElementu</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="s2">"Tło jest teraz koloru "</span> <span class="o">+</span> <span class="nx">kolor</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="nx">idElementu</span> <span class="o">+</span> <span class="s2">" jest teraz koloru "</span> <span class="o">+</span> <span class="nx">kolor</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Kiedy funkcja natyka się na słowo kluczowe <code class="highlighter-rouge">return</code>, natychmiast przestaje działać i przekazuje określoną wartość z powrotem do kodu, który ją wywołał.</p>
-
-<p>Wywołajmy teraz tę funkcję w funkcji <code class="highlighter-rouge">ustawKolor</code> i wyświetlmy efekty w konsoli. W tym celu na końcu ciała funkcji <code class="highlighter-rouge">ustawKolor</code> dodaj poniższą linijkę kodu:</p>
-
-<pre><code class="language-Javascript">console.log(pokazKomunikat(kolor, idElementu));
-</code></pre>
-
-<p>Zapisz plik i wypróbuj swój kod w przeglądarce. Zauważ, że wartości zwracane poprzez <code class="highlighter-rouge">return</code> w funkcji <code class="highlighter-rouge">pokazKomunikat</code> są przekazywane do konsoli poprzez <code class="highlighter-rouge">console.log</code>.</p>
-
-<p>W więc, zwrócone wartości pojawiły się w miejscu, w którym wywołaliśmy funkcję.</p>
-
-<p>Zróbmy teraz coś bardziej skomplikowanego. W funkcji <code class="highlighter-rouge">ustawKolor</code> zastąp console.log poniższym kodem:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"komunikat"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">pokazKomunikat</span><span class="p">(</span>
-  <span class="nx">kolor</span><span class="p">,</span>
-  <span class="nx">idElementu</span>
-<span class="p">);</span>
-</code></pre></div></div>
-
-<p>Teraz, kiedy zmienisz kolor któregoś elementu, na stronie pojawi się o tym adekwatna wiadomość.</p>
-
-<p>Jeżeli chcesz, możesz przenieść tę ostatnią linijkę z funkcji <code class="highlighter-rouge">ustawKolor</code> do funkcji <code class="highlighter-rouge">zmianaKoloru</code>, ale to wymagałoby kilku małych zmian. Jak myślisz, jakich? Spróbuj to zrobić!</p>
+<p>Jeżeli chcesz odwrócić wartość logiczną wyrażenia znajdującego się w którymś nawiasie, umieść przed nim operator <code class="highlighter-rouge">!</code> (negację).</p>
 
     
 
