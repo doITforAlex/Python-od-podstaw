@@ -187,7 +187,7 @@ else:
 
 #### Zadanie 2
 
-Do kolejnego zadania musisz skorzystać z managera pakietów Pythona, aby zainstalować zewnętrzną bibliotekę. W konsoli wykonaj wklej  poniższą komendę i naciśnij enter
+Do kolejnego zadania musisz skorzystać z managera pakietów Pythona, aby zainstalować zewnętrzną bibliotekę. W konsoli (terminalu, wierszu poleceń) wykonaj wklej  poniższą komendę i naciśnij enter
 
 ```
 pip install requests
