@@ -149,7 +149,7 @@ if not (age >= 18 or parent_agree):
     print("Przykro nam, nie możesz wziąć udziału w warsztacie")
 ```
 
-#### Zadanie
+#### Zadanie 1
 
 Zmodyfikuj skrypt znany z poprzedniego rozdziału tak, aby wyświetlał użytkownikowi komunikaty w zależności od średniej ocen. Dla wyniku powyżej 7 - bardzo dobry, 5-7 przeciętny, 4 i mniej nie warto oglądać. 
 
@@ -185,31 +185,43 @@ else:
 {: .solution }
 
 
-### Łączenie operatorów logicznych
+#### Zadanie 2
 
-Możesz połączyć ze sobą kilka operatorów logicznych w jednym wyrażeniu, ale w wyniku tego może się ono stać nieczytelne. Żeby upewnić się, że kod zachowa się tak, jak tego oczekujesz, łącz poszczególne wyrażenia w nawiasy.
+Do kolejnego zadania musisz skorzystać z managera pakietów Pythona, aby zainstalować zewnętrzną bibliotekę. W konsoli wykonaj wklej  poniższą komendę i naciśnij enter
 
-I tak, przykładowo, załóżmy, że chcemy stworzyć formularz, w którym:
-
-- użytkownik ma podać swój wiek (zmienna `age` - liczba),
-- użytkownik musi wyrazić zgodę na warunki korzystania z serwisu (zmienna `zgodaUzytkownika` - boolean),
-- jeżeli użytkownik ma mniej niż osiemnaście lat, zgodę na warunki korzystania z serwisu musi wyrazić też jego rodzic (zmienna `zgodaRodzica` - boolean).
-
-Poniższe wyrażenie `if` nie działa jednak do końca tak, jak byśmy chcieli.
-
-```Javascript
-if (wiek >= 18 || zgodaRodzica && zgodaUzytkownika) {
-
-}
+```
+pip install requests
 ```
 
-Jeżeli spełniony jest warunek `wiek >= 18`, całe wyrażenie uznawane jest za prawdziwe po napotkaniu w nim operatora `||`. Nie o to nam chodziło, prawda?
+Następnie wykorzystaj poniższy fragment kodu, aby wykonać zadanie
 
-W takiej sytuacji musimy użyć nawiasów, które pokazują, między którymi wyrażeniami mają zachodzić określone zależności.
+```python
+import requests #skorzystaj z pakietu request
 
-```javascript
-if ((wiek >= 18 || zgodaRodzica) && zgodaUzytkownika) {
-}
+req = requests.get("http://numbersapi.com/random/year") # odpytujemy API
+print(req.text)
+
+"""
+Sprawdź czy pobrany tekst ze strony zawiera liczbę "13"
+Zapytaj użytkownika o dowolny ciąg znaków.
+Sprawdź czy tekst ze strony zawiera też ciąg zadany przez użytkownika
+"""
 ```
 
-Jeżeli chcesz odwrócić wartość logiczną wyrażenia znajdującego się w którymś nawiasie, umieść przed nim operator `!` (negację).
+
+```python
+import requests #skorzystaj z pakietu request
+
+req = requests.get("http://numbersapi.com/random/year") # odpytujemy API
+
+sentence = req.text
+
+print(sentence)
+if "13" in sentence:
+    print("Pobrany tekst zawiera liczbę: 13")
+
+word = input("Podaj wyraz do sprawdzenia")
+if word in sentence:
+    print(f"Pobrany tekst zawiera: {word}")
+```
+{: .solution }

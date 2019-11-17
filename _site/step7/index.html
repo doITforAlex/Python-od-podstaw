@@ -351,7 +351,7 @@ print("A teraz jestem poza warunkiem")
     <span class="k">print</span><span class="p">(</span><span class="s">"Przykro nam, nie możesz wziąć udziału w warsztacie"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h4 id="zadanie">Zadanie</h4>
+<h4 id="zadanie-1">Zadanie 1</h4>
 
 <p>Zmodyfikuj skrypt znany z poprzedniego rozdziału tak, aby wyświetlał użytkownikowi komunikaty w zależności od średniej ocen. Dla wyniku powyżej 7 - bardzo dobry, 5-7 przeciętny, 4 i mniej nie warto oglądać.</p>
 
@@ -383,34 +383,41 @@ print("A teraz jestem poza warunkiem")
 
 </code></pre></div></div>
 
-<h3 id="łączenie-operatorów-logicznych">Łączenie operatorów logicznych</h3>
+<h4 id="zadanie-2">Zadanie 2</h4>
 
-<p>Możesz połączyć ze sobą kilka operatorów logicznych w jednym wyrażeniu, ale w wyniku tego może się ono stać nieczytelne. Żeby upewnić się, że kod zachowa się tak, jak tego oczekujesz, łącz poszczególne wyrażenia w nawiasy.</p>
+<p>Do kolejnego zadania musisz skorzystać z managera pakietów Pythona, aby zainstalować zewnętrzną bibliotekę. W konsoli wykonaj wklej  poniższą komendę i naciśnij enter</p>
 
-<p>I tak, przykładowo, załóżmy, że chcemy stworzyć formularz, w którym:</p>
-
-<ul>
-  <li>użytkownik ma podać swój wiek (zmienna <code class="highlighter-rouge">age</code> - liczba),</li>
-  <li>użytkownik musi wyrazić zgodę na warunki korzystania z serwisu (zmienna <code class="highlighter-rouge">zgodaUzytkownika</code> - boolean),</li>
-  <li>jeżeli użytkownik ma mniej niż osiemnaście lat, zgodę na warunki korzystania z serwisu musi wyrazić też jego rodzic (zmienna <code class="highlighter-rouge">zgodaRodzica</code> - boolean).</li>
-</ul>
-
-<p>Poniższe wyrażenie <code class="highlighter-rouge">if</code> nie działa jednak do końca tak, jak byśmy chcieli.</p>
-
-<pre><code class="language-Javascript">if (wiek &gt;= 18 || zgodaRodzica &amp;&amp; zgodaUzytkownika) {
-
-}
-</code></pre>
-
-<p>Jeżeli spełniony jest warunek <code class="highlighter-rouge">wiek &gt;= 18</code>, całe wyrażenie uznawane jest za prawdziwe po napotkaniu w nim operatora <code class="highlighter-rouge">||</code>. Nie o to nam chodziło, prawda?</p>
-
-<p>W takiej sytuacji musimy użyć nawiasów, które pokazują, między którymi wyrażeniami mają zachodzić określone zależności.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">((</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">||</span> <span class="nx">zgodaRodzica</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">zgodaUzytkownika</span><span class="p">)</span> <span class="p">{</span>
-<span class="p">}</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install requests
 </code></pre></div></div>
 
-<p>Jeżeli chcesz odwrócić wartość logiczną wyrażenia znajdującego się w którymś nawiasie, umieść przed nim operator <code class="highlighter-rouge">!</code> (negację).</p>
+<p>Następnie wykorzystaj poniższy fragment kodu, aby wykonać zadanie</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> <span class="c">#skorzystaj z pakietu request</span>
+
+<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://numbersapi.com/random/year"</span><span class="p">)</span> <span class="c"># odpytujemy API</span>
+<span class="k">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="s">"""
+Sprawdź czy pobrany tekst ze strony zawiera liczbę "13"
+Zapytaj użytkownika o dowolny ciąg znaków.
+Sprawdź czy tekst ze strony zawiera też ciąg zadany przez użytkownika
+"""</span>
+</code></pre></div></div>
+
+<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> <span class="c">#skorzystaj z pakietu request</span>
+
+<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://numbersapi.com/random/year"</span><span class="p">)</span> <span class="c"># odpytujemy API</span>
+
+<span class="n">sentence</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">text</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="k">if</span> <span class="s">"13"</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Pobrany tekst zawiera liczbę: 13"</span><span class="p">)</span>
+
+<span class="n">word</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Podaj wyraz do sprawdzenia"</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s">"Pobrany tekst zawiera: {word}"</span><span class="p">)</span>
+</code></pre></div></div>
 
     
 

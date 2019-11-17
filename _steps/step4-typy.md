@@ -88,6 +88,13 @@ W ostatnim przykładze pojawiła się literka `f` przed ciągiem znaków, w ten 
 >>> print(letterB)
 ```
 
+**Sprawdźmy czy napis zawiera znak**
+
+```
+>>> print('A' in 'anna')
+>>> print('A' in 'Anna')
+```
+
 #### Zadania
 
 Zajrzyj do dokumentacji - metody String! Możesz skorzystać z Google:
@@ -317,6 +324,13 @@ Zdejmowanie elementu z listy
 >>> print(sentence_arr)
 >>> sentence_arr[2] = 'psa'
 >>> print(sentence_arr)
+```
+
+**Sprawdźmy czy sekwencja zawiera element**
+
+```
+>>> print('Ala' in sentence_arr)
+>>> print('pies' in sentence_arr)
 ```
 
 #### Zadania
