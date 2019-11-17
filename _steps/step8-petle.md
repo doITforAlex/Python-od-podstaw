@@ -1,8 +1,8 @@
 ---
 layout: step
-number: 9
+number: 8
 title: Petle
-permalink: step9/
+permalink: step8/
 ---
 
 Często chcemy, by nasz kod wykonał się kilkukrotnie, nie wiedząc jednocześnie, ile dokładnie razy ma się powtórzyć.

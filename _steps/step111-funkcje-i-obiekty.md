@@ -1,8 +1,8 @@
 ---
 layout: step
-number: 8
+number: 111
 title: Funkcje i obiekty
-permalink: step8/
+permalink: step111/
 ---
 
 W naszym kodzie używaliśmy kilkukrotnie `document.getElementById`, ale nie wyjaśniliśmy sobie jeszcze, co to tak właściwie znaczy.

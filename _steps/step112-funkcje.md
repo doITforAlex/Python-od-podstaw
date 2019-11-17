@@ -1,8 +1,8 @@
 ---
 layout: step
-number: 8
+number: 112
 title: Funkcje
-permalink: step8/
+permalink: step112/
 ---
 
 Funkcje pozwalają nam na dzielenie jednej wielkiej listy zadań w naszym programie na kilka mniejszych list. To takie jakby pisanie małych programików w większym programie.
