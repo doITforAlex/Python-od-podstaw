@@ -67,6 +67,6 @@ True
 Utwórz zmienną name, która będzie przechowywać twoje imię i nazwisko, zmienną age przypisz do niej swój wiek, oraz zmienną favourite_number zawierającą ulubioną liczbę. Wyświetl co zawierają.
 
 
-
+Czas na poznanie podstawowych typów danych, ale to już w kolejnej lekcji.
 
 

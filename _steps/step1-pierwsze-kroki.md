@@ -39,5 +39,5 @@ U użykowników Linuxa **Terminal** prawdopodobnie jest w:
 
 Może to zależeć od systemu. Jeśli nie znajdziesz terminala, możesz spróbować z wyszukiwarką Google. :)
 
-
+To teraz czas poznać Pythona
 

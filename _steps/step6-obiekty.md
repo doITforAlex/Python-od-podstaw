@@ -1,8 +1,8 @@
 ---
 layout: step
-number: 6
+number: 7
 title: Obiekty
-permalink: step6/
+permalink: step7/
 ---
 
 Za pomocą tablic potrafimy już tworzyć listy wartości.

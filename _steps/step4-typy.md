@@ -232,8 +232,14 @@ print(b**a)  # 68.9209999
 ```
 
 ## Listy
-Lista (inaczej tablica) to struktura danych w Pythonie, która jest sekwencją elementów. Każda wartość znajdująca się na liście jest nazywana elementem. Jest to jeden z najczęściej używanych typów w Pythonie.
 
+Nasze zmienne mogą przechowywać stringi i liczby, co jest super, ale co jeżeli jedna zmienna ma przechować kilka wartości?
+
+W programowaniu często spotykamy się z sytuacją, kiedy nasze dane przechowujemy jako listę informacji - w Pythonie służy do tego specjalny typ danych, **list** (nazywane też tablicami).
+
+Listy to obiekty, które zawierają jakieś wartości w określonej kolejności. A więc, lista może przechowywać nie jedną, a kilka danych.
+
+Typy mogące przechowywać różne dane nazywamy czasem **kolekcjami**.
 Nie ma co tracić czasu, przejdźmy do kodu!
 
 Aby stworzyć listę elementów musimu użyć nawiasów kwadratowych `[]`.
@@ -357,10 +363,13 @@ Poćwicz i pobaw się wartościami logicznymi wpisując następujące instrukcje
 ---
 
 Inne typy dostępne w Pythonie, których dzisiaj nie omówmy:
-- krotki tuple, 
-- zestawy set, 
-- słowniki dict,
-- zakresy range,
-- sekwencje binarne np.bytes
+
+- krotki - tuple, 
+- zestawy - set, 
+- słowniki - dict,
+- zakresy - range,
+- sekwencje binarne - np.bytes
 
 ---
+
+Na razie samodzielnie wpisujemy wszystkie wartości. Chcemy jednak, by program mógł być obsługiwany przez użytkownika. Przejdźmy więc, do kolejnej lekcji.

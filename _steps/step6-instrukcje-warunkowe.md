@@ -1,8 +1,8 @@
 ---
 layout: step
-number: 5
+number: 6
 title: Instrukcje warunkowe
-permalink: step5/
+permalink: step6/
 ---
 
 Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie wpisał użytkownik.

@@ -18,6 +18,10 @@ Potrzebujemy poznać kolejną funkcję wbudowaną input()
 ```
 
 Teraz konsola czeka na nasze działanie, aż wpiszemy ciąg znaków z klawiatury - nasze imię.
+Kiedy je wpiszemy imię zostanie zapisane do zmiennej `name`.
+
+Wyświetlmy je:
+
 
 ```
 >>> print('Cześć', name, 'jak się masz?')
@@ -25,7 +29,7 @@ Teraz konsola czeka na nasze działanie, aż wpiszemy ciąg znaków z klawiatury
 
 Zmienna name została wyświetlona, i ma taką zawartość jak została podana przez `input()`
 
-Możemy to zapisać krócej:
+Możemy to samo zapisać krócej, niech funkcja input od razu wyświetli pytanie:
 
 ```
 >>> age = input('Ile masz lat?')
@@ -35,3 +39,32 @@ Możemy to zapisać krócej:
 
 Funkcja [input() - dokumentacja](https://docs.python.org/3/library/functions.html#input)
 
+#### Zadania
+
+1. Przypisz swoje imię do zmiennej o nazwie `my_name`.
+2. Następnie przypisz swoje nazwisko do `my_surname`.
+3. Połącz te dwa ciągi znaków w jeden.
+4. Poproś użytkownika o imię oraz wiek, a następnie spraw by na ekranie pojawiło się przywitanie oraz informacja jak jest różnica wieku między Wami.
+
+
+Sprawdź jeszcze:
+```
+>>> number = input("Wpisz tu 3: ")
+
+>>> print(3 == number)
+>>> type(3)
+>>> type(number)
+```
+
+Number zostało odczytane jako string. Stąd:
+
+```
+>>> number = int(number)
+>>> print(3 == number)
+```
+
+Zakończ pracę w trypie interaktywnym za pomocą komendy `exit()`.
+
+Znowu jesteśmy w systemowym wierszu poleceń / terminalu.
+
+Teraz przejdziemy do pracy w pliku - w naszym edytorze kodu.

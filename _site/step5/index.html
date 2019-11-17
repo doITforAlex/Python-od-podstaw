@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Python: Tablice</title>
-  <meta name="description" content="Nasze zmienne mogą przechowywać stringi i liczby, co jest super, ale co jeżeli jedna zmienna ma przechować kilka wartości?">
+  <title>Python: Dane użytkownika</title>
+  <meta name="description" content="Do tej pory pisaliśmy kod, w którym wszystkie dane do zmiennych podawaliśmy samodzielnie. Zmienna name od razu dostawała wartość (np. przez name = &quot;Rita&quot;), c...">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   
   <link rel="stylesheet" href="/assets/main.css">
@@ -118,21 +118,15 @@
         </a>
       </li>
   
-      <li class='active'>
-        <a href="/step5/">
-          5 - Instrukcje warunkowe
-        </a>
-      </li>
-  
-      <li class='active'>
-        <a href="/step5/">
-          5 - Tablice
+      <li class=''>
+        <a href="/step6/">
+          6 - Instrukcje warunkowe
         </a>
       </li>
   
       <li class=''>
-        <a href="/step6/">
-          6 - Obiekty
+        <a href="/step7/">
+          7 - Obiekty
         </a>
       </li>
   
@@ -187,144 +181,68 @@
   
   <header class="post-header">
       
-    <h2 class="post-title"> Step 5 - Tablice</h2>
+    <h2 class="post-title"> Step 5 - Dane użytkownika</h2>
     </header>
 
   <div class="post-content">
-    <p>Nasze zmienne mogą przechowywać stringi i liczby, co jest super, ale co jeżeli jedna zmienna ma przechować kilka wartości?</p>
+    <p>Do tej pory pisaliśmy kod, w którym wszystkie dane do zmiennych podawaliśmy samodzielnie. Zmienna <code class="highlighter-rouge">name</code> od razu dostawała wartość (np. przez <code class="highlighter-rouge">name = "Rita"</code>), co gdybyśmy chcieli tę zmienną zaktualizować o imię nowego użytkownika?</p>
 
-<p>W programowaniu często spotykamy się z sytuacją, kiedy nasze dane przechowujemy jako listę informacji - w javascript służy do tego specjalny typ danych, <strong>tablica</strong>.</p>
+<h3 id="input">input()</h3>
 
-<p>Tablice to obiekty (o których powiemy więcej później), które zawierają jakieś wartości w określonej kolejności. A więc, tablica może przechowywać nie jedną, a kilka danych.</p>
+<p>Potrzebujemy poznać kolejną funkcję wbudowaną input()</p>
 
-<p>Typy mogące przechowywać różne dane nazywamy czasem <strong>kolekcjami</strong>.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Tu wpisz swoje imię: ')
+&gt;&gt;&gt; name = input()
 
-<p>Teraz stwórzmy prostą stronę, na której wyświetlimy listę imion, do której będziemy mogli dodawać kolejne pozycje.</p>
-
-<p>Najpierw napiszmy stronę w HTMLu:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Warsztaty z JSa!<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"noweImie"</span> <span class="na">placeholder=</span><span class="s">"Podaj nowe imię"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"przyciskDodajImie"</span><span class="nt">&gt;</span>Dodaj imię<span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"liczbaImion"</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"listaImion"</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-  <span class="nt">&lt;script&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<p>Dzięki temu mamy już okno, w którym możemy wpisać nowe imię, przycisk, który doda je do listy i dwa divy - jeden, w którym wyświetla się lista imion i drugi, pokazujący liczbę imion.</p>
+<p>Teraz konsola czeka na nasze działanie, aż wpiszemy ciąg znaków z klawiatury - nasze imię.
+Kiedy je wpiszemy imię zostanie zapisane do zmiennej <code class="highlighter-rouge">name</code>.</p>
 
-<p>Teraz zajmijmy się naszym tagiem <code class="highlighter-rouge">&lt;script&gt;</code>…</p>
+<p>Wyświetlmy je:</p>
 
-<h2 id="tworzenie-tablicy">Tworzenie tablicy</h2>
-
-<p>Pustą tablicę tworzymy używając nawiasów kwadratowych.</p>
-
-<p>Na początku swojego tagu <code class="highlighter-rouge">&lt;script&gt;</code> stwórz zmienną <code class="highlighter-rouge">imiona</code> i przypisz do niej początkową wartość - pustą tablicę.</p>
-
-<pre><code class="language-Javascript">let imiona = [] ;
-</code></pre>
-
-<p>Oczywiście, jeżeli chcesz, możesz stworzyć tablicę, która będzie już zawierała jakieś elementy - oddzielaj je wtedy od siebie przecinkami.</p>
-
-<pre><code class="language-Javascript">let imiona =["Karolina", "Asia"];
-</code></pre>
-
-<p>W naszym przykładzie zaczniemy jednak od pustej tablicy.</p>
-
-<h2 id="dodawanie-elementów-do-tablicy">Dodawanie elementów do tablicy</h2>
-
-<p>Chcemy, by po kliknięciu na przycisk <code class="highlighter-rouge">Dodaj imię</code>, nowe imię zostało dodane na końcu stworzonej przez nas tablicy.</p>
-
-<p>W tym celu najpierw napiszmy funkcję, która będzie się wykonywała po kliknięciu na ten przycisk i przypiszmy ją do określonego zdarzenia.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">dodajImie</span><span class="p">()</span> <span class="p">{}</span>
-
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"przyciskDodajImie"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">dodajImie</span><span class="p">;</span>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Cześć', name, 'jak się masz?')
 </code></pre></div></div>
 
-<p>Teraz w funkcji <code class="highlighter-rouge">dodajImie</code> chcemy pobrać wpisaną przez użytkownika wartość i dodać ją na końcu naszej tablicy.</p>
+<p>Zmienna name została wyświetlona, i ma taką zawartość jak została podana przez <code class="highlighter-rouge">input()</code></p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">imie</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"noweImie"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-<span class="nx">imiona</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">imie</span><span class="p">);</span>
+<p>Możemy to samo zapisać krócej, niech funkcja input od razu wyświetli pytanie:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; age = input('Ile masz lat?')
+
+&gt;&gt;&gt; print('To już', age, 'lat!')
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">push()</code> to funkcja, którą możemy wykonać na każdej tablicy - nazywamy ją wtedy właściwością. Istnieje jeszcze wiele innych właściwości, z których możemy korzystać, ale o nich powiemy sobie później.</p>
+<p>Funkcja <a href="https://docs.python.org/3/library/functions.html#input">input() - dokumentacja</a></p>
 
-<p>Skoro dodaliśmy już nowe imię do tablicy, chcemy ją wyświetlić i policzyć, ile imion zawiera.</p>
-
-<p>Żeby elementy naszej tablicy stały się jednym stringiem, użyjemy właściwości <code class="highlighter-rouge">join()</code>, która konkatenuje ze sobą wszystkie elementy tablicy w jeden ciąg znaków.</p>
-
-<p>Z kolei do policzenia elementów tablicy, skorzystamy z właściwości <code class="highlighter-rouge">length</code>. Jak widzisz, w przeciwieństwie do dwóch poprzednich, ta właściwość nie jest funkcją, a po prostu właściwością liczbową.</p>
-
-<p>Teraz, wewnątrz funkcji <code class="highlighter-rouge">dodajImie</code> dodaj następujący kod:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"listaImion"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span>
-  <span class="s2">"Imiona to:"</span> <span class="o">+</span> <span class="nx">imiona</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">", "</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"liczbaImion"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span>
-  <span class="s2">"Na liście mamy "</span> <span class="o">+</span> <span class="nx">imiona</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s2">" imion."</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>A teraz otwórz tę stronę i dodaj do listy kilka imion.</p>
-
-<p>Super!</p>
-
-<p>Jak możesz jednak zauważyć, z naszą stroną jest kilka małych problemów.</p>
+<h4 id="zadania">Zadania</h4>
 
 <ol>
-  <li>Do listy możesz dodać puste imię, co nie wygląda zbyt fajnie.</li>
-  <li>Jeżeli na liście masz tylko jedno imię, wyświetla się wiadomość “Na liście mamy 1 imion”. Lepiej, żeby w takim przypadku wyświetlało się “Na liście mamy 1 imię”.</li>
+  <li>Przypisz swoje imię do zmiennej o nazwie <code class="highlighter-rouge">my_name</code>.</li>
+  <li>Następnie przypisz swoje nazwisko do <code class="highlighter-rouge">my_surname</code>.</li>
+  <li>Połącz te dwa ciągi znaków w jeden.</li>
+  <li>Poproś użytkownika o imię oraz wiek, a następnie spraw by na ekranie pojawiło się przywitanie oraz informacja jak jest różnica wieku między Wami.</li>
 </ol>
 
-<p>Żeby to naprawić napiszemy kilka warunków. Spróbuj zrobić to samodzielnie, zanim pójdziemy dalej.</p>
+<p>Sprawdź jeszcze:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; number = input("Wpisz tu 3: ")
 
-<p>Podpowiedzi:</p>
+&gt;&gt;&gt; print(3 == number)
+&gt;&gt;&gt; type(3)
+&gt;&gt;&gt; type(number)
+</code></pre></div></div>
 
-<ol>
-  <li><code class="highlighter-rouge">if (imie !== ‘’)</code></li>
-  <li><code class="highlighter-rouge">if (imiona.length === 0)</code></li>
-</ol>
+<p>Number zostało odczytane jako string. Stąd:</p>
 
-<p>Możliwe rozwiązanie:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; number = int(number)
+&gt;&gt;&gt; print(3 == number)
+</code></pre></div></div>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
-  <span class="kd">let</span> <span class="nx">imiona</span> <span class="o">=</span> <span class="p">[];</span>
+<p>Zakończ pracę w trypie interaktywnym za pomocą komendy <code class="highlighter-rouge">exit()</code>.</p>
 
-  <span class="kd">function</span> <span class="nx">dodajImie</span><span class="p">(){</span>
-    <span class="kd">let</span> <span class="nx">imie</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'noweImie'</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="k">if</span><span class="p">(</span><span class="nx">imie</span> <span class="o">!==</span> <span class="s1">''</span><span class="p">){</span>
-      <span class="nx">imiona</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">imie</span><span class="p">);</span>
-    <span class="p">}</span>
+<p>Znowu jesteśmy w systemowym wierszu poleceń / terminalu.</p>
 
-    <span class="kd">let</span> <span class="nx">komunikatZLiczbaImion</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
-    <span class="kd">let</span> <span class="nx">komunikatZListaImion</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="nx">imiona</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">){</span>
-      <span class="nx">komunikatZLiczbaImion</span> <span class="o">=</span> <span class="s2">"Na razie nie mamy jeszcze żadnych imion."</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">imiona</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">1</span><span class="p">){</span>
-      <span class="nx">komunikatZLiczbaImion</span> <span class="o">=</span> <span class="s2">"Na liście mamy 1 imię."</span><span class="p">;</span>
-      <span class="nx">komunikatZListaImion</span> <span class="o">=</span> <span class="s2">"Imię to: "</span> <span class="o">+</span> <span class="nx">imiona</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">imiona</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">){</span>
-      <span class="nx">komunikatZLiczbaImion</span> <span class="o">=</span> <span class="s2">"Na liście mamy "</span> <span class="o">+</span> <span class="nx">imiona</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="s2">" imion."</span><span class="p">;</span>
-      <span class="nx">komunikatZListaImion</span> <span class="o">=</span> <span class="s2">"Imiona to: "</span> <span class="o">+</span> <span class="nx">imiona</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">', '</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'liczbaImion'</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">komunikatZLiczbaImion</span><span class="p">;</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'listaImion'</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">komunikatZListaImion</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"przyciskDodajImie"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">dodajImie</span><span class="p">;</span>
-
-<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
-</span></code></pre></div></div>
+<p>Teraz przejdziemy do pracy w pliku - w naszym edytorze kodu.</p>
 
     
 

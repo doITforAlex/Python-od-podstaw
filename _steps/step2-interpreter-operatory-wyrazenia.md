@@ -5,8 +5,11 @@ title: Interpreter Pythona
 permalink: step2/
 ---
 
-W tej części rozpoczniemy zabawę z Pythonem. Otwórz interpreter Pythona w wierszu poleceń na swoim komputerze.
-Wpisz komendę
+W tej części rozpoczniemy zabawę z Pythonem, na razie w trybie interkatywnym czyli w konsolowym interpreterze.
+
+Otwórz interpreter Pythona w wierszu poleceń na swoim komputerze.
+Wpisz komendę `python`:
+
 
 ```
 $ python
@@ -125,6 +128,8 @@ Od razu przetestujmy:
 ```
 
 #### Zadania
+Sprawdź w konsoli:
+
 1. Czy 23 + 3 będzie się równać 15  + 12 ?
 2. Czy dzielenie 29 przez 7 bez reszty wynosi 5?
 3. Czy 27 podzielone przez 8 daje resztę 3?

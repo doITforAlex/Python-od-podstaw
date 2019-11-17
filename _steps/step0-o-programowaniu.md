@@ -34,4 +34,4 @@ Ale co z odczytywaniem i zapisywaniem plików? Pozyskiwaniem danych wprowadzonyc
 Do tego wykorzystujemy **funkcje**, które są już wbudowane w język programowania. Większość języków posiada wiele gotowych funkcji, które wykonują najróżniejsze działania.
 
 
-A teraz, skoro wstęp teorytyczny mamy za sobą, zabierajmy się za programowanie!
+A teraz, skoro wstęp teorytyczny mamy za sobą, zabierajmy się za pracę!

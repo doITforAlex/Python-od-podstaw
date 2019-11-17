@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Python: Obiekty</title>
-  <meta name="description" content="Za pomocą tablic potrafimy już tworzyć listy wartości.">
+  <title>Python: Instrukcje warunkowe</title>
+  <meta name="description" content="Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie w...">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   
   <link rel="stylesheet" href="/assets/main.css">
@@ -118,21 +118,15 @@
         </a>
       </li>
   
-      <li class=''>
-        <a href="/step5/">
-          5 - Instrukcje warunkowe
-        </a>
-      </li>
-  
-      <li class=''>
-        <a href="/step5/">
-          5 - Tablice
-        </a>
-      </li>
-  
       <li class='active'>
         <a href="/step6/">
-          6 - Obiekty
+          6 - Instrukcje warunkowe
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step7/">
+          7 - Obiekty
         </a>
       </li>
   
@@ -187,50 +181,224 @@
   
   <header class="post-header">
       
-    <h2 class="post-title"> Step 6 - Obiekty</h2>
+    <h2 class="post-title"> Step 6 - Instrukcje warunkowe</h2>
     </header>
 
   <div class="post-content">
-    <p>Za pomocą tablic potrafimy już tworzyć listy wartości.</p>
+    <p>Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie wpisał użytkownik.</p>
 
-<p>Ale co jeżeli nasza lista ma być bardziej skomplikowana i nie możemy jej zapisać po prostu jako ciągu pojedynczych wartości? Jeżeli nasza aplikacja ma zawierać odpowiednio nazwane informacje o naszych użytkownikach? Albo o naszych kotach?</p>
+<p>Ale jak możemy kontrolować, co robi nasz program?</p>
 
-<p>Wtedy przydadzą nam się <strong>obiekty</strong>.</p>
+<p>Za pomocą <strong>instrukcji warunkowych</strong>.</p>
 
-<p>Obiekty to zmienne, które zawierają kilka wartości. Ich zadaniem jest łączenie razem kilku wartości, które odnoszą się do jednej rzeczy. Takie wartości obiektu nazywamy jego właściwościami.</p>
+<p>Najpopularniejszą instrukcją jest wyrażenie <code class="highlighter-rouge">if</code>.</p>
 
-<p>Stwórzmy kolejną stronę, ale tym razem zamiast listy imion będziemy pracować na liście obiektów, które będziemy wyświetlać na różne sposoby.</p>
+<p>Spójrz na przykład poniżej - sprawdzamy, czy użytkownik podał swoje imię i jeżeli tego nie zrobił, ustawiamy odpowiednią treść wiadomości z błędem.</p>
 
-<p>I tak, przykładowo, nasz użytkownik może mieć imię, adres, swój unikalny numer użytkownika. Albo kot może mieć imię, wagę czy kolor.</p>
+<pre><code class="language-Javascript">if(imie == ''){
+  wiadomoscOBledzie = 'Musisz podać swoje imię!';
+}
+</code></pre>
 
-<p>Obiekty można tworzyć na kilka różnych sposób, ale najłatwiejszym jest korzystanie z <strong>literału obiektu</strong>.</p>
+<p><code class="highlighter-rouge">if</code> składa się z dwóch części:</p>
 
-<p>Oto nasz obiekt <code class="highlighter-rouge">kot</code>:</p>
+<ul>
+  <li>warunku w nawiasach okrągłych (możesz sobie wyobrazić, że to pytanie, które zadajemy naszemu kodowi, na przykład <em>“Czy imię użytkownika to pusty string?”</em>),</li>
+  <li>kodu w nawiasach klamerkowych, zawierającego instrukcje, które mają się wykonać, jeżeli nasz warunek jest prawdziwy (czyli jeżeli odpowiedzią na nasze pytanie jest <em>“Tak”</em>).</li>
+</ul>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">kot</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">imie</span><span class="p">:</span> <span class="s2">"Garfield"</span><span class="p">,</span>
-  <span class="na">waga</span><span class="p">:</span> <span class="mf">8.2</span><span class="p">,</span>
-  <span class="na">kolor</span><span class="p">:</span> <span class="s2">"pomarańczowy"</span><span class="p">,</span>
-  <span class="na">lubi</span><span class="p">:</span> <span class="s2">"lasagne"</span><span class="p">,</span>
-  <span class="na">nienawidzi</span><span class="p">:</span> <span class="s2">"poniedziałków"</span>
-<span class="p">};</span>
+<p>Ewentualnie na końcu możesz dodać też <code class="highlighter-rouge">else</code>, który określa, jaki kod się wykona, jeżeli nasz warunek nie zostanie spełniony.</p>
+
+<p>Warunki przyjmują wartość wyrażeń logicznych, czyli tzw. <strong>booleanów</strong>.
+Boolean to takie wyrażenie, którego wartość zostaje oszacowana jako <code class="highlighter-rouge">true</code> (prawdziwa) lub <code class="highlighter-rouge">false</code> (fałszywa) dzięki użyciu <strong>operatorów warunkowych</strong>.</p>
+
+<p>Operator warunkowy, którego użyliśmy w powyższym przykładzie to <strong>operator równości</strong>, czyli <strong>A jest równe B</strong>. Jeżeli wartości po jego obu stronach są uznawane za takie same, warunek uznawany jest za prawdziwy (przyjmuje wartość <code class="highlighter-rouge">true</code>). Jeżeli wartości po obu stronach są różne, warunek nie jest uznawany za prawdziwy i przyjmuje wartość <code class="highlighter-rouge">false</code>.</p>
+
+<h2 id="używanie-operatorów-porównania">Używanie operatorów porównania</h2>
+
+<p>Zmodyfikujmy nasz poprzedni przykład - dodamy miejsce, w którym możemy podać swoje imię, za pomocą którego strona następnie się do nas zwróci.</p>
+
+<p>Najpierw dodajmy miejsce, w którym podamy swoje imię:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"inputZImieniem"</span> <span class="na">placeholder=</span><span class="s">"Podaj swoje imię"</span> <span class="nt">/&gt;</span>
 </code></pre></div></div>
 
-<p>Nasz obiekt, przypisany do zmiennej <code class="highlighter-rouge">kot</code>, ma pięć właściwości: 4 stringi i jedną liczbę.
-Żeby odwoływać się do właściwości obiektu, podaj jego nazwę i określoną właściwość, oddzielając je od siebie kropką, np. <code class="highlighter-rouge">kot.imie</code>, <code class="highlighter-rouge">kot.lubi</code>.</p>
+<p>A teraz zmodyfikujmy nasz kod, dzięki czemu nasze funkcje <code class="highlighter-rouge">przyjdz</code> i <code class="highlighter-rouge">odejdz</code> zobaczą, jakie imię wpisaliśmy i użyją go w wiadomości.</p>
 
-<p>Właściwości obiektu możesz używać w taki sam sposób, jak pozostałych zmiennych:</p>
+<pre><code class="language-JavaScript">function przyjdz(){
+  let imie = document.getElementById('inputZImieniem').value;
+  wiadomosc = 'Witaj '+imie+'!';
+}
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">kot</span><span class="p">.</span><span class="nx">waga</span> <span class="o">=</span> <span class="nx">kot</span><span class="p">.</span><span class="nx">waga</span> <span class="o">-</span> <span class="mf">0.2</span><span class="p">;</span>
+function odejdz(){
+  let imie = document.getElementById('inputZImieniem').value;
+  wiadomosc = 'Szerokiej drogi '+imie+'!';
+}
+</code></pre>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">kot</span><span class="p">.</span><span class="nx">imie</span> <span class="o">+</span> <span class="s2">" naprawdę nienawidzi "</span> <span class="o">+</span> <span class="nx">kot</span><span class="p">.</span><span class="nx">nienawidzi</span><span class="p">);</span>
+<p>Odśwież stronę, podaj swoje imię i kliknij na przycisk <code class="highlighter-rouge">Przyjdź</code> lub <code class="highlighter-rouge">Odejdź</code>.</p>
+
+<p>Ale co jeśli nie podasz żadnego imienia? W wiadomości zostanie puste miejsce, czego chcemy uniknąć.</p>
+
+<p>Dodajmy do naszego kodu instrukcję warunkową, która zapobiegnie takiej sytuacji.</p>
+
+<pre><code class="language-Javascript">function przyjdz(){
+  let imie = document.getElementById('inputZImieniem').value;
+  if(imie == ''){
+    wiadomosc = "Witaj tajemniczy nieznajomy!  Jak masz na imię?";
+  }
+  else {
+    wiadomosc = 'Witaj '+imie+'!';
+  }
+}
+
+function odejdz(){
+  let imie = document.getElementById('inputZImieniem').value;
+  if(imie == ''){
+    wiadomosc = 'Szerokiej drogi tajemniczy nieznajomy!';
+  }
+  else {
+    wiadomosc = 'Szerokiej drogi '+imie+'!';
+  }
+}
+</code></pre>
+
+<p>Jak widzisz, używamy tutaj instrukcji <code class="highlighter-rouge">else</code>. Jeżeli <code class="highlighter-rouge">imie</code> jest pustym stringiem, nasza wiadomość nie będzie go używała.
+Ale jeżeli nasze <code class="highlighter-rouge">imie</code> nie będzie pustym stringiem, wykonany zostanie kod znajdujący się w bloku <code class="highlighter-rouge">else</code>, który ustawi wiadomość, dodając do niej podane przez użytkownika imię (za pomocą znanej ci już konkatenacji - znaku <code class="highlighter-rouge">+</code>).</p>
+
+<p>Teraz nasze funkcje <code class="highlighter-rouge">przyjdz</code> i <code class="highlighter-rouge">odejdz</code> mogą się wykonać na dwa różne sposoby.</p>
+
+<p>Tak na marginesie, możesz zauważyć, że w obu funkcjach wykonywane są prawie takie same instrukcje, które różnią się jedynie małymi różnicami. Oczywiście, możemy zmodyfikować nasz kod w taki sposób, że nie będzie zawierał takich powtórzeń - ale tym zajmiemy się w jednej z kolejnych lekcji, poświęconej funkcjom.</p>
+
+<h2 id="operatory-warunkowe">Operatory warunkowe</h2>
+
+<p>Na razie używaliśmy operatora równości, <code class="highlighter-rouge">==</code>, za pomocą którego sprawdzaliśmy, czy <em>A jest równe B</em>. Podobnych operatorów jest jednak znacznie więcej.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Nazwa/Opis</th>
+      <th>Używany na</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">==</code></td>
+      <td>Równość. Obie strony mają te same wartości.</td>
+      <td>Liczby i stringi.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">===</code></td>
+      <td>Równość ścisła. Wartość i typ obu stron musi być taka sama.</td>
+      <td>Liczby i stringi.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">!=</code></td>
+      <td>Brak równości. Strony mają różne wartości.</td>
+      <td>Liczby i stringi.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">!==</code></td>
+      <td>Brak równości ścisłej. Różne wartości ALBO różne typy.</td>
+      <td>Liczby i stringi.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;</code></td>
+      <td>Mniejszy niż.</td>
+      <td>Liczby.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt;</code></td>
+      <td>Większy niż.</td>
+      <td>Liczby.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&lt;=</code></td>
+      <td>Mniejszy lub równy.</td>
+      <td>Liczby.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">&gt;=</code></td>
+      <td>Większy lub równy.</td>
+      <td>Liczby.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Większość z nich mówi sama za siebie - z wyjątkiem ścisłej równości i jej braku. Wyjaśnijmy sobie krótko, o co z nimi chodzi.</p>
+
+<p>Jeżeli porównywane wartości będą różnych typów, zwykłe porównania (<code class="highlighter-rouge">==</code> i <code class="highlighter-rouge">!=</code>) najpierw przekonwertują je do tego samego typu, a dopiero potem dokonają porównania. Przykładowo, <code class="highlighter-rouge">12 == '12'</code>potraktowane zostanie jak <code class="highlighter-rouge">'12' == '12'</code>.</p>
+
+<p>Porównania ścisłe nie pozwalają na konwersję typów.</p>
+
+<p>Z tego też powodu zwykle zaleca się korzystanie właśnie z porównań ścisłych.</p>
+
+<h2 id="operatory-logiczne">Operatory logiczne</h2>
+
+<p>Umiemy już radzić sobie z porównaniem dwóch rzeczy. Ale co jeżeli mamy dokonać oceny bardziej skomplikowanych warunków? Wtedy z pomocą przychodzą nam <strong>operatory logiczne</strong>.</p>
+
+<p>Spotykać się będziesz głównie z trzema z nich: <code class="highlighter-rouge">&amp;&amp;</code>, <code class="highlighter-rouge">||</code> i <code class="highlighter-rouge">!</code></p>
+
+<h3 id="operator--koniunkcja-i">Operator <code class="highlighter-rouge">&amp;&amp;</code> (<strong>koniunkcja</strong>, <code class="highlighter-rouge">i</code>)</h3>
+
+<p><code class="highlighter-rouge">&amp;&amp;</code> to operator koniunkcji - używamy go, kiedy każdy z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">&amp;&amp;</span> <span class="nx">zgodaUzytkownika</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
-<p>Jeżeli spróbujesz odwołać się do właściwości, która nie istnieje, jej wartością będzie <code class="highlighter-rouge">undefined</code>.</p>
+<p>Używając operatora <code class="highlighter-rouge">&amp;&amp;</code> możesz łączyć ze sobą tyle warunków, ile tylko zapragniesz. One następnie będą sprawdzane od lewej do prawej i jeżeli tylko jeden z nich będzie fałszywy (będzie miał wartość <code class="highlighter-rouge">false</code>), całe wyrażenie będzie fałszywe. W przeciwnym razie całe wyrażenie będzie pradziwe (będzie miało wartość <code class="highlighter-rouge">true</code>).</p>
 
-<p>Jeżeli z kolei spróbujesz przypisać wartość do takiej nieistniejącej właściwości, zostanie ona stworzona.</p>
+<h3 id="operator--alternatywa-albo">Operator <code class="highlighter-rouge">||</code> (<strong>alternatywa</strong>, <code class="highlighter-rouge">albo</code>)</h3>
 
-<p>Javascript i przeglądarki w dużym stopniu korzystają właśnie z obiektów. Każdy element na stronie i każde zdarzenie jest obiektem. Ale o tym dowiemy się za chwilę.</p>
+<p><code class="highlighter-rouge">||</code> to operator alternatywy - używamy go, kiedy tylko jeden z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">||</span> <span class="nx">zgodaRodzica</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Tak samo jak w przypadku operatora <code class="highlighter-rouge">&amp;&amp;</code>, używając operatora <code class="highlighter-rouge">||</code> możesz łączyć ze sobą tyle warunków, ile chcesz. One również sprawdzane są od lewej do prawej - różnica polega na tym, że w przypadku alternatywy, jeżeli którykolwiek z warunków wyrażenia będzie prawdziwy, prawdziwe będzie też całe wyrażenie.</p>
+
+<h3 id="operator--negacja-nie">Operator <code class="highlighter-rouge">!</code> (<strong>negacja</strong>, <code class="highlighter-rouge">nie</code>)</h3>
+
+<p>W przeciwieństwie do operatorów <code class="highlighter-rouge">&amp;&amp;</code> i <code class="highlighter-rouge">||</code>, negacja logiczna umieszczana jest przed wyrażeniem, żeby odwrócić jego wartość logiczną (z <code class="highlighter-rouge">true</code> na <code class="highlighter-rouge">false</code> albo z <code class="highlighter-rouge">false</code> na <code class="highlighter-rouge">true</code>).</p>
+
+<pre><code class="language-Javascript">if(!zgodaUzytkownika){
+
+}
+</code></pre>
+
+<p>Ten operator przydaje się w sytuacjach, kiedy coś nie zostało zrobione albo coś poszło nie tak.</p>
+
+<h3 id="łączenie-operatorów-logicznych">Łączenie operatorów logicznych</h3>
+
+<p>Możesz połączyć ze sobą kilka operatorów logicznych w jednym wyrażeniu, ale w wyniku tego może się ono stać nieczytelne. Żeby upewnić się, że kod zachowa się tak, jak tego oczekujesz, łącz poszczególne wyrażenia w nawiasy.</p>
+
+<p>I tak, przykładowo, załóżmy, że chcemy stworzyć formularz, w którym:</p>
+
+<ul>
+  <li>użytkownik ma podać swój wiek (zmienna <code class="highlighter-rouge">age</code> - liczba),</li>
+  <li>użytkownik musi wyrazić zgodę na warunki korzystania z serwisu (zmienna <code class="highlighter-rouge">zgodaUzytkownika</code> - boolean),</li>
+  <li>jeżeli użytkownik ma mniej niż osiemnaście lat, zgodę na warunki korzystania z serwisu musi wyrazić też jego rodzic (zmienna <code class="highlighter-rouge">zgodaRodzica</code> - boolean).</li>
+</ul>
+
+<p>Poniższe wyrażenie <code class="highlighter-rouge">if</code> nie działa jednak do końca tak, jak byśmy chcieli.</p>
+
+<pre><code class="language-Javascript">if (wiek &gt;= 18 || zgodaRodzica &amp;&amp; zgodaUzytkownika) {
+
+}
+</code></pre>
+
+<p>Jeżeli spełniony jest warunek <code class="highlighter-rouge">wiek &gt;= 18</code>, całe wyrażenie uznawane jest za prawdziwe po napotkaniu w nim operatora <code class="highlighter-rouge">||</code>. Nie o to nam chodziło, prawda?</p>
+
+<p>W takiej sytuacji musimy użyć nawiasów, które pokazują, między którymi wyrażeniami mają zachodzić określone zależności.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">((</span><span class="nx">wiek</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="o">||</span> <span class="nx">zgodaRodzica</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">zgodaUzytkownika</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Jeżeli chcesz odwrócić wartość logiczną wyrażenia znajdującego się w którymś nawiasie, umieść przed nim operator <code class="highlighter-rouge">!</code> (negację).</p>
 
     
 
