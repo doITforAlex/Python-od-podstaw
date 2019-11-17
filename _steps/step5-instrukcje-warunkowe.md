@@ -7,9 +7,9 @@ permalink: step5/
 
 Nie zawsze chcemy, żeby nasz kod za każdym razem wykonywał te same czynności - czasem powinien robić inne rzeczy, na przykład reagując na to, co na stronie wpisał użytkownik.
 
-Mówimy wtedy, że nasz kod ma **odgałęzienia**.
+Ale jak możemy kontrolować, co robi nasz program?
 
-Ale jak możemy kontrolować, co robi nasz program? Za pomocą **instrukcji warunkowych**.
+Za pomocą **instrukcji warunkowych**.
 
 Najpopularniejszą instrukcją jest wyrażenie `if`.
 
