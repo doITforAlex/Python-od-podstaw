@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Python: Funkcje</title>
+  <meta name="description" content="Funkcje pozwalają nam na dzielenie jednej wielkiej listy zadań w naszym programie na kilka mniejszych list. To takie jakby pisanie małych programików w więks...">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://localhost:4000/step7/">
+  <link rel="alternate" type="application/rss+xml" title="Do IT for Alex" href="/feed.xml">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('div.solution').each( function(){
+      $(this).prepend('<h5 class="toggle hiding"><i class="fa fa-chevron-up" aria-hidden="true"></i> Click to <span class="action"></span> solution</h5>');
+    });
+    $('div.solution .highlight').first().addClass('hidden');
+    $('h5.toggle').click(function(e){
+      $(this).parent().children('.highlight').first().slideToggle('show');
+      $(this).toggleClass('showing');
+      $(this).toggleClass('hiding');
+      $(this).children('i.fa').toggleClass('fa-chevron-up');
+      $(this).children('i.fa').toggleClass('fa-chevron-down');
+
+    });
+  });
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+    <a class="site-title" href="https://flynerd.pl/alex">Do IT for Alex</a>
+    <a class="site-title" href="/"><span>Python od podstaw</span></a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Strona główna</a>
+           <a class="page-link go-link" href="/step0/"><i class="fa fa-rocket" aria-hidden="true"></i> Start</a>
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<div class="step-nav">
+  <ul class="main">
+    <li class=""><a  href="/">Strona główna</a></li>
+  </ul>
+
+  <h3>Etapy:</h3>
+  <ul>
+  
+      <li class=''>
+        <a href="/step0/">
+          0 - O programowaniu
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step1/">
+          1 - Wiersz poleceń
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step2/">
+          2 - Interpreter Pythona
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step3/">
+          3 - Zmienne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step4/">
+          4 - Typy danych
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Dane użytkownika
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Instrukcje warunkowe
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Tablice
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step6/">
+          6 - Obiekty
+        </a>
+      </li>
+  
+      <li class='active'>
+        <a href="/step7/">
+          7 - Funkcje
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step8/">
+          8 - Funkcje i obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step9/">
+          9 - Petle
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step10/">
+          10 - Skrypty zewnetrzne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step11/">
+          11 - DOM
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step12/">
+          12 - Co teraz?
+        </a>
+      </li>
+  
+  </ul>
+
+  <h3>Useful Links</h3>
+  <ul>
+  <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN Javascript Reference</a></li>
+
+</ul>
+
+
+</div>
+
+        <article class="post">
+  
+  <header class="post-header">
+      
+    <h2 class="post-title"> Step 7 - Funkcje</h2>
+    </header>
+
+  <div class="post-content">
+    <p>Funkcje pozwalają nam na dzielenie jednej wielkiej listy zadań w naszym programie na kilka mniejszych list. To takie jakby pisanie małych programików w większym programie.</p>
+
+<p>Na razie używaliśmy ich do przypisania reakcji na jakieś zdarzenia, w szczególności na kliknięcie na przycisk (<code class="highlighter-rouge">onclick</code>), ale możesz z nich korzystać również w innych przypadkach.</p>
+
+<p>Dzielenie całego kodu na funkcje sprawia, że zamiast jednego wielkiego programu mamy wiele małych programików. Ale co tak właściwie nam to daje?</p>
+
+<ol>
+  <li>Małe programy łatwiej się pisze.</li>
+  <li>Małe programy są łatwiejsze do przeczytania i zrozumienia.</li>
+  <li>Oszczędzamy czas, bo jednej funkcji możemy użyć w kilku miejscach.</li>
+</ol>
+
+<p>A więc, pobawmy się funkcjami tworząc kolejną aplikację.
+Czego się przy okazji nauczymy?</p>
+
+<ul>
+  <li><strong>deklarowania</strong> funkcji,</li>
+  <li><strong>wywoływania</strong> funkcji,</li>
+  <li><strong>parametrów</strong> i <strong>argumentów</strong> funkcji,</li>
+  <li><strong>wartości zwracanych</strong> przez funkcje.</li>
+</ul>
+
+<p>Bierzmy się do roboty!</p>
+
+<h2 id="tworzymy-html">Tworzymy HTML</h2>
+
+<p>Stwórz nowy plik z następującym kodem HTML.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Warsztaty z JSa!<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span>
+      <span class="na">style=</span><span class="s">"padding:10px; margin: 15px; border:1px solid grey; background-color:#ffffff"</span>
+    <span class="nt">&gt;</span>
+      Tło:
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"inputKolorTla"</span> <span class="na">name=</span><span class="s">"tlo"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffffff"</span> <span class="nt">/&gt;</span>
+      Rząd 1:
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"inputKolorRzad1"</span> <span class="na">name=</span><span class="s">"rzad1"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffffff"</span> <span class="nt">/&gt;</span>
+      Rząd 2:
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"inputKolorRzad2"</span> <span class="na">name=</span><span class="s">"rzad2"</span> <span class="na">type=</span><span class="s">"color"</span> <span class="na">value=</span><span class="s">"#ffffff"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"komunikat"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"rzad1"</span> <span class="na">style=</span><span class="s">"width:100%;height:100px"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"rzad2"</span> <span class="na">style=</span><span class="s">"width:100%;height:100px"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+  <span class="nt">&lt;script&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Zapisz plik i otwórz go w przeglądarce.</p>
+
+<p>Na stronie zobaczysz trzy pola do wyboru koloru - jeśli klikniesz na któreś, otworzy się paleta kolorów. Jak to zrobiliśmy? Używając elementów <code class="highlighter-rouge">&lt;input&gt;</code> o typie (<code class="highlighter-rouge">type</code>) <code class="highlighter-rouge">color</code>.</p>
+
+<p>Nasza strona zawiera też trzy puste elementy <code class="highlighter-rouge">&lt;div&gt;</code>.</p>
+
+<p>Zwróć uwagę, że każdy <code class="highlighter-rouge">&lt;input&gt;</code> ma swój atrybut <code class="highlighter-rouge">name</code>. Dwa z nich są takie same jak atrybuty <code class="highlighter-rouge">id</code> pustych divów, a trzeci to po prostu <code class="highlighter-rouge">tlo</code>. Te informacje przydadzą nam się później - będziemy wiedzieli, który input zmieniający kolor jest powiązany z którym elementem strony.</p>
+
+<p>Teraz w tagu <code class="highlighter-rouge">&lt;script&gt;</code> dodajmy kod, dzięki któremu po wyborze koloru, taki sam kolor przybierze określony element strony.</p>
+
+<h2 id="deklarowanie-funkcji">Deklarowanie funkcji</h2>
+
+<p>Tworzenie nowej funkcji nazywamy jej <strong>deklarowaniem</strong>.</p>
+
+<p>A więc, zadeklarujmy nową funkcję <code class="highlighter-rouge">zmianaKoloru</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<p>Do deklarowania funkcji używamy:</p>
+
+<ol>
+  <li>Słowa kluczowego <code class="highlighter-rouge">function</code>.</li>
+  <li>Nazwy nowej funkcji, <code class="highlighter-rouge">zmianaKoloru</code>.</li>
+  <li>Opcjonalnie listy parametrów w nawiasach okrągłych, <code class="highlighter-rouge">(event)</code></li>
+  <li>Ciała funkcji w nawiasach klamerkowych, <code class="highlighter-rouge">{</code> <code class="highlighter-rouge">}</code></li>
+</ol>
+
+<p>Funkcja <code class="highlighter-rouge">zmianaKoloru</code> jeszcze nic nie robi, ale i tak możemy ją już przypisać do wydarzenia <code class="highlighter-rouge">onchange</code> na każdym z naszych inputów.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"inputKolorTla"</span><span class="p">).</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">zmianaKoloru</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"inputKolorRzad1"</span><span class="p">).</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">zmianaKoloru</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"inputKolorRzad2"</span><span class="p">).</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">zmianaKoloru</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="parametry-i-argumenty">Parametry i argumenty</h2>
+
+<p><strong>Argumenty</strong> pozwalają nam na korzystanie z pewnych wartości podczas wykonywania funkcji. Nazywamy to zwykle <strong>przekazywaniem argumentów</strong>.</p>
+
+<p><strong>Parametry</strong> pozwalają ci na odnoszenie się do tych wartości wewnątrz funkcji podczas jej deklarowania.</p>
+
+<p>Nasza funkcja <code class="highlighter-rouge">zmianaKoloru</code> ma jeden parametr, <code class="highlighter-rouge">event</code> (po polsku <em>zdarzenie</em>).
+Funkcje powiązane ze zdarzeniami są wykonywane, kiedy dochodzi do określonego zdarzenia. Kiedy to się wydarzy, przeglądarka przekaże informacje o tym wydarzeniu jako argument funkcji.</p>
+
+<p>Ale czym tak właściwie jest <code class="highlighter-rouge">event</code>? Umieśćmy w najszej funkcji <code class="highlighter-rouge">console.log</code>, żeby się przekonać.</p>
+
+<p>Funkcja <code class="highlighter-rouge">zmianaKoloru</code> powinna teraz wyglądać tak:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Odśwież stronę, otwórz konsolę i kliknij na jeden z inputów, by zmienić kolor elementu strony.</p>
+
+<p>Konsola wyświetli dane o zdarzeniu. Po kliknięciu na mały trójkąt lista danych rozwinie się, dzięki czemu poznasz jego najdrobniejsze szczegóły.</p>
+
+<p>Jak widzisz, obiekt <code class="highlighter-rouge">event</code> ma wiele właściwości, które szczegółowo go opisują, ale nas na razie interesować będzie jedna z nich - właściwość <code class="highlighter-rouge">target</code>. <code class="highlighter-rouge">target</code> to po prostu inny obiekt, który odnosi się do elementu, który wywował określone zdarzenie. Dzięki niemu możemy dowiedzieć się, jaki jest nowy wybrany klor.</p>
+
+<p>Zmieńmy więc nasz <code class="highlighter-rouge">console.log</code>, aby poznać więcej interesujących nas szczegółów.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>No dobrze, teraz nasza funkcja <code class="highlighter-rouge">zmianaKoloru</code> ma informacje, których potrzebuje - nazwę inputa i nowy kolor. Żeby uaktualnić nasz kolor stworzymy jednak nową funkcję i ją stąd wywołamy.</p>
+
+<p>Zadeklarujmy szybko nową funkcję o pustym ciele:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">kolor</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{}</span>
+</code></pre></div></div>
+
+<p>Zauważ, że ma ona dwa parametry, <code class="highlighter-rouge">kolor</code> i <code class="highlighter-rouge">element</code>.</p>
+
+<p>Ale w jaki sposób mamy ją wywołać w funkcji <code class="highlighter-rouge">zmianaKoloru</code>?</p>
+
+<h2 id="wywoływanie-funkcji">Wywoływanie funkcji</h2>
+
+<p>Wywoływanie funkcji jest naprawdę proste - po prostu podajesz nazwę funkcji, a za nią wpisujesz nawiasy okrągłe. Jeżeli chcesz przekazać do funkcji jakieś argumenty, wpisz je w tych nawiasach.</p>
+
+<p>A więc, zmieńmy funkcję <code class="highlighter-rouge">zmianaKoloru</code>, tak, by wywoływała funkcję <code class="highlighter-rouge">ustawKolor</code>, która na razie będzie tylko wyświetlała w konsoli swoje parametry.</p>
+
+<pre><code class="language-Javascript">function ustawKolor(kolor, idElementu){
+  console.log(kolor, idElementu);
+}
+
+function zmianaKoloru(event){
+  ustawKolor(event.target.value, event.target.name);
+}
+</code></pre>
+
+<p>W taki sposób przekazujemy wartości z jednej funkcji do drugiej.</p>
+
+<p>Nasze funkcje jednak na razie jeszcze nie są zbyt przydatne. W tym celu dodajmy do funkcji <code class="highlighter-rouge">zmianaKoloru</code> kilka warunków:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">zmianaKoloru</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span> <span class="o">===</span> <span class="s2">"tlo"</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Teraz, jeżeli spróbujesz zmienić kolor tła, funkcja <code class="highlighter-rouge">ustawKolor</code> zostanie wywołana tylko z jednym parametrem? A jaką wartość przyjmie wtedy drugi parametr?</p>
+
+<p>Spróbuj to zrobić i wyświetl efekty w konsoli.</p>
+
+<p>Jeżeli wywołując funkcję przekazano do niej mniej argumentów niż zadeklarowano w niej parametrów, “nadliczbowe” parametry przyjmą wartość <code class="highlighter-rouge">undefined</code>, taką samą jak niezainicjalizowane zmienne!</p>
+
+<p>Wykorzystamy tę właściwość w funkcji <code class="highlighter-rouge">ustawKolor</code>, ponieważ zmiana koloru tła strony odbędzie się trochę inaczej niż zmiana koloru poszczególnych divów.</p>
+
+<p>Zmieńmy w takim razie ciało naszej funkcji <code class="highlighter-rouge">ustawKolor</code>:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">ustawKolor</span><span class="p">(</span><span class="nx">kolor</span><span class="p">,</span> <span class="nx">idElementu</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">idElementu</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">bgColor</span> <span class="o">=</span> <span class="nx">kolor</span><span class="p">;</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">idElementu</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span> <span class="o">=</span> <span class="nx">kolor</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Teraz, jeżeli nasze <code class="highlighter-rouge">idElementu</code> ma wartość undefined, tło strony zmieni się na wybrany przez nas <code class="highlighter-rouge">kolor</code>.
+W przeciwnym razie zmieni się kolor wybranego przez nas elementu.</p>
+
+<p>Wypróbuj to!</p>
+
+<h2 id="wartości-zwracane-przez-funkcje">Wartości zwracane przez funkcje</h2>
+
+<p>Funkcje mają jeszcze jedną cechę, z której na razie nie korzystaliśmy - <strong>zwracają określone wartości</strong>.
+Dzięki tym wartościom możemy przekazywać dane z wewnątrz funkcji z powrotem do elementu, który je wywołał. Czasem nazywamy je więc wynikami funkcji.</p>
+
+<p>Określoną wartość zwracamy używając słowa kluczowego <code class="highlighter-rouge">return</code>.</p>
+
+<p>Żeby przekonać się, jak to działa, przekażmy nasze argumenty <code class="highlighter-rouge">idElementu</code> i <code class="highlighter-rouge">kolor</code> do innej funkcji, która wyświetli informacje o dokonanej zmianie.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">pokazKomunikat</span><span class="p">(</span><span class="nx">kolor</span><span class="p">,</span> <span class="nx">idElementu</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">idElementu</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">"Tło jest teraz koloru "</span> <span class="o">+</span> <span class="nx">kolor</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">idElementu</span> <span class="o">+</span> <span class="s2">" jest teraz koloru "</span> <span class="o">+</span> <span class="nx">kolor</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Kiedy funkcja natyka się na słowo kluczowe <code class="highlighter-rouge">return</code>, natychmiast przestaje działać i przekazuje określoną wartość z powrotem do kodu, który ją wywołał.</p>
+
+<p>Wywołajmy teraz tę funkcję w funkcji <code class="highlighter-rouge">ustawKolor</code> i wyświetlmy efekty w konsoli. W tym celu na końcu ciała funkcji <code class="highlighter-rouge">ustawKolor</code> dodaj poniższą linijkę kodu:</p>
+
+<pre><code class="language-Javascript">console.log(pokazKomunikat(kolor, idElementu));
+</code></pre>
+
+<p>Zapisz plik i wypróbuj swój kod w przeglądarce. Zauważ, że wartości zwracane poprzez <code class="highlighter-rouge">return</code> w funkcji <code class="highlighter-rouge">pokazKomunikat</code> są przekazywane do konsoli poprzez <code class="highlighter-rouge">console.log</code>.</p>
+
+<p>W więc, zwrócone wartości pojawiły się w miejscu, w którym wywołaliśmy funkcję.</p>
+
+<p>Zróbmy teraz coś bardziej skomplikowanego. W funkcji <code class="highlighter-rouge">ustawKolor</code> zastąp console.log poniższym kodem:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"komunikat"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">pokazKomunikat</span><span class="p">(</span>
+  <span class="nx">kolor</span><span class="p">,</span>
+  <span class="nx">idElementu</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Teraz, kiedy zmienisz kolor któregoś elementu, na stronie pojawi się o tym adekwatna wiadomość.</p>
+
+<p>Jeżeli chcesz, możesz przenieść tę ostatnią linijkę z funkcji <code class="highlighter-rouge">ustawKolor</code> do funkcji <code class="highlighter-rouge">zmianaKoloru</code>, ale to wymagałoby kilku małych zmian. Jak myślisz, jakich? Spróbuj to zrobić!</p>
+
+    
+
+
+<div class="page-nav">
+  <a class='go-link' href='../step8'>Przejdź do kroku → 8</a>
+</div>
+
+
+    
+
+    
+
+    
+  </div>
+
+</article>
+
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="social-media centered">
+      <ul>
+        <li>
+          <i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https:/flynerd.pl/alex" target="_blank">flynerd.pl/alex</a>
+        </li>
+        <li>
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+          <a href="https://www.facebook.com/flynerdpl" target="_blank">facebook.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://instagram.com/flynerdpl" target="_blank">instagram.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://twitter.com/flynerdpl" target="_blank">twitter.com/flynerdpl</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <h2 class="footer-heading">Do IT for Alex</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Do IT for Alex
+            
+            </li>
+            
+            <li><a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Poznaj z nami podstawy Pythona
+</p>
+      </div>
+    </div>
+
+  </div> -->
+
+</footer>
+
+
+  </body>
+
+</html>

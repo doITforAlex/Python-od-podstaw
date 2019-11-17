@@ -364,5 +364,3 @@ Inne typy dostępne w Pythonie, których dzisiaj nie omówmy:
 - sekwencje binarne np.bytes
 
 ---
-
-

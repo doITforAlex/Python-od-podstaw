@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Python: Zmienne</title>
+  <meta name="description" content="Wiesz już, czym operacje arytmetyczne i wyrażenia logiczne.">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://localhost:4000/step3/">
+  <link rel="alternate" type="application/rss+xml" title="Do IT for Alex" href="/feed.xml">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('div.solution').each( function(){
+      $(this).prepend('<h5 class="toggle hiding"><i class="fa fa-chevron-up" aria-hidden="true"></i> Click to <span class="action"></span> solution</h5>');
+    });
+    $('div.solution .highlight').first().addClass('hidden');
+    $('h5.toggle').click(function(e){
+      $(this).parent().children('.highlight').first().slideToggle('show');
+      $(this).toggleClass('showing');
+      $(this).toggleClass('hiding');
+      $(this).children('i.fa').toggleClass('fa-chevron-up');
+      $(this).children('i.fa').toggleClass('fa-chevron-down');
+
+    });
+  });
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+    <a class="site-title" href="https://flynerd.pl/alex">Do IT for Alex</a>
+    <a class="site-title" href="/"><span>Python od podstaw</span></a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Strona główna</a>
+           <a class="page-link go-link" href="/step0/"><i class="fa fa-rocket" aria-hidden="true"></i> Start</a>
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<div class="step-nav">
+  <ul class="main">
+    <li class=""><a  href="/">Strona główna</a></li>
+  </ul>
+
+  <h3>Etapy:</h3>
+  <ul>
+  
+      <li class=''>
+        <a href="/step0/">
+          0 - O programowaniu
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step1/">
+          1 - Wiersz poleceń
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step2/">
+          2 - Interpreter Pythona
+        </a>
+      </li>
+  
+      <li class='active'>
+        <a href="/step3/">
+          3 - Zmienne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step4/">
+          4 - Typy danych
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Dane użytkownika
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Instrukcje warunkowe
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Tablice
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step6/">
+          6 - Obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step7/">
+          7 - Funkcje
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step8/">
+          8 - Funkcje i obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step9/">
+          9 - Petle
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step10/">
+          10 - Skrypty zewnetrzne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step11/">
+          11 - DOM
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step12/">
+          12 - Co teraz?
+        </a>
+      </li>
+  
+  </ul>
+
+  <h3>Useful Links</h3>
+  <ul>
+  <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN Javascript Reference</a></li>
+
+</ul>
+
+
+</div>
+
+        <article class="post">
+  
+  <header class="post-header">
+      
+    <h2 class="post-title"> Step 3 - Zmienne</h2>
+    </header>
+
+  <div class="post-content">
+    <p>Wiesz już, czym operacje arytmetyczne i wyrażenia logiczne.</p>
+
+<p>A co w sytuacji, kiedy jeszcze nie znamy danej wartości, a i tak chcemy jej użyć? Albo jeżeli będzie się ona zmieniać? W takiej sytuacji przydadzą się nam zmienne.</p>
+
+<p>Zmienne to służą do przechowywania danych. Możesz wyobrażać je sobie jako opisane pudełka, do których wsadzać różne dane i później możesz z nich korzystać odwołując się do nazwy określonego pudełka</p>
+
+<p>Każda zmienna ma nazwę, wartość oraz miejsce przechowywania w pamięci komputera.</p>
+
+<p>Spórz na przykład przypisania wartości do zmiennej:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence = "Hello world"
+&gt;&gt;&gt; print(sentence)
+Hello world
+</code></pre></div></div>
+
+<p>Stworzyliśmy w ten sposób nową zmienną o nazwie <code class="highlighter-rouge">sentence</code>.</p>
+
+<p>Kiedy otoczymy jakieś znaki cudzysłowem, tworzymy daną typu <strong>string</strong>, czyli po prostu ciąg liter, liczb czy innych znaków.</p>
+
+<p><strong>Zasady tworzenia nazw zmiennych:</strong></p>
+
+<ol>
+  <li>Pierwszym znakiem musi być litera alfabetu lub podkreślenie</li>
+  <li>Nie mogą zawierać spacji i znaków specjalnych</li>
+  <li>Mogą zawierać litery, cyfry, podkreślniki (<code class="highlighter-rouge">_</code>)</li>
+  <li>Wielkość liter ma znaczenie (przykładowo <code class="highlighter-rouge">sentence</code> i <code class="highlighter-rouge">Sentence</code> to dwie różne zmienne)</li>
+  <li>Nie może być słowem kluczowym*</li>
+  <li>powinna mówić co przechowuje</li>
+</ol>
+
+<p>Jeżeli nazwa zmiennej składa się z kilku słów, zapisujemy ją w formie <strong>snake_case</strong></p>
+
+<p><strong>Słowa kluczowe</strong>:</p>
+
+<p><img src="../assets/step-3a.png" alt="Slowa klucze" title="Slowa kluczowe" class="img-responsive" /></p>
+
+<p>Po stworzeniu zmiennej możesz przypisać do niej jakąś wartość za pomocą <strong>operatora przypisania</strong>, czyli znaku <code class="highlighter-rouge">=</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence = "I love Python"
+</code></pre></div></div>
+
+<p>Kilka przykładów przypisania wartości do zmiennej:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sum = 23 + 3
+&gt;&gt;&gt; print(sum)
+26
+&gt;&gt;&gt; result_false = 29 // 7 == 5
+&gt;&gt;&gt; print(result_false)
+False
+&gt;&gt;&gt; result_true = 27 % 8 == 3
+&gt;&gt;&gt; print(result_true)
+True
+</code></pre></div></div>
+
+<h4 id="zadania">Zadania:</h4>
+<p>Utwórz zmienną name, która będzie przechowywać twoje imię i nazwisko, zmienną age przypisz do niej swój wiek, oraz zmienną favourite_number zawierającą ulubioną liczbę. Wyświetl co zawierają.</p>
+
+
+    
+
+
+<div class="page-nav">
+  <a class='go-link' href='../step4'>Przejdź do kroku → 4</a>
+</div>
+
+
+    
+
+    
+
+    
+  </div>
+
+</article>
+
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="social-media centered">
+      <ul>
+        <li>
+          <i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https:/flynerd.pl/alex" target="_blank">flynerd.pl/alex</a>
+        </li>
+        <li>
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+          <a href="https://www.facebook.com/flynerdpl" target="_blank">facebook.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://instagram.com/flynerdpl" target="_blank">instagram.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://twitter.com/flynerdpl" target="_blank">twitter.com/flynerdpl</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <h2 class="footer-heading">Do IT for Alex</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Do IT for Alex
+            
+            </li>
+            
+            <li><a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Poznaj z nami podstawy Pythona
+</p>
+      </div>
+    </div>
+
+  </div> -->
+
+</footer>
+
+
+  </body>
+
+</html>

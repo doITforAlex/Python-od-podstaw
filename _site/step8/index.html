@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Python: Funkcje i obiekty</title>
+  <meta name="description" content="W naszym kodzie używaliśmy kilkukrotnie document.getElementById, ale nie wyjaśniliśmy sobie jeszcze, co to tak właściwie znaczy.">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://localhost:4000/step8/">
+  <link rel="alternate" type="application/rss+xml" title="Do IT for Alex" href="/feed.xml">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('div.solution').each( function(){
+      $(this).prepend('<h5 class="toggle hiding"><i class="fa fa-chevron-up" aria-hidden="true"></i> Click to <span class="action"></span> solution</h5>');
+    });
+    $('div.solution .highlight').first().addClass('hidden');
+    $('h5.toggle').click(function(e){
+      $(this).parent().children('.highlight').first().slideToggle('show');
+      $(this).toggleClass('showing');
+      $(this).toggleClass('hiding');
+      $(this).children('i.fa').toggleClass('fa-chevron-up');
+      $(this).children('i.fa').toggleClass('fa-chevron-down');
+
+    });
+  });
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+    <a class="site-title" href="https://flynerd.pl/alex">Do IT for Alex</a>
+    <a class="site-title" href="/"><span>Python od podstaw</span></a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Strona główna</a>
+           <a class="page-link go-link" href="/step0/"><i class="fa fa-rocket" aria-hidden="true"></i> Start</a>
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<div class="step-nav">
+  <ul class="main">
+    <li class=""><a  href="/">Strona główna</a></li>
+  </ul>
+
+  <h3>Etapy:</h3>
+  <ul>
+  
+      <li class=''>
+        <a href="/step0/">
+          0 - O programowaniu
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step1/">
+          1 - Wiersz poleceń
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step2/">
+          2 - Interpreter Pythona
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step3/">
+          3 - Zmienne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step4/">
+          4 - Typy danych
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Dane użytkownika
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Instrukcje warunkowe
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Tablice
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step6/">
+          6 - Obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step7/">
+          7 - Funkcje
+        </a>
+      </li>
+  
+      <li class='active'>
+        <a href="/step8/">
+          8 - Funkcje i obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step9/">
+          9 - Petle
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step10/">
+          10 - Skrypty zewnetrzne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step11/">
+          11 - DOM
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step12/">
+          12 - Co teraz?
+        </a>
+      </li>
+  
+  </ul>
+
+  <h3>Useful Links</h3>
+  <ul>
+  <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN Javascript Reference</a></li>
+
+</ul>
+
+
+</div>
+
+        <article class="post">
+  
+  <header class="post-header">
+      
+    <h2 class="post-title"> Step 8 - Funkcje i obiekty</h2>
+    </header>
+
+  <div class="post-content">
+    <p>W naszym kodzie używaliśmy kilkukrotnie <code class="highlighter-rouge">document.getElementById</code>, ale nie wyjaśniliśmy sobie jeszcze, co to tak właściwie znaczy.</p>
+
+<p>Otóż <code class="highlighter-rouge">getElementById</code> to właściwość obiektu <code class="highlighter-rouge">document</code> i jednocześnie funkcja, która zwraca pewną wartość.</p>
+
+<p>Ale hola hola, czy właściwość obiektu może być funkcją?</p>
+
+<h2 id="fukncje-jako-wartości">Fukncje jako wartości</h2>
+
+<p>Funkcje są także typami danych. Główna różnica między nimi a innymi danymi jest taka, że funkcje można wywoływać, czego nie można zrobić chociażby z liczbami czy stringami.</p>
+
+<p>Spójrz na kod poniżej:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">szczekanie</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">"hau-hau-hau"</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">burekSzczeka</span> <span class="o">=</span> <span class="nx">szczekanie</span><span class="p">;</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">burekSzczeka</span><span class="p">());</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">szczekanie</code> jest funkcją, a <code class="highlighter-rouge">burekSzczeka</code> to zmienna.</p>
+
+<p>Kiedy przypisujemy funkcję <code class="highlighter-rouge">szczekanie</code> do zmiennej <code class="highlighter-rouge">burekSzczeka</code>, <code class="highlighter-rouge">burekSzczeka</code> w dalszym ciągu jest zmienną, ale teraz jako zmienna zawiera deklarację funkcji. A więc również jest funkcją, która może zostać wywołana. Szaleństwo!</p>
+
+<p>Zwróć uwagę, że podczas przypisywania <code class="highlighter-rouge">szczekanie</code> do zmiennej <code class="highlighter-rouge">burekSzczeka</code>, nie wywołujemy funkcji <code class="highlighter-rouge">szczekanie</code>. Gdybyśmy to zrobili, do funkcji <code class="highlighter-rouge">burekSzczeka</code> zostałoby przypisane to, co zwraca funkcja <code class="highlighter-rouge">szczekanie</code> (czyli “hau-hau-hau”), a nie ta funkcja sama w sobie. Jak widzisz, to duża różnica.</p>
+
+<p>Właśnie w taki sposób przypisujemy funkcje do zdarzeń. <code class="highlighter-rouge">getElementById</code> zwraca nam obiekt, który odzwierciedla odpowiedni element HTML ze strony. Funkcje zdarzeń, takie jak <code class="highlighter-rouge">onclick</code> i <code class="highlighter-rouge">onchange</code> to właściwości tego obiektu, dzięki którym możesz przypisać do nich cokolwiek zechcesz. Domyślnie mają one wartość null. Kiedy dochodzi do jakiegoś zdarzenia, przeglądarka sprawdza, czy odpowiednia właściwość ma wartość null, i jeżeli nie, próbuje wykonać zawarty w niej kod. Jeżeli przypiszemy do tej właściwości coś innego niż funkcja, dostaniemy błąd w konsoli.</p>
+
+<h2 id="wyrażenia-funkcyjne">Wyrażenia funkcyjne</h2>
+
+<p>Funkcje możemy tworzyć także za pomocą <strong>wyrażeń funkcyjnych</strong>.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">burekSzczeka</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">"hau-hau-hau"</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>Jak widzisz, możesz od razu zadeklarować funkcję przypisując ją do zmiennej.</p>
+
+<p>Oczywiście, możesz dać tej funkcji jakąś nazwę (tak jak w przykładzie wyżej nazwaliśmy ją <code class="highlighter-rouge">szczekanie</code>), ale to nie miałoby za dużo sensu - nie będziemy mogli się odwoływać do tej funkcji po jej nazwie, a po nazwie zmiennej. Takie funkcje, które nie mają swoich nazw, nazywamy <strong>funkcjami anonimowymi</strong>.</p>
+
+<p>Dzięki wyrażeniom fukcyjnym możemy zrobić coś takiego:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"przycisk"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"komunikat"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s2">"Naciśnięto przycisk!"</span><span class="o">!</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>To dosyć wygodna metoda na upraszczanie naszego kodu, gdy potrzebna jest nam jakaś funkcja.</p>
+
+<h2 id="funkcje-jako-właściwości-obiektów">Funkcje jako właściwości obiektów</h2>
+
+<p>Oczywiście, jeżeli możemy przypisywać funkcje do zmiennych, to możemy je przypisywać też jako właściwości obiektów.</p>
+
+<p>Tym właśnie jest <code class="highlighter-rouge">getElementById</code>, właściwością obiektu <code class="highlighter-rouge">document</code> .</p>
+
+<p>Spójrz na przykład poniżej: mamy obiekt, którego właściwościami są trzy funkcje, przypisane na trzy różne sposoby - jako deklaracja funkcji, wyrażenie funkcyjne przypisane do zmiennej i wyrażenie funkcyjne przypisane bezpośrednio do właściwości.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">odglosyZwierzat</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">kot</span><span class="p">:</span> <span class="nx">miau</span><span class="p">,</span>
+  <span class="na">pies</span><span class="p">:</span> <span class="nx">hau</span><span class="p">,</span>
+  <span class="na">kaczka</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"kwa kwa!"</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">miau</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"miau miau!"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kd">let</span> <span class="nx">hau</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"hau hau!"</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">odglosyZwierzat</span><span class="p">.</span><span class="nx">kot</span><span class="p">();</span>
+<span class="nx">odglosyZwierzat</span><span class="p">.</span><span class="nx">pies</span><span class="p">();</span>
+<span class="nx">odglosyZwierzat</span><span class="p">.</span><span class="nx">kaczka</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>(Możesz zauważyć, że ten przykładowy kod nie zadziała - wynika to z tego, że zmienna <code class="highlighter-rouge">hau</code> jest używana zanim zostanie do niej przypisana funkcja. Kod zadziała, jeżeli przeniesiesz zmienną <code class="highlighter-rouge">hau</code> na sam początek kodu. Jeżeli chcesz dowiedzieć się czegoś więcej na ten temat i dlaczego ten problem nie dotyczy funkcji <code class="highlighter-rouge">miau</code>, poczytaj o hoistingu tutaj <a href="https://developer.mozilla.org/pl/docs/Glossary/Hoisting">https://developer.mozilla.org/pl/docs/Glossary/Hoisting</a> ).</p>
+
+<h2 id="łączenie-funkcji-i-właściwości">Łączenie funkcji i właściwości</h2>
+
+<p>No dobrze, spójrzmy jeszcze na kod, którego niedawno używaliśmy:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="err">‘</span><span class="nx">przycisk</span><span class="err">’</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">jakasFunkcja</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>W tej jednej linijce bardzo wiele się dzieje.</p>
+
+<p><code class="highlighter-rouge">document.getElementById(‘przycisk’)</code> zwraca nam obiekt <code class="highlighter-rouge">Element</code>, tak więc możemy od razu coś z nim zrobić. Jak pewnie pamiętasz, kiedy wywołamy funkcję, która coś zwraca, dostaniemy w rezultacie to, co nasza funkcja zwróciła.</p>
+
+<p>Łączenie ze sobą kilku wywołań funkcji i odwołań do właściwości obiektu to property chaining lub function chaining (czyli po polsku po prostu łączenie właściwości lub łączenie funkcji). Z czasem nabierzesz wyczucia, kiedy warto z tego korzystać, a kiedy nasz “łańcuszek” lepiej rozbić na kilka mniejszych części.</p>
+
+<p>I odnosząc to do naszego kodu powyżej - moglibyśmy go równie dobrze zapisać jako:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">przycisk</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="err">‘</span><span class="nx">przycisk</span><span class="err">’</span><span class="p">);</span>
+<span class="nx">przycisk</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">jakasFunkcja</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Efekt będzie dokładnie taki sam.</p>
+
+    
+
+
+<div class="page-nav">
+  <a class='go-link' href='../step9'>Przejdź do kroku → 9</a>
+</div>
+
+
+    
+
+    
+
+    
+  </div>
+
+</article>
+
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="social-media centered">
+      <ul>
+        <li>
+          <i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https:/flynerd.pl/alex" target="_blank">flynerd.pl/alex</a>
+        </li>
+        <li>
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+          <a href="https://www.facebook.com/flynerdpl" target="_blank">facebook.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://instagram.com/flynerdpl" target="_blank">instagram.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://twitter.com/flynerdpl" target="_blank">twitter.com/flynerdpl</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <h2 class="footer-heading">Do IT for Alex</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Do IT for Alex
+            
+            </li>
+            
+            <li><a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Poznaj z nami podstawy Pythona
+</p>
+      </div>
+    </div>
+
+  </div> -->
+
+</footer>
+
+
+  </body>
+
+</html>

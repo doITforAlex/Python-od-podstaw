@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Python: Interpreter Pythona</title>
+  <meta name="description" content="W tej części rozpoczniemy zabawę z Pythonem. Otwórz interpreter Pythona w wierszu poleceń na swoim komputerze. Wpisz komendę">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://localhost:4000/step2/">
+  <link rel="alternate" type="application/rss+xml" title="Do IT for Alex" href="/feed.xml">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('div.solution').each( function(){
+      $(this).prepend('<h5 class="toggle hiding"><i class="fa fa-chevron-up" aria-hidden="true"></i> Click to <span class="action"></span> solution</h5>');
+    });
+    $('div.solution .highlight').first().addClass('hidden');
+    $('h5.toggle').click(function(e){
+      $(this).parent().children('.highlight').first().slideToggle('show');
+      $(this).toggleClass('showing');
+      $(this).toggleClass('hiding');
+      $(this).children('i.fa').toggleClass('fa-chevron-up');
+      $(this).children('i.fa').toggleClass('fa-chevron-down');
+
+    });
+  });
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+    <a class="site-title" href="https://flynerd.pl/alex">Do IT for Alex</a>
+    <a class="site-title" href="/"><span>Python od podstaw</span></a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Strona główna</a>
+           <a class="page-link go-link" href="/step0/"><i class="fa fa-rocket" aria-hidden="true"></i> Start</a>
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<div class="step-nav">
+  <ul class="main">
+    <li class=""><a  href="/">Strona główna</a></li>
+  </ul>
+
+  <h3>Etapy:</h3>
+  <ul>
+  
+      <li class=''>
+        <a href="/step0/">
+          0 - O programowaniu
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step1/">
+          1 - Wiersz poleceń
+        </a>
+      </li>
+  
+      <li class='active'>
+        <a href="/step2/">
+          2 - Interpreter Pythona
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step3/">
+          3 - Zmienne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step4/">
+          4 - Typy danych
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Dane użytkownika
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Instrukcje warunkowe
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Tablice
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step6/">
+          6 - Obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step7/">
+          7 - Funkcje
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step8/">
+          8 - Funkcje i obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step9/">
+          9 - Petle
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step10/">
+          10 - Skrypty zewnetrzne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step11/">
+          11 - DOM
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step12/">
+          12 - Co teraz?
+        </a>
+      </li>
+  
+  </ul>
+
+  <h3>Useful Links</h3>
+  <ul>
+  <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN Javascript Reference</a></li>
+
+</ul>
+
+
+</div>
+
+        <article class="post">
+  
+  <header class="post-header">
+      
+    <h2 class="post-title"> Step 2 - Interpreter Pythona</h2>
+    </header>
+
+  <div class="post-content">
+    <p>W tej części rozpoczniemy zabawę z Pythonem. Otwórz interpreter Pythona w wierszu poleceń na swoim komputerze.
+Wpisz komendę</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python
+Python 3.7.2 (...)
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt;
+</code></pre></div></div>
+
+<p>Wcześniej pracowaliśmy w linii poleceń <code class="highlighter-rouge">/</code> konsoli systemu operacyjnego i mogliśmy wydawać polecenia. Znak zachęty był oznaczany jako <code class="highlighter-rouge">~ $</code> lub <code class="highlighter-rouge">&gt;</code>. Po uruchomieniu polecenia python zachęta zmieniła się na <code class="highlighter-rouge">&gt;&gt;&gt;</code>. Dla nas oznacza to, że w tym możemy używać tylko poleceń z języka Python.</p>
+
+<h2 id="pierwszy-kod-w-pythonie">Pierwszy kod w Pythonie</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Python 3.7.2 (...)
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; print("Hello World")
+Hello World
+</code></pre></div></div>
+
+<p>Zastosowane polecenie <em>print()</em> to funkcja, która służy w Pythonie do wyświetlania tekstu (w konsoli)</p>
+
+<h2 id="python-jako-kalkulator">Python jako kalkulator</h2>
+
+<p><strong>Operacje arytmetyczne</strong> pozwalają nam na wykonywanie na danych działań matematycznych, takich jak dodawanie, odejmowanie, dzielenie, itd.</p>
+
+<p><strong>Operatory</strong> to z kolei symbole, których używamy do przeprowadzania tych operacji, takie jak <code class="highlighter-rouge">+</code>, <code class="highlighter-rouge">-</code>, <code class="highlighter-rouge">=</code>, itd.</p>
+
+<p><strong>Wyrażeniem</strong> jest łączenie kilku danych i przeprowadzanie na nich działań matematycznych, by dostać nową wartość.</p>
+
+<p>To wszystko jest nam znane od podstówki, każda i każdy z nas potrafi wykonać podstawowe operacje matematyczne, ale czy potrafi je też Python?</p>
+
+<h2 id="operacje-arytmetyczne">Operacje arytmetyczne</h2>
+
+<p>Wpisz w konsoli liczbę <code class="highlighter-rouge">205</code> i wciśnij enter.</p>
+
+<p>Jak widzisz, liczba <code class="highlighter-rouge">205</code> została wyświetlona po raz kolejny. To konsola wykonuje działanie na liczbie, którą w niej wpisujesz i wyświetla wynik. Tak więc, jeżeli wpiszesz w niej po prostu pojedynczą liczbę, to właśnie ta liczba jest wynikiem działania, bo nie wykonujesz na niej żadnych operacji.</p>
+
+<p>Spróbujmy teraz <code class="highlighter-rouge">205 + 103</code></p>
+
+<p>W konsoli wyświetliła się liczba <code class="highlighter-rouge">308</code>. W tym wyrażeniu przeprowadziliśmy operację arytmetyczną z użyciem operatora <code class="highlighter-rouge">+</code>, czyli dodawania.</p>
+
+<p>Głównymi operatorami matematycznymi są:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">+</code>: dodawanie</li>
+  <li><code class="highlighter-rouge">-</code>: odejmowanie</li>
+  <li><code class="highlighter-rouge">*</code>: mnożenie</li>
+  <li><code class="highlighter-rouge">/</code>: dzielenie</li>
+  <li><code class="highlighter-rouge">%</code>: modulo, czyli reszta z dzielenia</li>
+</ul>
+
+<p>I tak samo jak w matematyce, stosujemy tu <strong>kolejność wykonywania działań</strong> i możemy używać nawiasów <code class="highlighter-rouge">(</code> i <code class="highlighter-rouge">)</code>.</p>
+
+<p>I tak, na przykład:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">100+50*2</code> to <code class="highlighter-rouge">200</code>, ale</li>
+  <li><code class="highlighter-rouge">(100+50)*2</code> to <code class="highlighter-rouge">300</code>.</li>
+</ul>
+
+<p>A teraz pobaw się trochę - powpisuj różne wartości w konsoli i zobacz, jakie dostaniesz wyniki.</p>
+
+<p><strong>Operator modulo</strong></p>
+
+<p>Takiego operatora w szkole nie było, spójrzmy jak zachowuje się modulo:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt;  print(5 % 2)
+&gt;&gt;&gt;  print(5 % 3)
+&gt;&gt;&gt;  print(5 % 4)
+</code></pre></div></div>
+
+<h4 id="zadania">Zadania</h4>
+
+<p>Użyj Pythona, aby obliczyć</p>
+<ol>
+  <li>Ile godzin ma rok?</li>
+  <li>Ile sekund ma dekada?</li>
+  <li>Ile skrzydeł ma dwanaście tuzinów ważek?</li>
+</ol>
+
+<h3 id="ciekawostka-o-co-chodzi-z--i-">Ciekawostka: o co chodzi z <code class="highlighter-rouge">*</code> i <code class="highlighter-rouge">/</code>?</h3>
+
+<p>Dlaczego używamy <code class="highlighter-rouge">*</code> i <code class="highlighter-rouge">/</code> zamiast zwykłych symboli mnożenia i dzielenia?</p>
+
+<p>Pierwsze klawiatury komputerowe były wzorowane na mechanicznych maszynach do pisania.</p>
+
+<p>Osoby, które korzystły z takich maszyn nie potrzebowały ani symbolu mnożenia (bo mogły po prostu używać znaku <code class="highlighter-rouge">x</code>), ani symbolu dzielenia (bo mogły wpisać po prostu <code class="highlighter-rouge">-</code> i potem nadpisać na nim <code class="highlighter-rouge">:</code>, albo po prostu użyć samego znaku <code class="highlighter-rouge">:</code>). Ułamki z kolei zapisywano jako <code class="highlighter-rouge">1/2</code> czy <code class="highlighter-rouge">3/4</code>.</p>
+
+<p>(Co prawda, maszyny z wyższej półki miewały specjalne klawisze z symbolami mnożenia i dzielenia, ale jakoś nigdy się to nie przyjęło).</p>
+
+<p>Tak więc kiedy zaczęliśmy używać klawiatur komputerowych, “odziedziczyliśmy” to ograniczenie i wymyśliliśmy sposób, żeby je obejść - do ułamków i dzielenia używając znaku <code class="highlighter-rouge">/</code>, a do mnożenia <code class="highlighter-rouge">*</code>.</p>
+
+<h3 id="typy-danych">Typy danych</h3>
+
+<p>Jak widzisz, wszystkie dane, na których do tej pory pracowaliśmy, to liczby. Ale co, jeżeli chcesz użyć czyjegoś imienia? Jak to zrobić?</p>
+
+<p>Przyjrzyj się kodowi, który już napisaliśmy. W jaki sposób napisaliśmy wiadomość, która wyświetliła się po naciśnięciu przycisku?</p>
+
+<h3 id="operatory-logiczne">Operatory logiczne</h3>
+
+<p>Czy Python poradzi sobie z operacjami porównania?</p>
+
+<ul>
+  <li><code class="highlighter-rouge">==</code>:    równa się</li>
+  <li><code class="highlighter-rouge">!=</code>:    nie równa się</li>
+  <li><code class="highlighter-rouge">&gt;</code>:    większe od</li>
+  <li><code class="highlighter-rouge">&lt;</code>:    mniejsze od</li>
+  <li><code class="highlighter-rouge">&gt;=</code>:    większe lub równe</li>
+  <li><code class="highlighter-rouge">&lt;=</code>:    mniejsze lub równe</li>
+</ul>
+
+<p>Od razu przetestujmy:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt;  print(5 == 4)     
+&gt;&gt;&gt;  print(5 != 4)     
+&gt;&gt;&gt;  print(5 &gt; 2)    
+&gt;&gt;&gt;  print(5 &lt; 3)    
+&gt;&gt;&gt;  print(3 &gt;= 4)     
+&gt;&gt;&gt;  print(3 &lt;= 4)     
+&gt;&gt;&gt;  print(False &lt; True)
+</code></pre></div></div>
+
+<h4 id="zadania-1">Zadania</h4>
+<ol>
+  <li>Czy 23 + 3 będzie się równać 15  + 12 ?</li>
+  <li>Czy dzielenie 29 przez 7 bez reszty wynosi 5?</li>
+  <li>Czy 27 podzielone przez 8 daje resztę 3?</li>
+</ol>
+
+
+    
+
+
+<div class="page-nav">
+  <a class='go-link' href='../step3'>Przejdź do kroku → 3</a>
+</div>
+
+
+    
+
+    
+
+    
+  </div>
+
+</article>
+
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="social-media centered">
+      <ul>
+        <li>
+          <i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https:/flynerd.pl/alex" target="_blank">flynerd.pl/alex</a>
+        </li>
+        <li>
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+          <a href="https://www.facebook.com/flynerdpl" target="_blank">facebook.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://instagram.com/flynerdpl" target="_blank">instagram.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://twitter.com/flynerdpl" target="_blank">twitter.com/flynerdpl</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <h2 class="footer-heading">Do IT for Alex</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Do IT for Alex
+            
+            </li>
+            
+            <li><a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Poznaj z nami podstawy Pythona
+</p>
+      </div>
+    </div>
+
+  </div> -->
+
+</footer>
+
+
+  </body>
+
+</html>

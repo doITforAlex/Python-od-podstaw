@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Python: Petle</title>
+  <meta name="description" content="Często chcemy, by nasz kod wykonał się kilkukrotnie, nie wiedząc jednocześnie, ile dokładnie razy ma się powtórzyć.">
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://localhost:4000/step9/">
+  <link rel="alternate" type="application/rss+xml" title="Do IT for Alex" href="/feed.xml">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    $('div.solution').each( function(){
+      $(this).prepend('<h5 class="toggle hiding"><i class="fa fa-chevron-up" aria-hidden="true"></i> Click to <span class="action"></span> solution</h5>');
+    });
+    $('div.solution .highlight').first().addClass('hidden');
+    $('h5.toggle').click(function(e){
+      $(this).parent().children('.highlight').first().slideToggle('show');
+      $(this).toggleClass('showing');
+      $(this).toggleClass('hiding');
+      $(this).children('i.fa').toggleClass('fa-chevron-up');
+      $(this).children('i.fa').toggleClass('fa-chevron-down');
+
+    });
+  });
+  </script>
+  
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    
+    <a class="site-title" href="https://flynerd.pl/alex">Do IT for Alex</a>
+    <a class="site-title" href="/"><span>Python od podstaw</span></a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <a class="page-link" href="/">Strona główna</a>
+           <a class="page-link go-link" href="/step0/"><i class="fa fa-rocket" aria-hidden="true"></i> Start</a>
+        </div>
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+
+<div class="step-nav">
+  <ul class="main">
+    <li class=""><a  href="/">Strona główna</a></li>
+  </ul>
+
+  <h3>Etapy:</h3>
+  <ul>
+  
+      <li class=''>
+        <a href="/step0/">
+          0 - O programowaniu
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step1/">
+          1 - Wiersz poleceń
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step2/">
+          2 - Interpreter Pythona
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step3/">
+          3 - Zmienne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step4/">
+          4 - Typy danych
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Dane użytkownika
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Instrukcje warunkowe
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step5/">
+          5 - Tablice
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step6/">
+          6 - Obiekty
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step7/">
+          7 - Funkcje
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step8/">
+          8 - Funkcje i obiekty
+        </a>
+      </li>
+  
+      <li class='active'>
+        <a href="/step9/">
+          9 - Petle
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step10/">
+          10 - Skrypty zewnetrzne
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step11/">
+          11 - DOM
+        </a>
+      </li>
+  
+      <li class=''>
+        <a href="/step12/">
+          12 - Co teraz?
+        </a>
+      </li>
+  
+  </ul>
+
+  <h3>Useful Links</h3>
+  <ul>
+  <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference">MDN Javascript Reference</a></li>
+
+</ul>
+
+
+</div>
+
+        <article class="post">
+  
+  <header class="post-header">
+      
+    <h2 class="post-title"> Step 9 - Petle</h2>
+    </header>
+
+  <div class="post-content">
+    <p>Często chcemy, by nasz kod wykonał się kilkukrotnie, nie wiedząc jednocześnie, ile dokładnie razy ma się powtórzyć.</p>
+
+<p>Nasz problem rozwiązują wtedy <strong>pętle</strong> - jest ich wiele, ale dzisiaj zajmiemy się pętlą <code class="highlighter-rouge">for</code>.</p>
+
+<h2 id="pętla-for">Pętla <code class="highlighter-rouge">for</code></h2>
+
+<p>Pętla <code class="highlighter-rouge">for</code> służy do powtarzania kodu.</p>
+
+<p>Stwórzmy nową stronę, na której podasz jaka wiadomość ma się wyświetlić - i ile razy ma to zrobić.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Warsztaty z JSa!<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"wiadomosc"</span> <span class="na">placeholder=</span><span class="s">"Co chcesz napisać?"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"licznik"</span> <span class="na">placeholder=</span><span class="s">"Ile razy?"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"przycisk"</span><span class="nt">&gt;</span>Pisz!<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;pre</span> <span class="na">id=</span><span class="s">"oknoZWiadomoscia"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+
+  <span class="nt">&lt;script&gt;</span>
+    <span class="kd">function</span> <span class="nx">pokazWiadomosc</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">liczbaPowtorzen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"licznik"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+      <span class="kd">let</span> <span class="nx">wiadomosc</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"wiadomosc"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+
+      <span class="kd">let</span> <span class="nx">rezultat</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">liczbaPowtorzen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">rezultat</span> <span class="o">=</span> <span class="nx">rezultat</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="s2">"</span><span class="err">\</span><span class="s2">n"</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"oknoZWiadomoscia"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">rezultat</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"przycisk"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">pokazWiadomosc</span><span class="p">;</span>
+  <span class="nt">&lt;/script&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>Spróbuj!</p>
+
+<p>Zwróć tylko uwagę, że jeśli w liczniku podasz liczbę większą niż około 10000, twoja strona prawdopodobnie zwolni, a przy liczbach rzędu 30000 minie sekunda czy dwie zanim strona się zaktualizuje.</p>
+
+<p>Wykonanie pętli jeden raz zajmuje jakiś ułamek sekundy, ale powtórzenie tej czynności dziesiątki tysięcy razy wymaga już trochę czasu.</p>
+
+<p>Przyjrzyjmy się dokładniej naszej pętli:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">liczbaPowtorzen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">rezultat</span> <span class="o">=</span> <span class="nx">rezultat</span> <span class="o">+</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="s2">"</span><span class="err">\</span><span class="s2">n"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Pętla składa się z dwóch części:</p>
+
+<ol>
+  <li>
+    <p>Deklaracji pętli, <code class="highlighter-rouge">for (let i = 1; i &lt;= liczbaPowtorzen; i++)</code>. Deklaracja wygląda trochę jak wywołanie funkcji, ale to coś innego. Deklaracja pętli określa po prostu, jak nasza pętla ma działać.</p>
+  </li>
+  <li>
+    <p>Ciała pętli, czyli kodu który ma się wykonać za każdym powtórzeniem pętli.</p>
+  </li>
+</ol>
+
+<p>Deklaracja pątli składa się ze słowa kluczowego <code class="highlighter-rouge">for</code> i trzech wyrażeń w nawiasie okrągłym, oddzielonych od siebie średnikami.</p>
+
+<ol>
+  <li>
+    <p>Pierwsze wyrażenie to wyrażenie inicjalizacji: <code class="highlighter-rouge">let i = 0</code>.
+Tworzymy w ten sposób licznik <code class="highlighter-rouge">i</code>, który będzie przechowywał informację o tym, który raz wykonuje się pętla.</p>
+  </li>
+  <li>
+    <p>Drugim wyrażeniem jest warunek: <code class="highlighter-rouge">i&lt;=liczbaPowtorzen</code>
+Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona się tylko wtedy, jeżeli nasz warunek jest prawdziwy (a jeżeli jest fałszywy, pętla się kończy).
+W naszym przykładzie oznacza on, że kiedy wartość <code class="highlighter-rouge">i</code> jest mniejsza lub równa niż <code class="highlighter-rouge">liczbaPowtorzen</code>, pętla wykonuje się po raz kolejny.</p>
+  </li>
+  <li>
+    <p>Trzecim wyrażeniem jest wyrażenie inkrementacji: <code class="highlighter-rouge">i++</code>. Wykonuje się ono po wykonaniu kodu z ciała pętli.
+W pętli powyżej po każdym dodaniu kolejnej wiadomości do zmiennej <code class="highlighter-rouge">output</code>, nasz licznik <code class="highlighter-rouge">i</code> zwiększa się o 1 (zapis <code class="highlighter-rouge">i++</code> oznacza to samo co <code class="highlighter-rouge">i + 1</code>).</p>
+  </li>
+</ol>
+
+<p>Po tym kiedy nasza pętla wykonała się już określoną liczbę razy, ustawiamy tekst w <code class="highlighter-rouge">oknoZWiadomoscia</code> na nasz <code class="highlighter-rouge">rezultat</code>.</p>
+
+<p>Czy myślisz, że uda ci się zmienić działanie naszej pętli w taki sposób, że będzie liczyć od <code class="highlighter-rouge">liczbaPowtorzen</code> do <code class="highlighter-rouge">1</code>, a nie od <code class="highlighter-rouge">0</code> do <code class="highlighter-rouge">liczbaPowtorzen</code>? Spróbuj!</p>
+
+<h3 id="co-tak-wolno">Co tak wolno?</h3>
+
+<p>Jeżeli tekst ma być powtórzony naprawdę wiele razy, powiedzmy <code class="highlighter-rouge">32000</code>, pętla będzie potrzebowała kilku sekund, by się wykonać i zaktualizować stronę.</p>
+
+<p>Ale co się stanie jeżeli kod aktualizujący treść strony umieścimy <em>wewnątrz</em> pętli?</p>
+
+<p>Spróbujmy.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+  <span class="kd">function</span> <span class="nx">pokazWiadomosc</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">liczbaPowtorzen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"licznik"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">wiadomosc</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"wiadomosc"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
+
+    <span class="kd">let</span> <span class="nx">rezultat</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">liczbaPowtorzen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">rezultat</span> <span class="o">=</span> <span class="nx">rezultat</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="s2">"</span><span class="err">\</span><span class="s2">n"</span><span class="p">;</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"oknoZWiadomoscia"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">rezultat</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"przycisk"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">pokazWiadomosc</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>Niestety nasz kod nie działa. Dlaczego?</p>
+
+<p>Zawartość strony może być zaktualizowana tylko po wykonaniu kodu javascript - musi więc czekać, aż ten skończy powtarzanie pętli. Tak w dużym uproszczeniu, jeżeli twój kod potrzebuje dużo czasu na wykonanie się, na stronie nic będzie mogło się w tym czasie wydarzyć. A więc nauczka na przyszłość - unikaj długich pętli!</p>
+
+<h3 id="inne-rodzaje-pętli">Inne rodzaje pętli</h3>
+
+<p>Istnieją też inne rodzaje pętli - jednak większość z nich powtarza pewne działanie określoną liczbę razy, aż do momentu spełnienia warunku albo tak długo jak warunek jest spełniany. Ich działanie jest więc podobne do naszej pętli <code class="highlighter-rouge">for</code>.</p>
+
+    
+
+
+<div class="page-nav">
+  <a class='go-link' href='../step10'>Przejdź do kroku → 10</a>
+</div>
+
+
+    
+
+    
+
+    
+  </div>
+
+</article>
+
+      </div>
+
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="social-media centered">
+      <ul>
+        <li>
+          <i class="fa fa-home" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https:/flynerd.pl/alex" target="_blank">flynerd.pl/alex</a>
+        </li>
+        <li>
+          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <i class="fa fa-facebook" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;
+          <a href="https://www.facebook.com/flynerdpl" target="_blank">facebook.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-instagram" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://instagram.com/flynerdpl" target="_blank">instagram.com/flynerdpl</a>
+        </li>
+        <li>
+          <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;
+          <a href="https://twitter.com/flynerdpl" target="_blank">twitter.com/flynerdpl</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <h2 class="footer-heading">Do IT for Alex</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              Do IT for Alex
+            
+            </li>
+            
+            <li><a href="mailto:hello@flynerd.pl">hello@flynerd.pl</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Poznaj z nami podstawy Pythona
+</p>
+      </div>
+    </div>
+
+  </div> -->
+
+</footer>
+
+
+  </body>
+
+</html>
