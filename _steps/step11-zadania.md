@@ -57,7 +57,7 @@ Stwórz listę pomysłów na prezent dla swoich bliskich. Kiedy nadarzy się oka
 PYTHON JEST SUPER
 ```
 
-- lgorytm `secret1.py` zmieni wiadomość w ciąg ”RZUIPO*KFTU*TWRFS”
+- lgorytm `secret1.py` zmieni wiadomość w ciąg ”RZUIPO-KFTU-TWRFS”
 - wymyśl własny algorytm kodujący jako `secret2.py`
 - napisz program `secret3.py`, które odkoduje wiadomość
 
