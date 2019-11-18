@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Python: DOM</title>
-  <meta name="description" content="Czym jest DOM?">
+  <title>Python: Zadania</title>
+  <meta name="description" content="">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   
   <link rel="stylesheet" href="/assets/main.css">
@@ -137,32 +137,20 @@
       </li>
   
       <li class=''>
-        <a href="/step10/">
-          10 - Skrypty zewnetrzne
+        <a href="/step9/">
+          9 - Funkcje
         </a>
       </li>
   
       <li class='active'>
         <a href="/step11/">
-          11 - DOM
+          11 - Zadania
         </a>
       </li>
   
       <li class=''>
         <a href="/step12/">
           12 - Co teraz?
-        </a>
-      </li>
-  
-      <li class=''>
-        <a href="/step111/">
-          111 - Funkcje i obiekty
-        </a>
-      </li>
-  
-      <li class=''>
-        <a href="/step112/">
-          112 - Funkcje
         </a>
       </li>
   
@@ -181,117 +169,11 @@
   
   <header class="post-header">
       
-    <h2 class="post-title"> Step 11 - DOM</h2>
+    <h2 class="post-title"> Step 11 - Zadania</h2>
     </header>
 
   <div class="post-content">
-    <h2 id="czym-jest-dom"><code class="highlighter-rouge">Czym jest DOM?</code></h2>
-
-<p>DOM to skrót od Document Object Model.</p>
-
-<p>Kiedy strona się ładuje, przeglądarka nie wyświetla bezpośrednio kodu HTML. Zamiast tego odczytuje go i tworzy jego odwzorowanie na stronie. Właśnie te elementy odwzorowujące HTML nazywamy DOMem.</p>
-
-<p>Kiedy kod javascript zmienia jakiś element strony, nie zmienia się kod HTML, a tylko DOM.</p>
-
-<p>Uruchom któryś z naszych poprzenich przykładów (na przykład ten z lekcji 1) i otwórz w przeglądarce narzędzia deweloperskie (a w nich zakładkę Elements lub Inspector w Firefoxie).</p>
-
-<p>W tym oknie widzisz DOM stworzony dla aktualnej strony, który wygląda podobnie do kodu HTML.</p>
-
-<p>Kiedy jednak wejdziesz w jakieś interakcje ze stroną, zobaczysz w narzędziach deweloperskich, że DOM został zaktualizowany.</p>
-
-<p>Jeżeli klikniesz prawym przyciskiem myszy gdzieś na swojej stronie, zobaczysz w menu opcję <code class="highlighter-rouge">Wyświetl źródło</code> albo <code class="highlighter-rouge">Wyświetl źródło strony</code>. Kliknij na nią. Otworzy się nowe okno z pierwotnym kodem HTML strony, który może różnić się od aktualnego DOMu. To właśnie ten kod HTML posłużył do stworzenia DOMu podczas ładowania strony, ale jakiekolwiek późniejsze zmiany DOMu podczas interakcji ze stroną nie miały na niego wpływu.</p>
-
-<p>Wprowadzanie zmian na stronie to po prostu operowanie jej DOMem. Często w ten sposób wybieramy jakieś elementy i zmieniamy ich właściwości albo dodajemy lub usuwamy z nich inne elementy.</p>
-
-<h2 id="pobieranie-węzłów---elementów">Pobieranie węzłów - elementów</h2>
-
-<h3 id="pobieranie-pojedynczego-węzła---elementu">Pobieranie pojedynczego węzła - elementu</h3>
-
-<p>Jak na razie pobieraliśmy węzły (elementy) za pomocą <code class="highlighter-rouge">getElementById()</code>. Określasz tam ID szukanego elementu, który następnie zostaje zwrócony.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">naglowek</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"naglowek"</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById</a></p>
-
-<p>Do tego samego możesz używać też <code class="highlighter-rouge">document.querySelector()</code>, przy czym wtedy w nawiasie musisz podać szukany selektor css. <code class="highlighter-rouge">document.querySelector()</code> zwróci wtedy pierwszy znaleziony element.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">naglowek</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">"h2.artykul-naglowek"</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector">https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector</a></p>
-
-<h3 id="pobieranie-kilku-węzłów---elementów">Pobieranie kilku węzłów - elementów</h3>
-
-<p>Pobieranie jednego elementu jest bardzo przydatne, ale co, jeśli chcesz operować na wielu? Służy do tego kilka funkcji:</p>
-
-<p><code class="highlighter-rouge">document.getElementsByClassName()</code> zwraca wszystkie elementy o podanej klasie.</p>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName</a></p>
-
-<p><code class="highlighter-rouge">document.getElementsByTagName()</code> zwraca wszystkie elementy o podanym tagu.</p>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName">https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName</a></p>
-
-<p><code class="highlighter-rouge">document.querySelectorAll()</code> działa tak jak <code class="highlighter-rouge">querySelector()</code>, tylko że zwraca wszystkie pasujące elementy.</p>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll">https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll</a></p>
-
-<p>Każda z tych funkcji zwraca obiekt zwany NodeList (listą węzłów). Przypomina on tablicę, przy czym każdy obiekt w nim jest elementem ze strony.</p>
-
-<h2 id="modyfikowanie-elementów">Modyfikowanie elementów</h2>
-
-<p>Kiedy pozyskasz już element ze strony dzięki użyciu którejś z powyższych metod, możesz łatwo go modyfikować.</p>
-
-<p><code class="highlighter-rouge">innerText</code> to właściwość, która zawiera tekst wewnątrz danego elementu. Dzisiaj korzystaliśmy z niej już kilka razy.</p>
-
-<p>Zmienić możesz nie tylko tekst elementu, ale praktycznie każdą jego właściwość. Całą listę właściwości znajdziesz tutaj:
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">https://developer.mozilla.org/en-US/docs/Web/API/Element</a></p>
-
-<h2 id="usuwanie-elementów">Usuwanie elementów</h2>
-
-<p>Do usunięciu elementu ze strony możesz skorzystać z metody <code class="highlighter-rouge">removeChild()</code> na jego rodzicu. Musisz więc mieć dostęp nie tylko do elementu, który chcesz usunąć, ale też do jego rodzica, który może przeprowadzić akcję usuwania.</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">rodzic</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"listaKotow"</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">dziecko</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"kot_432"</span><span class="p">);</span>
-<span class="nx">rodzic</span><span class="p">.</span><span class="nx">removeChild</span><span class="p">(</span><span class="nx">dziecko</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild">https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild</a></p>
-
-<h2 id="dodawanie-elementów">Dodawanie elementów</h2>
-
-<p>Dodawanie nowego elementu przeprowadza się w 3 krokach:</p>
-
-<ol>
-  <li>Tworzenie nowego elementu (i ustawianie jego właściwości)</li>
-  <li>Pozyskanie elementu rodzica</li>
-  <li>Dodanie nowego elementu do rodzica.</li>
-</ol>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">noweLi</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"li"</span><span class="p">);</span>
-<span class="nx">noweLi</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">kot</span><span class="p">.</span><span class="nx">imie</span> <span class="o">+</span> <span class="s2">" ("</span> <span class="o">+</span> <span class="nx">kot</span><span class="p">.</span><span class="nx">wiek</span> <span class="o">+</span> <span class="s2">"/"</span> <span class="o">+</span> <span class="nx">kot</span><span class="p">.</span><span class="nx">kolor</span> <span class="o">+</span> <span class="s2">")"</span><span class="p">;</span>
-<span class="kd">let</span> <span class="nx">rodzic</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"listaKotow"</span><span class="p">);</span>
-<span class="nx">rodzic</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">noweLi</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>W powyższym przykładzie <code class="highlighter-rouge">appendChild()</code> dodaje stworzony przez nas nowy element jako ostatnie dziecko innego elementu.</p>
-
-<p>Są też inne funkcje służące do dodawania dzieci do elementów, chociażby <code class="highlighter-rouge">replaceChild()</code>, <code class="highlighter-rouge">insertBefore()</code>, i <code class="highlighter-rouge">append()</code>. O tworzeniu i dodawaniu elementów przeczytasz więcej tutaj:</p>
-
-<ul>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild">https://developer.mozilla.org/en-US/docs/Web/API/Node/replaceChild</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore">https://developer.mozilla.org/en-US/docs/Web/API/Node/insertBefore</a></li>
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append</a></li>
-</ul>
-
-<h2 id="jeszcze-więcej-o-dom">Jeszcze więcej o DOM</h2>
-
-<p>Dzisiaj ledwie musnęliśmy wszystkie możliwe sposoby modyfikowania i oddziaływania na DOM.</p>
-
-<p>Więcej informacji na ten temat znajdziesz tutaj: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction</a>.</p>
+    
 
     
 

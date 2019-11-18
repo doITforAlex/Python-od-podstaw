@@ -137,32 +137,20 @@
       </li>
   
       <li class=''>
-        <a href="/step10/">
-          10 - Skrypty zewnetrzne
+        <a href="/step9/">
+          9 - Funkcje
         </a>
       </li>
   
       <li class=''>
         <a href="/step11/">
-          11 - DOM
+          11 - Zadania
         </a>
       </li>
   
       <li class=''>
         <a href="/step12/">
           12 - Co teraz?
-        </a>
-      </li>
-  
-      <li class=''>
-        <a href="/step111/">
-          111 - Funkcje i obiekty
-        </a>
-      </li>
-  
-      <li class=''>
-        <a href="/step112/">
-          112 - Funkcje
         </a>
       </li>
   
@@ -187,119 +175,216 @@
   <div class="post-content">
     <p>Często chcemy, by nasz kod wykonał się kilkukrotnie, nie wiedząc jednocześnie, ile dokładnie razy ma się powtórzyć.</p>
 
-<p>Nasz problem rozwiązują wtedy <strong>pętle</strong> - jest ich wiele, ale dzisiaj zajmiemy się pętlą <code class="highlighter-rouge">for</code>.</p>
+<p>Nasz problem rozwiązują wtedy <strong>pętle</strong></p>
 
 <h2 id="pętla-for">Pętla <code class="highlighter-rouge">for</code></h2>
 
-<p>Pętla <code class="highlighter-rouge">for</code> służy do powtarzania kodu.</p>
+<p>Pętla <code class="highlighter-rouge">for</code> służy do powtarzania kodu ograniczoną liczbę razy.</p>
 
-<p>Stwórzmy nową stronę, na której podasz jaka wiadomość ma się wyświetlić - i ile razy ma to zrobić.</p>
+<p>Stwórzmy nowy plik.</p>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Warsztaty z JSa!<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"wiadomosc"</span> <span class="na">placeholder=</span><span class="s">"Co chcesz napisać?"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"licznik"</span> <span class="na">placeholder=</span><span class="s">"Ile razy?"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"przycisk"</span><span class="nt">&gt;</span>Pisz!<span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;pre</span> <span class="na">id=</span><span class="s">"oknoZWiadomoscia"</span> <span class="nt">/&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">easy_python</span> <span class="o">=</span> <span class="p">[</span><span class="s">"ABC"</span><span class="p">,</span> <span class="s">"It's easy as 1 2 3"</span><span class="p">,</span> <span class="s">"As simple as do re mi"</span><span class="p">]</span>
 
-  <span class="nt">&lt;script&gt;</span>
-    <span class="kd">function</span> <span class="nx">pokazWiadomosc</span><span class="p">()</span> <span class="p">{</span>
-      <span class="kd">let</span> <span class="nx">liczbaPowtorzen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"licznik"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-      <span class="kd">let</span> <span class="nx">wiadomosc</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"wiadomosc"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-
-      <span class="kd">let</span> <span class="nx">rezultat</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
-      <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">liczbaPowtorzen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">rezultat</span> <span class="o">=</span> <span class="nx">rezultat</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="s2">"</span><span class="err">\</span><span class="s2">n"</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"oknoZWiadomoscia"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">rezultat</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"przycisk"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">pokazWiadomosc</span><span class="p">;</span>
-  <span class="nt">&lt;/script&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<span class="k">for</span> <span class="n">txt</span> <span class="ow">in</span> <span class="n">easy_python</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">txt</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">txt</span><span class="p">))</span>
 </code></pre></div></div>
 
-<p>Spróbuj!</p>
-
-<p>Zwróć tylko uwagę, że jeśli w liczniku podasz liczbę większą niż około 10000, twoja strona prawdopodobnie zwolni, a przy liczbach rzędu 30000 minie sekunda czy dwie zanim strona się zaktualizuje.</p>
-
-<p>Wykonanie pętli jeden raz zajmuje jakiś ułamek sekundy, ale powtórzenie tej czynności dziesiątki tysięcy razy wymaga już trochę czasu.</p>
-
-<p>Przyjrzyjmy się dokładniej naszej pętli:</p>
-
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">liczbaPowtorzen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">rezultat</span> <span class="o">=</span> <span class="nx">rezultat</span> <span class="o">+</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="s2">"</span><span class="err">\</span><span class="s2">n"</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p>Pętla wykona się dla każdego elementu naszej tablicy.</p>
 
 <p>Pętla składa się z dwóch części:</p>
 
 <ol>
   <li>
-    <p>Deklaracji pętli, <code class="highlighter-rouge">for (let i = 1; i &lt;= liczbaPowtorzen; i++)</code>. Deklaracja wygląda trochę jak wywołanie funkcji, ale to coś innego. Deklaracja pętli określa po prostu, jak nasza pętla ma działać.</p>
+    <p>Deklaracji pętli, <code class="highlighter-rouge">for txt in easy_python</code>. Deklaracja pętli określa po prostu, jak nasza pętla ma działać.</p>
   </li>
   <li>
     <p>Ciała pętli, czyli kodu który ma się wykonać za każdym powtórzeniem pętli.</p>
   </li>
 </ol>
 
-<p>Deklaracja pątli składa się ze słowa kluczowego <code class="highlighter-rouge">for</code> i trzech wyrażeń w nawiasie okrągłym, oddzielonych od siebie średnikami.</p>
+<p>Deklaracja pątli składa się ze słowa kluczowego <code class="highlighter-rouge">for</code> i trzech kolejnych elementów.</p>
 
 <ol>
   <li>
-    <p>Pierwsze wyrażenie to wyrażenie inicjalizacji: <code class="highlighter-rouge">let i = 0</code>.
-Tworzymy w ten sposób licznik <code class="highlighter-rouge">i</code>, który będzie przechowywał informację o tym, który raz wykonuje się pętla.</p>
+    <p>Pierwszym elementem jest zmienna sterująca <code class="highlighter-rouge">txt</code>. Może mieć dowolną nazwę, jaką będziemy wykorzystywać w ciele pętli.
+Tworzymy zmienną <code class="highlighter-rouge">txt</code>, która będzie przechowywać informację o elemencie, który właśnie wykorzystujemy.</p>
   </li>
   <li>
-    <p>Drugim wyrażeniem jest warunek: <code class="highlighter-rouge">i&lt;=liczbaPowtorzen</code>
-Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona się tylko wtedy, jeżeli nasz warunek jest prawdziwy (a jeżeli jest fałszywy, pętla się kończy).
-W naszym przykładzie oznacza on, że kiedy wartość <code class="highlighter-rouge">i</code> jest mniejsza lub równa niż <code class="highlighter-rouge">liczbaPowtorzen</code>, pętla wykonuje się po raz kolejny.</p>
+    <p>Drugim elementem jest warunek: <code class="highlighter-rouge">in</code>
+Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona się tylko wtedy, jeżeli nasz warunek jest prawdziwy - tzn bierzemy kolejny, niepusty element z listy (a jeżeli jest fałszywy, pętla się kończy, nie mamy więcej elmentów w liście).</p>
   </li>
   <li>
-    <p>Trzecim wyrażeniem jest wyrażenie inkrementacji: <code class="highlighter-rouge">i++</code>. Wykonuje się ono po wykonaniu kodu z ciała pętli.
-W pętli powyżej po każdym dodaniu kolejnej wiadomości do zmiennej <code class="highlighter-rouge">output</code>, nasz licznik <code class="highlighter-rouge">i</code> zwiększa się o 1 (zapis <code class="highlighter-rouge">i++</code> oznacza to samo co <code class="highlighter-rouge">i + 1</code>).</p>
+    <p>Trzecim wyrażeniem jest sekwencja elementów czyli lista: <code class="highlighter-rouge">easy_python</code>.</p>
   </li>
 </ol>
 
-<p>Po tym kiedy nasza pętla wykonała się już określoną liczbę razy, ustawiamy tekst w <code class="highlighter-rouge">oknoZWiadomoscia</code> na nasz <code class="highlighter-rouge">rezultat</code>.</p>
+<h4 id="range"><code class="highlighter-rouge">range()</code></h4>
 
-<p>Czy myślisz, że uda ci się zmienić działanie naszej pętli w taki sposób, że będzie liczyć od <code class="highlighter-rouge">liczbaPowtorzen</code> do <code class="highlighter-rouge">1</code>, a nie od <code class="highlighter-rouge">0</code> do <code class="highlighter-rouge">liczbaPowtorzen</code>? Spróbuj!</p>
+<p>Innym sposobem stworzenia pętli <code class="highlighter-rouge">for</code> jest zadanie ile razy ma wykonać się pętla. Funkcja range() - range(start, stop, krok) nie tworzy bezpośrednio listy, zamiast tego zwraca zakres liczb. Zawsze od start do stop(bez wartości stopu!).</p>
 
-<h3 id="co-tak-wolno">Co tak wolno?</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>  <span class="c"># i = 0, 1, 2, 3, 4 -&gt; domyślnie od zera [0, 5) </span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
-<p>Jeżeli tekst ma być powtórzony naprawdę wiele razy, powiedzmy <code class="highlighter-rouge">32000</code>, pętla będzie potrzebowała kilku sekund, by się wykonać i zaktualizować stronę.</p>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>  <span class="c"># i = 10, 20, 30, 40 -&gt; [10, 50) co 10</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
-<p>Ale co się stanie jeżeli kod aktualizujący treść strony umieścimy <em>wewnątrz</em> pętli?</p>
-
-<p>Spróbujmy.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
-  <span class="kd">function</span> <span class="nx">pokazWiadomosc</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">let</span> <span class="nx">liczbaPowtorzen</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"licznik"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-    <span class="kd">let</span> <span class="nx">wiadomosc</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"wiadomosc"</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
-
-    <span class="kd">let</span> <span class="nx">rezultat</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="nx">liczbaPowtorzen</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">rezultat</span> <span class="o">=</span> <span class="nx">rezultat</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s2">" : "</span> <span class="o">+</span> <span class="nx">wiadomosc</span> <span class="o">+</span> <span class="s2">"</span><span class="err">\</span><span class="s2">n"</span><span class="p">;</span>
-      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"oknoZWiadomoscia"</span><span class="p">).</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">rezultat</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"przycisk"</span><span class="p">).</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">pokazWiadomosc</span><span class="p">;</span>
-<span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
 
-<p>Niestety nasz kod nie działa. Dlaczego?</p>
+<p>Stwórzmy nowy przykład, w którym, na której podasz jaka wiadomość ma się wyświetlić - i ile razy ma to zrobić.</p>
 
-<p>Zawartość strony może być zaktualizowana tylko po wykonaniu kodu javascript - musi więc czekać, aż ten skończy powtarzanie pętli. Tak w dużym uproszczeniu, jeżeli twój kod potrzebuje dużo czasu na wykonanie się, na stronie nic będzie mogło się w tym czasie wydarzyć. A więc nauczka na przyszłość - unikaj długich pętli!</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user_message</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Podaj wiadomość: "</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Podaj ile razy: "</span><span class="p">))</span>
 
-<h3 id="inne-rodzaje-pętli">Inne rodzaje pętli</h3>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number</span><span class="p">):</span> 
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">user_message</span><span class="p">)</span>
 
-<p>Istnieją też inne rodzaje pętli - jednak większość z nich powtarza pewne działanie określoną liczbę razy, aż do momentu spełnienia warunku albo tak długo jak warunek jest spełniany. Ich działanie jest więc podobne do naszej pętli <code class="highlighter-rouge">for</code>.</p>
+</code></pre></div></div>
+
+<p>Teraz nasza zmienna <code class="highlighter-rouge">i</code> porusza się (<em>iteruje</em>) po zakresie liczb. Staje się więc naszym licznikiem- ile razy wykonaliśmy polecenie w środku pętli.</p>
+
+<p>To jeszcze jednen przykład na pętlę <code class="highlighter-rouge">for</code>. Utwórz plik <code class="highlighter-rouge">heroes.py</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">heros</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Knight"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="s">"Killer"</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s">"Wizard"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">heros</span><span class="p">)</span>  <span class="c"># lista -&gt; ['Knight', 'Knight', 'Knight', 'Killer', 'Wizard', 'Wizard']</span>
+
+<span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">heros</span><span class="p">:</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="s">"Killer"</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Found the killer!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="zadanie-1">Zadanie 1</h4>
+
+<p>Utwórz pętlę, która wypisze liczby od 20 do 40 co drugą wartość</p>
+
+<h4 id="zadanie-2">Zadanie 2</h4>
+
+<p>Zmodyfikuj kod <code class="highlighter-rouge">heroes.py</code> tak, aby listę bohaterów podawał użytkownik. Dodatkowo jeśli osoba <code class="highlighter-rouge">Killer</code> nie znajduje się na liście wypisz “There’s no Killer”.</p>
+
+<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number_of_heros</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Number of heros: "</span><span class="p">))</span>
+
+<span class="n">heros</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_heros</span><span class="p">):</span>
+  <span class="n">person</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Personality type:  "</span><span class="p">)</span>
+  <span class="n">heros</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">heros</span><span class="p">)</span>  <span class="c"># ['Knight', 'Knight', 'Knight', 'Killer', 'Wizard', 'Wizard']</span>
+
+<span class="n">check_killer</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">for</span> <span class="n">hero</span> <span class="ow">in</span> <span class="n">heros</span><span class="p">:</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">hero</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s">"killer"</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Found the killer!"</span><span class="p">)</span>
+        <span class="n">check_killer</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">if</span> <span class="n">check_killer</span> <span class="o">==</span> <span class="bp">False</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"There's no Killer"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"There's a Killer!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="pętla-while">Pętla <code class="highlighter-rouge">while</code></h2>
+
+<p>Istnieje też inna pętla, pętla <code class="highlighter-rouge">while</code>.  W pętle <code class="highlighter-rouge">while</code> powtarzają pewne działanie określoną liczbę razy, aż do momentu spełnienia warunku albo tak długo jak warunek jest spełniony.</p>
+
+<p>Od razu przejdźmy do przykładu:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">price</span> <span class="o">=</span> <span class="mi">150</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">price</span> <span class="o">&gt;</span> <span class="mi">100</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="s">"zł - za drogo"</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Poczekam aż będzie lepsza promocja"</span><span class="p">)</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="n">price</span> <span class="o">-</span> <span class="mi">20</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Już poza pętlą"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">price</span><span class="p">,</span> <span class="s">"$ to super promocja!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Pętla while również składa się z 2 części:</p>
+
+<ol>
+  <li>
+    <p>Deklaracji pętli <code class="highlighter-rouge">while (price &gt; 100):</code>.</p>
+  </li>
+  <li>
+    <p>Ciała pętli oznaczonego wcięciem.</p>
+  </li>
+</ol>
+
+<p>Jeśli się przyjrzymy jej konstrukacja jest bardzo prosta:</p>
+
+<ol>
+  <li>
+    <p>Słowo kluczowe <code class="highlighter-rouge">while</code> (<em>kiedy, dopóki</em>)</p>
+  </li>
+  <li>
+    <p>Warunek w nawiasach (nawiasy opcjonalne), jest sprawdzany po każdym wykonaniu, a pętla wykonuje się dopóki nasz warunek zwraca wartość <code class="highlighter-rouge">True</code>, na początku cena 150 jest większa od 100. W ciele pętli obniżamy cenę. Kiedy cena <code class="highlighter-rouge">price</code> przestanie być większa od 100, czyli zwróci wartość logiczną <code class="highlighter-rouge">False</code>, wyjdziemy z ciała pętli.</p>
+  </li>
+</ol>
+
+<p>Spójrzmy na kolejny przypadek. Teraz wykorzystamy moduł random. Pozwala on dodać do naszego kodu odrobinę losowości. Za pomocą metody <code class="highlighter-rouge">randrange()</code> będziemy losować liczby od 0 do 100. Składnia Pythona jest na tyle prosta, że nie musisz znać dosłownie każdej linijki, by zrozumieć ogół działania poniższego programu:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="n">bird</span> <span class="o">=</span> <span class="s">"duck"</span>
+<span class="k">while</span> <span class="n">bird</span> <span class="o">!=</span> <span class="s">"pigeon"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"waiting..."</span><span class="p">)</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">):</span>
+        <span class="n">bird</span> <span class="o">=</span> <span class="s">"pigeon"</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Hurray, I'm a pigeon!"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>W poniższych zadaniach możesz użyć zarówno pętli <code class="highlighter-rouge">for</code> jak i <code class="highlighter-rouge">while</code>.</p>
+
+<h4 id="zadanie-1-1">Zadanie 1</h4>
+
+<p>Pobierz od użytkownika tytuły kilku filmów. Poproś użytkownika o ich ocenienie. Wyświetl pary film i ocena.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Film pt. "</span> <span class="o">+</span> <span class="n">movie</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"oceniasz na "</span><span class="p">,</span> <span class="n">grade</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>W razie potrzeby możesz podejrzeć rozwiązanie. Oczywiście, to tylko propozycja. Twój kod może wyglądać inaczej i również działać prawidłowo ;)</p>
+
+<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number_of_movies</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Podaj liczbę filmów do ocenienia"</span><span class="p">))</span>
+
+<span class="n">movies_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">grades_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c"># ------- rozwiązanie for -------</span>
+<span class="k">for</span> <span class="n">nr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_movies</span><span class="p">):</span>
+    <span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">)</span>
+    <span class="n">movies_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
+    <span class="n">grades_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+    
+<span class="c"># ------ rozwiązanie while ------</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">number_of_movies</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
+    <span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">)</span>
+    <span class="n">movies_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
+    <span class="n">grades_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_movies</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Film pt."</span><span class="p">,</span> <span class="n">movie</span><span class="p">,</span> <span class="s">" : "</span><span class="p">,</span> <span class="n">grade</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="zadanie-2-1">Zadanie 2</h4>
+
+<p>Napisz program, który znajdzie wszystkie liczby, które są podzielne przez 7, ale nie są wielokrotnością 5, między 2000 a 3200 (obie wartości uwzględnione).</p>
+
+<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">3201</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">7</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Jeżeli ten etap mamy za sobą, to czas na kolejny krok naszej Pythonowej przygody!</p>
+
 
     
 
