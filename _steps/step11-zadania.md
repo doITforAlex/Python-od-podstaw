@@ -49,7 +49,7 @@ Narysuj choinkę:
 - użytkownik podaje wysokość choinki
 - znak użytkownika nie może być literą ani cyfrą
 
-#### 4. Literki 🔠
+### 4. Literki 🔠
 
 Pobierz od użytkownika dowolny tekst i wyświetl tylko te znaki, które są na pozycjach parzystych. Wykonaj zadanie na dwa sposoby - za pomocą pętli oraz przez sting slicing ( ‘abrakadabra’ -> ‘baaar’).
 
