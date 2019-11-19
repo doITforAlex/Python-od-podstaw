@@ -1,8 +1,8 @@
 ---
 layout: step
-number: 12
+number: 11
 title: Co teraz?
-permalink: step12/
+permalink: step11/
 end: true
 ---
 

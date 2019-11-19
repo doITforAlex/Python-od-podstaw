@@ -1,8 +1,8 @@
 ---
 layout: step
-number: 11
+number: 10
 title: Zadania
-permalink: step11/
+permalink: step10/
 ---
 
 ### 1. Warm Up 🧠
