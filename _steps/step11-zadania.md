@@ -49,10 +49,14 @@ Narysuj choinkę:
 - użytkownik podaje wysokość choinki
 - znak użytkownika nie może być literą ani cyfrą
 
-### 4. Co na prezent? 🎁
+#### 4. Literki 🔠
+
+Pobierz od użytkownika dowolny tekst i wyświetl tylko te znaki, które są na pozycjach parzystych. Wykonaj zadanie na dwa sposoby - za pomocą pętli oraz przez sting slicing ( ‘abrakadabra’ -> ‘baaar’).
+
+### 5. Co na prezent? 🎁
 Stwórz listę pomysłów na prezent dla swoich bliskich. Kiedy nadarzy się okazja, aby dać im prezent (święta, urodziny, rocznicę), program losowo wybierze jeden (i być może miejsca, w których możesz go zdobyć).
 
-### 5. Zakoduj tajną wiadomość 🕵️
+### 6. Zakoduj tajną wiadomość 🕵️
 ```
 PYTHON JEST SUPER
 ```
@@ -61,7 +65,7 @@ PYTHON JEST SUPER
 - wymyśl własny algorytm kodujący jako `secret2.py`
 - napisz program `secret3.py`, które odkoduje wiadomość
 
-### 6. Śledź robota 🤖
+### 7. Śledź robota 🤖
 Robot porusza się w płaszczyźnie zaczynając od pierwotnego punktu (0,0). Robot może poruszać się w GÓRĘ, W DÓŁ, ​​W LEWO i W PRAWO, wykonując określone kroki. Ślad ruchu robota pokazano następująco:
 ```
 UP 5
@@ -82,7 +86,7 @@ RIGHT 2
 Wynik: `3`
 
 
-### 7. Love calculator 💖
+### 8. Love calculator 💖
 
 Stwórz grę inspirowaną miłosną wróżbą z czasów szkolnych. Zasady gry przedstawia to [wideo](https://www.youtube.com/watch?v=oFsLVG7EAZ4).
 1. Pobierz imiona zakochanych
