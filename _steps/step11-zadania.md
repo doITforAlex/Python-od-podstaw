@@ -61,7 +61,7 @@ PYTHON JEST SUPER
 - wymyśl własny algorytm kodujący jako `secret2.py`
 - napisz program `secret3.py`, które odkoduje wiadomość
 
-### 6. Śledź robota 🔍
+### 6. Śledź robota 🤖
 Robot porusza się w płaszczyźnie zaczynając od pierwotnego punktu (0,0). Robot może poruszać się w GÓRĘ, W DÓŁ, ​​W LEWO i W PRAWO, wykonując określone kroki. Ślad ruchu robota pokazano następująco:
 ```
 UP 5
