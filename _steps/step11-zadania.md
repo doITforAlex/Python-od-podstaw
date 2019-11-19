@@ -85,8 +85,23 @@ RIGHT 2
 
 Wynik: `3`
 
+### 8. Sprawdź pogodę 🌤
 
-### 8. Love calculator 💖
+Przypominij sobie zadanie z wykorzystaniem biblioteki `requests` do odpytania zewnętrznego API.
+Strona OpenWeatherMap udostępnia różnego rodzaju informacje o pogodzie. Skorzystaj z dokumentacji [Current Weather](https://openweathermap.org/current). Przyjrzyj się jak zbudowany jest adres URL. 
+
+Pozwól użytkownikowi podać miasto oraz dwuliterowy kod kraju. Możesz ograniczyć miasta przez wybór kraju w prostym menu np.
+
+- United Kingdom - uk
+- Poland - pl
+- Germany - de
+- itd...
+
+Pokaż użytkownikowi krótkie zdanie o pogodzie oraz temperaturę w st. celcjusza.
+
+*Uwaga: OpenWeather API może wymagać autoryzacji. Należy założyć darmowe konto i w miejsce appid podać swój klucz konta (`&APPID=your_key`)*
+
+### 9. Love calculator 💖
 
 Stwórz grę inspirowaną miłosną wróżbą z czasów szkolnych. Zasady gry przedstawia to [wideo](https://www.youtube.com/watch?v=oFsLVG7EAZ4).
 1. Pobierz imiona zakochanych
