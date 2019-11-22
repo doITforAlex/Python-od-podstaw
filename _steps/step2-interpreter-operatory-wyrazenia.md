@@ -5,7 +5,7 @@ title: Interpreter Pythona
 permalink: step2/
 ---
 
-W tej części rozpoczniemy zabawę z Pythonem, na razie w trybie interkatywnym czyli w konsolowym interpreterze.
+W tej części rozpoczniemy zabawę z Pythonem, na razie w trybie interaktywnym czyli w konsolowym interpreterze.
 
 Otwórz interpreter Pythona w wierszu poleceń na swoim komputerze.
 Wpisz komendę `python`:
@@ -40,7 +40,7 @@ Zastosowane polecenie *print()* to funkcja, która służy w Pythonie do wyświe
 
 **Wyrażeniem** jest łączenie kilku danych i przeprowadzanie na nich działań matematycznych, by dostać nową wartość.
 
-To wszystko jest nam znane od podstówki, każda i każdy z nas potrafi wykonać podstawowe operacje matematyczne, ale czy potrafi je też Python?
+To wszystko jest nam znane od podstawówki, każda i każdy z nas potrafi wykonać podstawowe operacje matematyczne, ale czy potrafi je też Python?
 
 ## Operacje arytmetyczne
 
@@ -92,7 +92,7 @@ Dlaczego używamy `*` i `/` zamiast zwykłych symboli mnożenia i dzielenia?
 
 Pierwsze klawiatury komputerowe były wzorowane na mechanicznych maszynach do pisania.
 
-Osoby, które korzystły z takich maszyn nie potrzebowały ani symbolu mnożenia (bo mogły po prostu używać znaku `x`), ani symbolu dzielenia (bo mogły wpisać po prostu `-` i potem nadpisać na nim `:`, albo po prostu użyć samego znaku `:`). Ułamki z kolei zapisywano jako `1/2` czy `3/4`.
+Osoby, które korzystały z takich maszyn nie potrzebowały ani symbolu mnożenia (bo mogły po prostu używać znaku `x`), ani symbolu dzielenia (bo mogły wpisać po prostu `-` i potem nadpisać na nim `:`, albo po prostu użyć samego znaku `:`). Ułamki z kolei zapisywano jako `1/2` czy `3/4`.
 
 (Co prawda, maszyny z wyższej półki miewały specjalne klawisze z symbolami mnożenia i dzielenia, ale jakoś nigdy się to nie przyjęło).
 

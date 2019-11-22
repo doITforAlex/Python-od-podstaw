@@ -143,14 +143,14 @@
       </li>
   
       <li class=''>
-        <a href="/step11/">
-          11 - Zadania
+        <a href="/step10/">
+          10 - Zadania
         </a>
       </li>
   
       <li class=''>
-        <a href="/step12/">
-          12 - Co teraz?
+        <a href="/step11/">
+          11 - Co teraz?
         </a>
       </li>
   
@@ -183,10 +183,10 @@
 
 <ul>
   <li>
-    <p>Na pulpicie (lub w dowolnej innej lokalizacji) utwórz folder dla dzisiejszych zajęć o nazwie <code class="highlighter-rouge">python_od_podstaw</code>.</p>
+    <p>Na pulpicie (lub w dowolnej innej lokalizacji) utwórz folder dla dzisiejszych zajęć o nazwie <code class="language-plaintext highlighter-rouge">python_od_podstaw</code>.</p>
   </li>
   <li>
-    <p>Otwórz edytor. Wybierz <code class="highlighter-rouge">Open</code> &gt; <code class="highlighter-rouge">twój folder</code></p>
+    <p>Otwórz edytor. Wybierz <code class="language-plaintext highlighter-rouge">Open</code> &gt; <code class="language-plaintext highlighter-rouge">twój folder</code></p>
   </li>
 </ul>
 
@@ -198,7 +198,7 @@
 
 <p><img src="../assets/pycharm_new_file.png" alt="Otworz folder" title="Terminal MacOs" class="img-responsive" /></p>
 
-<p>Zauważysz, że w twoim folderze pojawił się nowy plik. Pliki Pythona używają rozszerzenia <code class="highlighter-rouge">.py</code>.</p>
+<p>Zauważysz, że w twoim folderze pojawił się nowy plik. Pliki Pythona używają rozszerzenia <code class="language-plaintext highlighter-rouge">.py</code>.</p>
 
 <p>Dodaj następujące komendy:</p>
 
@@ -212,8 +212,8 @@
 <p>Komentarze to linie zaczynające się od znaku #. Możesz napisać dowolną informację za znakiem #, a Python ją zignoruje. Komentarze mogą sprawić, że kod będzie łatwiejszy do zrozumienia przez innych programistów, a tekst ten nie będzie widziany przez użytkownika programu.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="c"># to jest komentarz jednolinijkowy</span>
-
+<span class="c1"># to jest komentarz jednolinijkowy
+</span>
 <span class="s">"""
 ten komentarz
 zajmuje
@@ -222,19 +222,19 @@ linii
 """</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s">"widać mnie"</span><span class="p">)</span>
-<span class="c"># print("a mnie nie widać")</span>
-
+<span class="c1"># print("a mnie nie widać")
+</span>
 </code></pre></div></div>
 
 <h4 id="zadanie">Zadanie</h4>
 
-<p>Utwórz nowy plik np. <code class="highlighter-rouge">movies.py</code>. Skopiuj poniższy kod i przeanalizuj. Potraktuj jako bazę do rozwiązania zadania. Dodaj 3 nowe oceny i wylicz srednia z ocen.</p>
+<p>Utwórz nowy plik np. <code class="language-plaintext highlighter-rouge">movies.py</code>. Skopiuj poniższy kod i przeanalizuj. Potraktuj jako bazę do rozwiązania zadania. Dodaj 3 nowe oceny i wylicz średnią z ocen.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>movie = input("Tytul filmu: ")
-grade = int(input("Ocena filmu w skali 1-10: "))
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
+<span class="n">grade</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">))</span>
 
-print("Film pt. " + movie)
-print("oceniasz na ", grade)
+<span class="k">print</span><span class="p">(</span><span class="s">"Film pt. "</span> <span class="o">+</span> <span class="n">movie</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"oceniasz na "</span><span class="p">,</span> <span class="n">grade</span><span class="p">)</span>
 
 </code></pre></div></div>
 

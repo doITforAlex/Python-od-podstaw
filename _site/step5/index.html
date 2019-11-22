@@ -143,14 +143,14 @@
       </li>
   
       <li class=''>
-        <a href="/step11/">
-          11 - Zadania
+        <a href="/step10/">
+          10 - Zadania
         </a>
       </li>
   
       <li class=''>
-        <a href="/step12/">
-          12 - Co teraz?
+        <a href="/step11/">
+          11 - Co teraz?
         </a>
       </li>
   
@@ -173,30 +173,30 @@
     </header>
 
   <div class="post-content">
-    <p>Do tej pory pisaliśmy kod, w którym wszystkie dane do zmiennych podawaliśmy samodzielnie. Zmienna <code class="highlighter-rouge">name</code> od razu dostawała wartość (np. przez <code class="highlighter-rouge">name = "Rita"</code>), co gdybyśmy chcieli tę zmienną zaktualizować o imię nowego użytkownika?</p>
+    <p>Do tej pory pisaliśmy kod, w którym wszystkie dane do zmiennych podawaliśmy samodzielnie. Zmienna <code class="language-plaintext highlighter-rouge">name</code> od razu dostawała wartość (np. przez <code class="language-plaintext highlighter-rouge">name = "Rita"</code>), co gdybyśmy chcieli tę zmienną zaktualizować o imię nowego użytkownika?</p>
 
 <h3 id="input">input()</h3>
 
 <p>Potrzebujemy poznać kolejną funkcję wbudowaną input()</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Tu wpisz swoje imię: ')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Tu wpisz swoje imię: ')
 &gt;&gt;&gt; name = input()
 
 </code></pre></div></div>
 
 <p>Teraz konsola czeka na nasze działanie, aż wpiszemy ciąg znaków z klawiatury - nasze imię.
-Kiedy je wpiszemy imię zostanie zapisane do zmiennej <code class="highlighter-rouge">name</code>.</p>
+Kiedy je wpiszemy imię zostanie zapisane do zmiennej <code class="language-plaintext highlighter-rouge">name</code>.</p>
 
 <p>Wyświetlmy je:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Cześć', name, 'jak się masz?')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Cześć', name, 'jak się masz?')
 </code></pre></div></div>
 
-<p>Zmienna name została wyświetlona, i ma taką zawartość jak została podana przez <code class="highlighter-rouge">input()</code></p>
+<p>Zmienna name została wyświetlona, i ma taką zawartość jak została podana przez <code class="language-plaintext highlighter-rouge">input()</code></p>
 
 <p>Możemy to samo zapisać krócej, niech funkcja input od razu wyświetli pytanie:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; age = input('Ile masz lat?')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; age = input('Ile masz lat?')
 
 &gt;&gt;&gt; print('To już', age, 'lat!')
 </code></pre></div></div>
@@ -206,14 +206,14 @@ Kiedy je wpiszemy imię zostanie zapisane do zmiennej <code class="highlighter-r
 <h4 id="zadania">Zadania</h4>
 
 <ol>
-  <li>Przypisz swoje imię do zmiennej o nazwie <code class="highlighter-rouge">my_name</code>.</li>
-  <li>Następnie przypisz swoje nazwisko do <code class="highlighter-rouge">my_surname</code>.</li>
+  <li>Przypisz swoje imię do zmiennej o nazwie <code class="language-plaintext highlighter-rouge">my_name</code>.</li>
+  <li>Następnie przypisz swoje nazwisko do <code class="language-plaintext highlighter-rouge">my_surname</code>.</li>
   <li>Połącz te dwa ciągi znaków w jeden.</li>
   <li>Poproś użytkownika o imię oraz wiek, a następnie spraw by na ekranie pojawiło się przywitanie oraz informacja jak jest różnica wieku między Wami.</li>
 </ol>
 
 <p>Sprawdź jeszcze:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; number = input("Wpisz tu 3: ")
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; number = input("Wpisz tu 3: ")
 
 &gt;&gt;&gt; print(3 == number)
 &gt;&gt;&gt; type(3)
@@ -222,11 +222,11 @@ Kiedy je wpiszemy imię zostanie zapisane do zmiennej <code class="highlighter-r
 
 <p>Number zostało odczytane jako string. Stąd:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; number = int(number)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; number = int(number)
 &gt;&gt;&gt; print(3 == number)
 </code></pre></div></div>
 
-<p>Zakończ pracę w trypie interaktywnym za pomocą komendy <code class="highlighter-rouge">exit()</code>.</p>
+<p>Zakończ pracę w trybie interaktywnym za pomocą komendy <code class="language-plaintext highlighter-rouge">exit()</code>.</p>
 
 <p>Znowu jesteśmy w systemowym wierszu poleceń / terminalu.</p>
 

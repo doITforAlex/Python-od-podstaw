@@ -5,7 +5,7 @@ title: Typy danych
 permalink: step4/
 ---
 
-Tworzyliśmy zmienne, które przechowywały dane, ale jakie dane? Gdy patrzymy na napis wiemy, że jest napisem, czy na cyfry, mózg wie, żeby je potraktować jako policzalne wartości. Skąd wie to Python? Otórz dla komputera istnieją typy danych. W tym rozdziale poznasz podstawowe typy. *W czasie warsztatu nie poruszamy wszystkim typów, które są dostępne w Pythonie.*
+Tworzyliśmy zmienne, które przechowywały dane, ale jakie dane? Gdy patrzymy na napis wiemy, że jest napisem, czy na cyfry, mózg wie, żeby je potraktować jako policzalne wartości. Skąd wie to Python? Otóż dla komputera istnieją typy danych. W tym rozdziale poznasz podstawowe typy. *W czasie warsztatu nie poruszamy wszystkim typów, które są dostępne w Pythonie.*
 
 Pierwsza rzecz na jaką trzeba zwrócić uwagę to dynamiczna zmiana typu:
 
@@ -72,7 +72,7 @@ Wyświetl powyższe zmienne
 >>> print(mood)
 ```
 
-W ostatnim przykładze pojawiła się literka `f` przed ciągiem znaków, w ten sposób tworzymy **f-string**, string, który może zawierać jakąś zmienną w środku. U nas string "How are you today" zawiera zmienną przechowującą imię.
+W ostatnim przykładzie pojawiła się literka `f` przed ciągiem znaków, w ten sposób tworzymy **f-string**, string, który może zawierać jakąś zmienną w środku. U nas string "How are you today" zawiera zmienną przechowującą imię.
 
 ---
 
@@ -249,7 +249,7 @@ Listy to obiekty, które zawierają jakieś wartości w określonej kolejności.
 Typy mogące przechowywać różne dane nazywamy czasem **kolekcjami**.
 Nie ma co tracić czasu, przejdźmy do kodu!
 
-Aby stworzyć listę elementów musimu użyć nawiasów kwadratowych `[]`.
+Aby stworzyć listę elementów musimy użyć nawiasów kwadratowych `[]`.
 
 ```
 >>> shopping_list = []

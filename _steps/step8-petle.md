@@ -30,13 +30,13 @@ Pętla składa się z dwóch części:
 
 2. Ciała pętli, czyli kodu który ma się wykonać za każdym powtórzeniem pętli.
 
-Deklaracja pątli składa się ze słowa kluczowego `for` i trzech kolejnych elementów.
+Deklaracja pętli składa się ze słowa kluczowego `for` i trzech kolejnych elementów.
 
 1. Pierwszym elementem jest zmienna sterująca `txt`. Może mieć dowolną nazwę, jaką będziemy wykorzystywać w ciele pętli.
    Tworzymy zmienną `txt`, która będzie przechowywać informację o elemencie, który właśnie wykorzystujemy.
 
 2. Drugim elementem jest warunek: `in`
-   Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona się tylko wtedy, jeżeli nasz warunek jest prawdziwy - tzn bierzemy kolejny, niepusty element z listy (a jeżeli jest fałszywy, pętla się kończy, nie mamy więcej elmentów w liście).
+   Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona się tylko wtedy, jeżeli nasz warunek jest prawdziwy - tzn bierzemy kolejny, niepusty element z listy (a jeżeli jest fałszywy, pętla się kończy, nie mamy więcej elementów w liście).
 
 3. Trzecim wyrażeniem jest sekwencja elementów czyli lista: `easy_python`.
 
@@ -67,7 +67,7 @@ for i in range(number):
 
 Teraz nasza zmienna `i` porusza się (*iteruje*) po zakresie liczb. Staje się więc naszym licznikiem- ile razy wykonaliśmy polecenie w środku pętli.
 
-To jeszcze jednen przykład na pętlę `for`. Utwórz plik `heroes.py`:
+To jeszcze jeden przykład na pętlę `for`. Utwórz plik `heroes.py`:
 
 ```python
 heros = ["Knight"] * 3 + ["Killer"] + ["Wizard"] * 2
@@ -135,7 +135,7 @@ Pętla while również składa się z 2 części:
 
 2. Ciała pętli oznaczonego wcięciem.
 
-Jeśli się przyjrzymy jej konstrukacja jest bardzo prosta:
+Jeśli się przyjrzymy jej konstrukcja jest bardzo prosta:
 
 1. Słowo kluczowe `while` (*kiedy, dopóki*)
 
