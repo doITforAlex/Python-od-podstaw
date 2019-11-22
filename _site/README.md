@@ -13,4 +13,4 @@ Po wykonaniu zmian np. css należy od nowa zbudować projekt np.
 - `bundle exec jekyll build`
 - `bundle exec jekyll serve`
 
-Lokalnie pod adressem: http://127.0.0.1:4000/
+Lokalnie pod adresem: http://127.0.0.1:4000/

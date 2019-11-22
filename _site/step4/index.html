@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,9 +36,9 @@
 </head>
 
 
-  <body>
+<body>
 
-    <header class="site-header" role="banner">
+  <header class="site-header" role="banner">
 
   <div class="wrapper">
     
@@ -70,9 +70,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      
 
 <div class="step-nav">
   <ul class="main">
@@ -165,7 +165,7 @@
 
 </div>
 
-        <article class="post">
+      <article class="post">
   
   <header class="post-header">
       
@@ -173,17 +173,17 @@
     </header>
 
   <div class="post-content">
-    <p>Tworzyliśmy zmienne, które przechowywały dane, ale jakie dane? Gdy patrzymy na napis wiemy, że jest napisem, czy na cyfry, mózg wie, żeby je potraktować jako policzalne wartości. Skąd wie to Python? Otórz dla komputera istnieją typy danych. W tym rozdziale poznasz podstawowe typy. <em>W czasie warsztatu nie poruszamy wszystkim typów, które są dostępne w Pythonie.</em></p>
+    <p>Tworzyliśmy zmienne, które przechowywały dane, ale jakie dane? Gdy patrzymy na napis wiemy, że jest napisem, czy na cyfry, mózg wie, żeby je potraktować jako policzalne wartości. Skąd wie to Python? Otóż dla komputera istnieją typy danych. W tym rozdziale poznasz podstawowe typy. <em>W czasie warsztatu nie poruszamy wszystkim typów, które są dostępne w Pythonie.</em></p>
 
 <p>Pierwsza rzecz na jaką trzeba zwrócić uwagę to dynamiczna zmiana typu:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 26
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 26
 &gt;&gt;&gt; print(a)
 &gt;&gt;&gt; a = "Rita"
 &gt;&gt;&gt; print(a)
 </code></pre></div></div>
 
-<p>Dla Pythona powyższy kod jest zupełnie naturalny. Najpierw zmienna <code class="highlighter-rouge">a</code> przechowywała liczbę, a następnie do <code class="highlighter-rouge">a</code> ponownie przypisaliśmy wartość, tym razem jednak wartość tekstową.</p>
+<p>Dla Pythona powyższy kod jest zupełnie naturalny. Najpierw zmienna <code class="language-plaintext highlighter-rouge">a</code> przechowywała liczbę, a następnie do <code class="language-plaintext highlighter-rouge">a</code> ponownie przypisaliśmy wartość, tym razem jednak wartość tekstową.</p>
 
 <p>Nie we wszystkich językach programowania takie zachowanie jest dopuszczalne. W językach takich jak C++, C# czy Java zmienna ma z góry określony typ i próba zmiany typu powoduje błąd stąd ich nazwa <strong>statycznie typowane</strong>. Python jednak należy do grupy języków programowania <strong>dynamicznie typowanych</strong> (jak Ruby, JavaScript czy PHP).</p>
 
@@ -193,7 +193,7 @@
 
 <p>Przetestuj poniższy kod</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; txt = "Hello world"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; txt = "Hello world"
 &gt;&gt;&gt; welcome = "I’m Flynerd"
 &gt;&gt;&gt; type(txt)
 &gt;&gt;&gt; type(welcome)
@@ -205,7 +205,7 @@
 
 <p><strong>Nadpisanie wartości</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; txt = "Flynerd"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; txt = "Flynerd"
 &gt;&gt;&gt; print(txt)
 &gt;&gt;&gt; txt = "3 + 4"
 &gt;&gt;&gt; print(txt)
@@ -217,7 +217,7 @@
 
 <p><strong>Konkatenacja (łączenie) stringów</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; pp = "pen pineapple"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; pp = "pen pineapple"
 &gt;&gt;&gt; ap = "apple pen"
 &gt;&gt;&gt; concatenation = pp + ap
 </code></pre></div></div>
@@ -226,7 +226,7 @@
 
 <hr />
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; welcome = "Hello"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; welcome = "Hello"
 &gt;&gt;&gt; user_name = "Alicja"
 &gt;&gt;&gt; sentence = welcome + " " + user_name + ", welcome home!"
 &gt;&gt;&gt; print(sentence)
@@ -234,13 +234,13 @@
 &gt;&gt;&gt; print(mood)
 </code></pre></div></div>
 
-<p>W ostatnim przykładze pojawiła się literka <code class="highlighter-rouge">f</code> przed ciągiem znaków, w ten sposób tworzymy <strong>f-string</strong>, string, który może zawierać jakąś zmienną w środku. U nas string “How are you today” zawiera zmienną przechowującą imię.</p>
+<p>W ostatnim przykładzie pojawiła się literka <code class="language-plaintext highlighter-rouge">f</code> przed ciągiem znaków, w ten sposób tworzymy <strong>f-string</strong>, string, który może zawierać jakąś zmienną w środku. U nas string “How are you today” zawiera zmienną przechowującą imię.</p>
 
 <hr />
 
 <p><strong>Mnożenie napisów</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; letterA = "A"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; letterA = "A"
 &gt;&gt;&gt; print(25 * letterA)
 &gt;&gt;&gt; print(letterA)
 &gt;&gt;&gt; letterB = "B"
@@ -250,7 +250,7 @@
 
 <p><strong>Sprawdźmy czy napis zawiera znak</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('A' in 'anna')
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('A' in 'anna')
 &gt;&gt;&gt; print('A' in 'Anna')
 </code></pre></div></div>
 
@@ -262,7 +262,7 @@
   <li>Utwórz zmienną, która będzie przechowywać imię pupila, a następnie wyświetl informację “Pogłaszcz {imie_pupila}, ucieszy się”.</li>
   <li>Zapisz swoje imię i nazwisko do dowolnej zmiennej. Ile znaków ma Twoje imię i nazwisko?</li>
   <li>Zmień wszystkie litery imienia i nazwiska na drukowane.</li>
-  <li>Jaką metodą usunąć z ciągu znaków “Programujemy w Pythonie” literę <code class="highlighter-rouge">a</code>?</li>
+  <li>Jaką metodą usunąć z ciągu znaków “Programujemy w Pythonie” literę <code class="language-plaintext highlighter-rouge">a</code>?</li>
   <li>⭐W jaki sposób zamienić ciąg znaków “123” na liczbę 123?</li>
 </ol>
 
@@ -272,7 +272,7 @@
 
 <p><img src="../assets/step-3b.png" alt="Indeksowanie" title="Indeksowanie sekwencji" class="img-responsive" /></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; seq = "Monty Python"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; seq = "Monty Python"
 &gt;&gt;&gt; print(seq[0])
 &gt;&gt;&gt; print(seq[1])
 &gt;&gt;&gt; print(seq[2])
@@ -287,27 +287,27 @@ Pyth
 Monty
 </code></pre></div></div>
 
-<p>Przycinanie obywa się wg. wzoru: <code class="highlighter-rouge">[start:stop:krok]</code> albo <code class="highlighter-rouge">[-od_tylu]</code></p>
+<p>Przycinanie obywa się wg. wzoru: <code class="language-plaintext highlighter-rouge">[start:stop:krok]</code> albo <code class="language-plaintext highlighter-rouge">[-od_tylu]</code></p>
 <h1 id="zawsze-od-zera">zawsze od zera!</h1>
 
 <p>Przeanalizuj kolejne linie kodu, każdą wyświetl:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cool_string</span> <span class="o">=</span> <span class="s">"The quick brown fox jumped over the lazy dog"</span>
 
-<span class="c"># sprawdź długość - liczbę znaków</span>
-<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cool_string</span><span class="p">)</span>  <span class="c"># 44</span>
-
-<span class="n">index0</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c"># litera: 'T'</span>
-<span class="n">index5</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>  <span class="c"># litera: 'u'</span>
-
-<span class="c"># znajdź ostatnią literę</span>
-<span class="n">index_last</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cool_string</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="c"># dlaczego musmy odjąć 1?</span>
-<span class="n">last_char</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="n">index_last</span><span class="p">]</span>  <span class="c"># litera: 'g'</span>
-
-<span class="n">cool_slice_to_end</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>  <span class="c"># 'quick brown fox jumped over the lazy dog'</span>
-
-<span class="n">reversed_string</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c"># odwraca kolejność liter</span>
-</code></pre></div></div>
+<span class="c1"># sprawdź długość - liczbę znaków
+</span><span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cool_string</span><span class="p">)</span>  <span class="c1"># 44
+</span>
+<span class="n">index0</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># litera: 'T'
+</span><span class="n">index5</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># litera: 'u'
+</span>
+<span class="c1"># znajdź ostatnią literę
+</span><span class="n">index_last</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">cool_string</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># dlaczego musmy odjąć 1?
+</span><span class="n">last_char</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="n">index_last</span><span class="p">]</span>  <span class="c1"># litera: 'g'
+</span>
+<span class="n">cool_slice_to_end</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>  <span class="c1"># 'quick brown fox jumped over the lazy dog'
+</span>
+<span class="n">reversed_string</span> <span class="o">=</span> <span class="n">cool_string</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># odwraca kolejność liter
+</span></code></pre></div></div>
 
 <h4 id="zadania-1">Zadania</h4>
 
@@ -322,14 +322,14 @@ Monty
 
 <p>W Pythonie wyróżniamy 3 typy liczbowe</p>
 <ul>
-  <li>liczby całkowite (<code class="highlighter-rouge">int</code> - integer)</li>
-  <li>zmiennoprzecinkowe (<code class="highlighter-rouge">float</code> - floating point)</li>
-  <li>zespolone (<code class="highlighter-rouge">complex</code>)</li>
+  <li>liczby całkowite (<code class="language-plaintext highlighter-rouge">int</code> - integer)</li>
+  <li>zmiennoprzecinkowe (<code class="language-plaintext highlighter-rouge">float</code> - floating point)</li>
+  <li>zespolone (<code class="language-plaintext highlighter-rouge">complex</code>)</li>
 </ul>
 
 <p>Utworzymy sobie dwie rożne zmienne przechowujące liczby - całkowitą i dziesiętną (<em>zmiennoprzecinkową</em>), a następnie przeprowadzimy kilka operacji:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
 &gt;&gt;&gt; b = 5.5
 &gt;&gt;&gt; print(a + b)
 &gt;&gt;&gt; print(a - b)
@@ -339,14 +339,14 @@ Monty
 </code></pre></div></div>
 
 <p><strong>Sprawdź</strong>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type(a)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>type(a)
 type(b)
 </code></pre></div></div>
 
 <h3 id="konwersja-typów">Konwersja typów</h3>
 <p>Na razie mówiliśmy jedynie o przeprowadzaniu operacji na wartościach tego samego typu (na przykład na dwóch liczbach). Ale co się stanie, jeżeli spróbujesz przeprowadzić operację na danych różnych typów? Chociażby pomnożyć string przez liczbę? Albo dodać do siebie string i liczbę?</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
 &gt;&gt;&gt; c = "30"
 &gt;&gt;&gt; print(a + c)
 </code></pre></div></div>
@@ -355,14 +355,14 @@ type(b)
 
 <p>Istnieją metody <strong>int()</strong> czy <strong>float()</strong>, za pomocą których dokonamy zmiany jednego typu na drugi, czyli dokonamy <strong>konwersji typu</strong>. Stąd nasz przykład powyżej możemy naprawić:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
 &gt;&gt;&gt; c = int("30")
 &gt;&gt;&gt; print(a + c)
 </code></pre></div></div>
 
 <p>albo</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; a = 20
 &gt;&gt;&gt; c = float("30")
 &gt;&gt;&gt; print(a + c)
 </code></pre></div></div>
@@ -371,23 +371,23 @@ type(b)
 
 <p>Przypisanie wartości 3 do zmiennej a (int) oraz 4.1 do zmiennej b (float)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = 3, 4.1
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a, b = 3, 4.1
 print("Zmienna a = ", a, "b = ", b)
 </code></pre></div></div>
 
 <p>Operator dzielenia zawsze zwraca wartość float</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(a / b)  # 0.7317073170731708
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(a / b)  # 0.7317073170731708
 </code></pre></div></div>
 
 <p><strong>Dzielenie “podłoga”</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(a // b)  # 0.0
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(a // b)  # 0.0
 </code></pre></div></div>
 
 <p><strong>Zmienna b (4.1) podniesiona do potęgi a (3)</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(b**a)  # 68.9209999
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(b**a)  # 68.9209999
 </code></pre></div></div>
 
 <h2 id="listy">Listy</h2>
@@ -401,9 +401,9 @@ print("Zmienna a = ", a, "b = ", b)
 <p>Typy mogące przechowywać różne dane nazywamy czasem <strong>kolekcjami</strong>.
 Nie ma co tracić czasu, przejdźmy do kodu!</p>
 
-<p>Aby stworzyć listę elementów musimu użyć nawiasów kwadratowych <code class="highlighter-rouge">[]</code>.</p>
+<p>Aby stworzyć listę elementów musimy użyć nawiasów kwadratowych <code class="language-plaintext highlighter-rouge">[]</code>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list = []
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list = []
 &gt;&gt;&gt; print(shopping_list)
 </code></pre></div></div>
 
@@ -411,7 +411,7 @@ Nie ma co tracić czasu, przejdźmy do kodu!</p>
 
 <p>Zapełnijmy ją:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list = ["chleb", "cebula", "ziemniaki", "czekolada"]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list = ["chleb", "cebula", "ziemniaki", "czekolada"]
 &gt;&gt;&gt; grades = [1, 2, 3, 4, 5, 6]
 &gt;&gt;&gt; print(shopping_list)
 &gt;&gt;&gt; print(grades)
@@ -420,24 +420,24 @@ Nie ma co tracić czasu, przejdźmy do kodu!</p>
 </code></pre></div></div>
 
 <p><strong>Łączenie list</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; concatenation = shopping_list + grades
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; concatenation = shopping_list + grades
 &gt;&gt;&gt; print(concatenation)
 </code></pre></div></div>
 
 <p>Weźmy pierwszy produkt z listy zakupów:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list[1]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list[1]
 'cebula'
 </code></pre></div></div>
 <p>Jednak wynik jest jednak inny niż się spodziewamy. Kolejne elementy w tablicy są zawsze numerowane od 0, czyli:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list[0]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; shopping_list[0]
 'chleb'
 </code></pre></div></div>
 
 <h3 id="metody-typu-list">Metody typu list</h3>
 
 <p><strong>Dodawanie elementu na listę</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; my_arr = [3, 4]
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; my_arr = [3, 4]
 &gt;&gt;&gt; my_arr.append("milk")
 &gt;&gt;&gt; print(my_arr)
 [3, 4, 'milk']
@@ -452,7 +452,7 @@ Nie ma co tracić czasu, przejdźmy do kodu!</p>
 </code></pre></div></div>
 
 <p><strong>Dodawanie wielu elementów na raz</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; my_arr.extend([1, 2, 3])
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; my_arr.extend([1, 2, 3])
 &gt;&gt;&gt; print(my_arr)
 [3, 4, 'milk', [4, 5, 8], 1, 2, 3]
 Zdejmowanie elementu z listy
@@ -464,7 +464,7 @@ Zdejmowanie elementu z listy
 </code></pre></div></div>
 
 <p><strong>Podstawienie elementu - zastąpienie elementu tablicy innym elementem</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence_arr = ['Ala', 'ma', 'kota', 'i rybki.']
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence_arr = ['Ala', 'ma', 'kota', 'i rybki.']
 &gt;&gt;&gt; print(sentence_arr)
 &gt;&gt;&gt; sentence_arr[2] = 'psa'
 &gt;&gt;&gt; print(sentence_arr)
@@ -472,7 +472,7 @@ Zdejmowanie elementu z listy
 
 <p><strong>Sprawdźmy czy sekwencja zawiera element</strong></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Ala' in sentence_arr)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print('Ala' in sentence_arr)
 &gt;&gt;&gt; print('pies' in sentence_arr)
 </code></pre></div></div>
 
@@ -492,7 +492,7 @@ Zdejmowanie elementu z listy
 
 <p>Typy boolowskie inaczej zwane typami logicznymi posiadają tylko dwie wartości True / False</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print(1 == 1)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; print(1 == 1)
   True
 &gt;&gt;&gt; print(1 == 2)
   False
@@ -501,14 +501,14 @@ Zdejmowanie elementu z listy
 <p>Zapis ma znaczenie! True (pierwsza litera wielka, reszta to małe litery). true, TRUE, tRUE nie zadziałają - tylko True jest poprawne (to samo dotyczy False).</p>
 
 <p>Porównaj:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; type(True)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; type(True)
 &gt;&gt;&gt; type("True")
 </code></pre></div></div>
 
 <h4 id="and--or--not">AND / OR / NOT</h4>
 <p>Poćwicz i pobaw się wartościami logicznymi wpisując następujące instrukcje:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; True and True
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; True and True
 &gt;&gt;&gt; False and True
 &gt;&gt;&gt; True or 1 == 1
 &gt;&gt;&gt; False or 1 == 1
@@ -549,11 +549,11 @@ Zdejmowanie elementu z listy
 
 </article>
 
-      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
 
   <div class="wrapper">
 
@@ -618,6 +618,15 @@ Zdejmowanie elementu z listy
 </footer>
 
 
-  </body>
+</body>
+<script>
+  $(document).ready(function () {
+    const toHide = document.querySelectorAll("div.solution .toggle.hiding~.highlight");
+
+    for (const element of toHide) {
+      element.classList.add("hidden");
+    }
+  });
+</script>
 
 </html>

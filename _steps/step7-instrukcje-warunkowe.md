@@ -43,7 +43,7 @@ Boolean pojawiło się w rozdziale o typach. To takie wyrażenie, którego wart
 
 Operator warunkowy, którego użyliśmy w powyższym przykładzie to **operator równości**, czyli **A jest równe B**. Jeżeli wartości po jego obu stronach są uznawane za takie same, warunek uznawany jest za prawdziwy (przyjmuje wartość `True`). Jeżeli wartości po obu stronach są różne, warunek nie jest uznawany za prawdziwy i przyjmuje wartość `False`.
 
-Oprócz else, możeby obsłużyć dodatkowy warunek, specjalne zachowanie. 
+Oprócz else, możemy obsłużyć dodatkowy warunek, specjalne zachowanie. 
 
 ```python
 name = input("Podaj swoje imię: ")
@@ -90,20 +90,20 @@ print("A teraz jestem poza warunkiem")
 
 Szybka powtórka i rozszerzenie na potrzeby tworzenia warunków ;) 
 
-|  Operator  | Nazwa/Opis                                                  |
-| ---------- | ----------------------------------------------------------- |
-|   `==`     | Równość. Obie strony mają te same wartości.                 |
-|   `is`     | Równość ścisła. Wartość i typ obu stron musi być taka sama. |
-|   `!=`     | Brak równości. Strony mają różne wartości.                  |
-|   `is not` | Brak równości ścisłej. Różne wartości ALBO różne typy.      |
-|   `<`      | Mniejszy niż.                                               |
-|   `>`      | Większy niż.                                                |
-|   `<=`     | Mniejszy lub równy.                                         |
-|   `>=`     | Większy lub równy.                                          |
+| Operator | Nazwa/Opis                                                  |
+| -------- | ----------------------------------------------------------- |
+| `==`     | Równość. Obie strony mają te same wartości.                 |
+| `is`     | Równość ścisła. Wartość i typ obu stron musi być taka sama. |
+| `!=`     | Brak równości. Strony mają różne wartości.                  |
+| `is not` | Brak równości ścisłej. Różne wartości ALBO różne typy.      |
+| `<`      | Mniejszy niż.                                               |
+| `>`      | Większy niż.                                                |
+| `<=`     | Mniejszy lub równy.                                         |
+| `>=`     | Większy lub równy.                                          |
 
 Większość z nich mówi sama za siebie - z wyjątkiem ścisłej równości i jej braku. Wyjaśnijmy sobie krótko, o co z nimi chodzi.
 
-Jeżeli porównywane wartości będą różnych typów, zwykłe porównania (`==` i `!=`) najpierw przekonwertują je do tego samego typu, a dopiero potem dokonają porównania. Przykładowo, `12 == 12.0` zwróci nam `True` (gdyż obie strony równania mają wartość liczbową 12), ale `12 is 12.0` zwraca `False`, poniważ sprawdzana jest wartość jak i dokładnie ten sam typ.
+Jeżeli porównywane wartości będą różnych typów, zwykłe porównania (`==` i `!=`) najpierw przekonwertują je do tego samego typu, a dopiero potem dokonają porównania. Przykładowo, `12 == 12.0` zwróci nam `True` (gdyż obie strony równania mają wartość liczbową 12), ale `12 is 12.0` zwraca `False`, ponieważ sprawdzana jest wartość jak i dokładnie ten sam typ.
 
 
 ## Operatory logiczne
@@ -121,7 +121,7 @@ if age >= 18 and drive_licence:
   print("Możesz prowadzić auto")
 ```
 
-Używając operatora `and` możesz łączyć ze sobą tyle warunków, ile tylko zapragniesz. One następnie będą sprawdzane od lewej do prawej i jeżeli tylko jeden z nich będzie fałszywy (będzie miał wartość `False`), całe wyrażenie będzie fałszywe. W przeciwnym razie całe wyrażenie będzie pradziwe (będzie miało wartość `True`).
+Używając operatora `and` możesz łączyć ze sobą tyle warunków, ile tylko zapragniesz. One następnie będą sprawdzane od lewej do prawej i jeżeli tylko jeden z nich będzie fałszywy (będzie miał wartość `False`), całe wyrażenie będzie fałszywe. W przeciwnym razie całe wyrażenie będzie prawdziwe (będzie miało wartość `True`).
 
 
 ```python

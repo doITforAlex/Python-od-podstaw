@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,9 +36,9 @@
 </head>
 
 
-  <body>
+<body>
 
-    <header class="site-header" role="banner">
+  <header class="site-header" role="banner">
 
   <div class="wrapper">
     
@@ -70,9 +70,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      
 
 <div class="step-nav">
   <ul class="main">
@@ -165,7 +165,7 @@
 
 </div>
 
-        <article class="post">
+      <article class="post">
   
   <header class="post-header">
       
@@ -181,14 +181,14 @@
 
 <p>Każda zmienna ma nazwę, wartość oraz miejsce przechowywania w pamięci komputera.</p>
 
-<p>Spórz na przykład przypisania wartości do zmiennej:</p>
+<p>Spójrz na przykład przypisania wartości do zmiennej:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence = "Hello world"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence = "Hello world"
 &gt;&gt;&gt; print(sentence)
 Hello world
 </code></pre></div></div>
 
-<p>Stworzyliśmy w ten sposób nową zmienną o nazwie <code class="highlighter-rouge">sentence</code>.</p>
+<p>Stworzyliśmy w ten sposób nową zmienną o nazwie <code class="language-plaintext highlighter-rouge">sentence</code>.</p>
 
 <p>Kiedy otoczymy jakieś znaki cudzysłowem, tworzymy daną typu <strong>string</strong>, czyli po prostu ciąg liter, liczb czy innych znaków.</p>
 
@@ -197,8 +197,8 @@ Hello world
 <ol>
   <li>Pierwszym znakiem musi być litera alfabetu lub podkreślenie</li>
   <li>Nie mogą zawierać spacji i znaków specjalnych</li>
-  <li>Mogą zawierać litery, cyfry, podkreślniki (<code class="highlighter-rouge">_</code>)</li>
-  <li>Wielkość liter ma znaczenie (przykładowo <code class="highlighter-rouge">sentence</code> i <code class="highlighter-rouge">Sentence</code> to dwie różne zmienne)</li>
+  <li>Mogą zawierać litery, cyfry, podkreślniki (<code class="language-plaintext highlighter-rouge">_</code>)</li>
+  <li>Wielkość liter ma znaczenie (przykładowo <code class="language-plaintext highlighter-rouge">sentence</code> i <code class="language-plaintext highlighter-rouge">Sentence</code> to dwie różne zmienne)</li>
   <li>Nie może być słowem kluczowym*</li>
   <li>powinna mówić co przechowuje</li>
 </ol>
@@ -209,14 +209,14 @@ Hello world
 
 <p><img src="../assets/step-3a.png" alt="Slowa klucze" title="Slowa kluczowe" class="img-responsive" /></p>
 
-<p>Po stworzeniu zmiennej możesz przypisać do niej jakąś wartość za pomocą <strong>operatora przypisania</strong>, czyli znaku <code class="highlighter-rouge">=</code>.</p>
+<p>Po stworzeniu zmiennej możesz przypisać do niej jakąś wartość za pomocą <strong>operatora przypisania</strong>, czyli znaku <code class="language-plaintext highlighter-rouge">=</code>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence = "I love Python"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sentence = "I love Python"
 </code></pre></div></div>
 
 <p>Kilka przykładów przypisania wartości do zmiennej:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sum = 23 + 3
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; sum = 23 + 3
 &gt;&gt;&gt; print(sum)
 26
 &gt;&gt;&gt; result_false = 29 // 7 == 5
@@ -250,11 +250,11 @@ True
 
 </article>
 
-      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
 
   <div class="wrapper">
 
@@ -319,6 +319,15 @@ True
 </footer>
 
 
-  </body>
+</body>
+<script>
+  $(document).ready(function () {
+    const toHide = document.querySelectorAll("div.solution .toggle.hiding~.highlight");
+
+    for (const element of toHide) {
+      element.classList.add("hidden");
+    }
+  });
+</script>
 
 </html>

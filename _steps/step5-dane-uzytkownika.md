@@ -63,7 +63,7 @@ Number zostało odczytane jako string. Stąd:
 >>> print(3 == number)
 ```
 
-Zakończ pracę w trypie interaktywnym za pomocą komendy `exit()`.
+Zakończ pracę w trybie interaktywnym za pomocą komendy `exit()`.
 
 Znowu jesteśmy w systemowym wierszu poleceń / terminalu.
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,9 +36,9 @@
 </head>
 
 
-  <body>
+<body>
 
-    <header class="site-header" role="banner">
+  <header class="site-header" role="banner">
 
   <div class="wrapper">
     
@@ -70,9 +70,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      
 
 <div class="step-nav">
   <ul class="main">
@@ -165,7 +165,7 @@
 
 </div>
 
-        <article class="post">
+      <article class="post">
   
   <header class="post-header">
       
@@ -177,9 +177,9 @@
 
 <p>Nasz problem rozwiązują wtedy <strong>pętle</strong></p>
 
-<h2 id="pętla-for">Pętla <code class="highlighter-rouge">for</code></h2>
+<h2 id="pętla-for">Pętla <code class="language-plaintext highlighter-rouge">for</code></h2>
 
-<p>Pętla <code class="highlighter-rouge">for</code> służy do powtarzania kodu ograniczoną liczbę razy.</p>
+<p>Pętla <code class="language-plaintext highlighter-rouge">for</code> służy do powtarzania kodu ograniczoną liczbę razy.</p>
 
 <p>Stwórzmy nowy plik.</p>
 
@@ -195,38 +195,38 @@
 
 <ol>
   <li>
-    <p>Deklaracji pętli, <code class="highlighter-rouge">for txt in easy_python</code>. Deklaracja pętli określa po prostu, jak nasza pętla ma działać.</p>
+    <p>Deklaracji pętli, <code class="language-plaintext highlighter-rouge">for txt in easy_python</code>. Deklaracja pętli określa po prostu, jak nasza pętla ma działać.</p>
   </li>
   <li>
     <p>Ciała pętli, czyli kodu który ma się wykonać za każdym powtórzeniem pętli.</p>
   </li>
 </ol>
 
-<p>Deklaracja pątli składa się ze słowa kluczowego <code class="highlighter-rouge">for</code> i trzech kolejnych elementów.</p>
+<p>Deklaracja pętli składa się ze słowa kluczowego <code class="language-plaintext highlighter-rouge">for</code> i trzech kolejnych elementów.</p>
 
 <ol>
   <li>
-    <p>Pierwszym elementem jest zmienna sterująca <code class="highlighter-rouge">txt</code>. Może mieć dowolną nazwę, jaką będziemy wykorzystywać w ciele pętli.
-Tworzymy zmienną <code class="highlighter-rouge">txt</code>, która będzie przechowywać informację o elemencie, który właśnie wykorzystujemy.</p>
+    <p>Pierwszym elementem jest zmienna sterująca <code class="language-plaintext highlighter-rouge">txt</code>. Może mieć dowolną nazwę, jaką będziemy wykorzystywać w ciele pętli.
+Tworzymy zmienną <code class="language-plaintext highlighter-rouge">txt</code>, która będzie przechowywać informację o elemencie, który właśnie wykorzystujemy.</p>
   </li>
   <li>
-    <p>Drugim elementem jest warunek: <code class="highlighter-rouge">in</code>
-Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona się tylko wtedy, jeżeli nasz warunek jest prawdziwy - tzn bierzemy kolejny, niepusty element z listy (a jeżeli jest fałszywy, pętla się kończy, nie mamy więcej elmentów w liście).</p>
+    <p>Drugim elementem jest warunek: <code class="language-plaintext highlighter-rouge">in</code>
+Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona się tylko wtedy, jeżeli nasz warunek jest prawdziwy - tzn bierzemy kolejny, niepusty element z listy (a jeżeli jest fałszywy, pętla się kończy, nie mamy więcej elementów w liście).</p>
   </li>
   <li>
-    <p>Trzecim wyrażeniem jest sekwencja elementów czyli lista: <code class="highlighter-rouge">easy_python</code>.</p>
+    <p>Trzecim wyrażeniem jest sekwencja elementów czyli lista: <code class="language-plaintext highlighter-rouge">easy_python</code>.</p>
   </li>
 </ol>
 
-<h4 id="range"><code class="highlighter-rouge">range()</code></h4>
+<h4 id="range"><code class="language-plaintext highlighter-rouge">range()</code></h4>
 
-<p>Innym sposobem stworzenia pętli <code class="highlighter-rouge">for</code> jest zadanie ile razy ma wykonać się pętla. Funkcja range() - range(start, stop, krok) nie tworzy bezpośrednio listy, zamiast tego zwraca zakres liczb. Zawsze od start do stop(bez wartości stopu!).</p>
+<p>Innym sposobem stworzenia pętli <code class="language-plaintext highlighter-rouge">for</code> jest zadanie ile razy ma wykonać się pętla. Funkcja range() - range(start, stop, krok) nie tworzy bezpośrednio listy, zamiast tego zwraca zakres liczb. Zawsze od start do stop(bez wartości stopu!).</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>  <span class="c"># i = 0, 1, 2, 3, 4 -&gt; domyślnie od zera [0, 5) </span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>  <span class="c1"># i = 0, 1, 2, 3, 4 -&gt; domyślnie od zera [0, 5) 
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>  <span class="c"># i = 10, 20, 30, 40 -&gt; [10, 50) co 10</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>  <span class="c1"># i = 10, 20, 30, 40 -&gt; [10, 50) co 10
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
 </code></pre></div></div>
 
@@ -240,13 +240,13 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
 
 </code></pre></div></div>
 
-<p>Teraz nasza zmienna <code class="highlighter-rouge">i</code> porusza się (<em>iteruje</em>) po zakresie liczb. Staje się więc naszym licznikiem- ile razy wykonaliśmy polecenie w środku pętli.</p>
+<p>Teraz nasza zmienna <code class="language-plaintext highlighter-rouge">i</code> porusza się (<em>iteruje</em>) po zakresie liczb. Staje się więc naszym licznikiem- ile razy wykonaliśmy polecenie w środku pętli.</p>
 
-<p>To jeszcze jednen przykład na pętlę <code class="highlighter-rouge">for</code>. Utwórz plik <code class="highlighter-rouge">heroes.py</code>:</p>
+<p>To jeszcze jeden przykład na pętlę <code class="language-plaintext highlighter-rouge">for</code>. Utwórz plik <code class="language-plaintext highlighter-rouge">heroes.py</code>:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">heros</span> <span class="o">=</span> <span class="p">[</span><span class="s">"Knight"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="s">"Killer"</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s">"Wizard"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
-<span class="k">print</span><span class="p">(</span><span class="n">heros</span><span class="p">)</span>  <span class="c"># lista -&gt; ['Knight', 'Knight', 'Knight', 'Killer', 'Wizard', 'Wizard']</span>
-
+<span class="k">print</span><span class="p">(</span><span class="n">heros</span><span class="p">)</span>  <span class="c1"># lista -&gt; ['Knight', 'Knight', 'Knight', 'Killer', 'Wizard', 'Wizard']
+</span>
 <span class="k">for</span> <span class="n">h</span> <span class="ow">in</span> <span class="n">heros</span><span class="p">:</span>
     <span class="k">if</span><span class="p">(</span><span class="n">p</span> <span class="o">==</span> <span class="s">"Killer"</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s">"Found the killer!"</span><span class="p">)</span>
@@ -258,7 +258,7 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
 
 <h4 id="zadanie-2">Zadanie 2</h4>
 
-<p>Zmodyfikuj kod <code class="highlighter-rouge">heroes.py</code> tak, aby listę bohaterów podawał użytkownik. Dodatkowo jeśli osoba <code class="highlighter-rouge">Killer</code> nie znajduje się na liście wypisz “There’s no Killer”.</p>
+<p>Zmodyfikuj kod <code class="language-plaintext highlighter-rouge">heroes.py</code> tak, aby listę bohaterów podawał użytkownik. Dodatkowo jeśli osoba <code class="language-plaintext highlighter-rouge">Killer</code> nie znajduje się na liście wypisz “There’s no Killer”.</p>
 
 <div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">number_of_heros</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"Number of heros: "</span><span class="p">))</span>
 
@@ -267,8 +267,8 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
   <span class="n">person</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Personality type:  "</span><span class="p">)</span>
   <span class="n">heros</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">heros</span><span class="p">)</span>  <span class="c"># ['Knight', 'Knight', 'Knight', 'Killer', 'Wizard', 'Wizard']</span>
-
+<span class="k">print</span><span class="p">(</span><span class="n">heros</span><span class="p">)</span>  <span class="c1"># ['Knight', 'Knight', 'Knight', 'Killer', 'Wizard', 'Wizard']
+</span>
 <span class="n">check_killer</span> <span class="o">=</span> <span class="bp">False</span>
 
 <span class="k">for</span> <span class="n">hero</span> <span class="ow">in</span> <span class="n">heros</span><span class="p">:</span>
@@ -282,9 +282,9 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
   <span class="k">print</span><span class="p">(</span><span class="s">"There's a Killer!"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h2 id="pętla-while">Pętla <code class="highlighter-rouge">while</code></h2>
+<h2 id="pętla-while">Pętla <code class="language-plaintext highlighter-rouge">while</code></h2>
 
-<p>Istnieje też inna pętla, pętla <code class="highlighter-rouge">while</code>.  W pętle <code class="highlighter-rouge">while</code> powtarzają pewne działanie określoną liczbę razy, aż do momentu spełnienia warunku albo tak długo jak warunek jest spełniony.</p>
+<p>Istnieje też inna pętla, pętla <code class="language-plaintext highlighter-rouge">while</code>.  W pętle <code class="language-plaintext highlighter-rouge">while</code> powtarzają pewne działanie określoną liczbę razy, aż do momentu spełnienia warunku albo tak długo jak warunek jest spełniony.</p>
 
 <p>Od razu przejdźmy do przykładu:</p>
 
@@ -303,25 +303,25 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
 
 <ol>
   <li>
-    <p>Deklaracji pętli <code class="highlighter-rouge">while (price &gt; 100):</code>.</p>
+    <p>Deklaracji pętli <code class="language-plaintext highlighter-rouge">while (price &gt; 100):</code>.</p>
   </li>
   <li>
     <p>Ciała pętli oznaczonego wcięciem.</p>
   </li>
 </ol>
 
-<p>Jeśli się przyjrzymy jej konstrukacja jest bardzo prosta:</p>
+<p>Jeśli się przyjrzymy jej konstrukcja jest bardzo prosta:</p>
 
 <ol>
   <li>
-    <p>Słowo kluczowe <code class="highlighter-rouge">while</code> (<em>kiedy, dopóki</em>)</p>
+    <p>Słowo kluczowe <code class="language-plaintext highlighter-rouge">while</code> (<em>kiedy, dopóki</em>)</p>
   </li>
   <li>
-    <p>Warunek w nawiasach (nawiasy opcjonalne), jest sprawdzany po każdym wykonaniu, a pętla wykonuje się dopóki nasz warunek zwraca wartość <code class="highlighter-rouge">True</code>, na początku cena 150 jest większa od 100. W ciele pętli obniżamy cenę. Kiedy cena <code class="highlighter-rouge">price</code> przestanie być większa od 100, czyli zwróci wartość logiczną <code class="highlighter-rouge">False</code>, wyjdziemy z ciała pętli.</p>
+    <p>Warunek w nawiasach (nawiasy opcjonalne), jest sprawdzany po każdym wykonaniu, a pętla wykonuje się dopóki nasz warunek zwraca wartość <code class="language-plaintext highlighter-rouge">True</code>, na początku cena 150 jest większa od 100. W ciele pętli obniżamy cenę. Kiedy cena <code class="language-plaintext highlighter-rouge">price</code> przestanie być większa od 100, czyli zwróci wartość logiczną <code class="language-plaintext highlighter-rouge">False</code>, wyjdziemy z ciała pętli.</p>
   </li>
 </ol>
 
-<p>Spójrzmy na kolejny przypadek. Teraz wykorzystamy moduł random. Pozwala on dodać do naszego kodu odrobinę losowości. Za pomocą metody <code class="highlighter-rouge">randrange()</code> będziemy losować liczby od 0 do 100. Składnia Pythona jest na tyle prosta, że nie musisz znać dosłownie każdej linijki, by zrozumieć ogół działania poniższego programu:</p>
+<p>Spójrzmy na kolejny przypadek. Teraz wykorzystamy moduł random. Pozwala on dodać do naszego kodu odrobinę losowości. Za pomocą metody <code class="language-plaintext highlighter-rouge">randrange()</code> będziemy losować liczby od 0 do 100. Składnia Pythona jest na tyle prosta, że nie musisz znać dosłownie każdej linijki, by zrozumieć ogół działania poniższego programu:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">random</span>
 
@@ -334,7 +334,7 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
 <span class="k">print</span><span class="p">(</span><span class="s">"Hurray, I'm a pigeon!"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>W poniższych zadaniach możesz użyć zarówno pętli <code class="highlighter-rouge">for</code> jak i <code class="highlighter-rouge">while</code>.</p>
+<p>W poniższych zadaniach możesz użyć zarówno pętli <code class="language-plaintext highlighter-rouge">for</code> jak i <code class="language-plaintext highlighter-rouge">while</code>.</p>
 
 <h4 id="zadanie-1-1">Zadanie 1</h4>
 
@@ -354,15 +354,15 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
 <span class="n">movies_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">grades_list</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="c"># ------- rozwiązanie for -------</span>
-<span class="k">for</span> <span class="n">nr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_movies</span><span class="p">):</span>
+<span class="c1"># ------- rozwiązanie for -------
+</span><span class="k">for</span> <span class="n">nr</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">number_of_movies</span><span class="p">):</span>
     <span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
     <span class="n">grade</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Ocena filmu w skali 1-10: "</span><span class="p">)</span>
     <span class="n">movies_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">movie</span><span class="p">)</span>
     <span class="n">grades_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">grade</span><span class="p">)</span>
     
-<span class="c"># ------ rozwiązanie while ------</span>
-<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># ------ rozwiązanie while ------
+</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">number_of_movies</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="n">movie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Tytul filmu: "</span><span class="p">)</span>
@@ -403,11 +403,11 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
 
 </article>
 
-      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
 
   <div class="wrapper">
 
@@ -472,6 +472,15 @@ Warunek ten sprawdzany jest przez każdym wykonaniem pętli - jej ciało wykona 
 </footer>
 
 
-  </body>
+</body>
+<script>
+  $(document).ready(function () {
+    const toHide = document.querySelectorAll("div.solution .toggle.hiding~.highlight");
+
+    for (const element of toHide) {
+      element.classList.add("hidden");
+    }
+  });
+</script>
 
 </html>

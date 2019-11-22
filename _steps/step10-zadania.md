@@ -87,7 +87,7 @@ Wynik: `3`
 
 ### 8. Sprawdź pogodę 🌤
 
-Przypominij sobie zadanie z wykorzystaniem biblioteki `requests` do odpytania zewnętrznego API.
+Przypomnij sobie zadanie z wykorzystaniem biblioteki `requests` do odpytania zewnętrznego API.
 Strona OpenWeatherMap udostępnia różnego rodzaju informacje o pogodzie. Skorzystaj z dokumentacji [Current Weather](https://openweathermap.org/current). Przyjrzyj się jak zbudowany jest adres URL. 
 
 Pozwól użytkownikowi podać miasto oraz dwuliterowy kod kraju. Możesz ograniczyć miasta przez wybór kraju w prostym menu np.
@@ -97,7 +97,7 @@ Pozwól użytkownikowi podać miasto oraz dwuliterowy kod kraju. Możesz ogranic
 - Germany - de
 - itd...
 
-Pokaż użytkownikowi krótkie zdanie o pogodzie oraz temperaturę w st. celcjusza.
+Pokaż użytkownikowi krótkie zdanie o pogodzie oraz temperaturę w st. Celsjusza.
 
 *Uwaga: OpenWeather API może wymagać autoryzacji. Należy założyć darmowe konto i w miejsce appid podać swój klucz konta (`&APPID=your_key`)*
 
@@ -106,5 +106,5 @@ Pokaż użytkownikowi krótkie zdanie o pogodzie oraz temperaturę w st. celcju
 Stwórz grę inspirowaną miłosną wróżbą z czasów szkolnych. Zasady gry przedstawia to [wideo](https://www.youtube.com/watch?v=oFsLVG7EAZ4).
 1. Pobierz imiona zakochanych
 2. Policz wystąpienia każdej z liter w obu imionach oraz słowie LOVE.
-3. Redukuj liczbę elementów tablicy dodając pierwszą i ostatnią liczbę do siebie, tak długo, aż zostną dwie cyfry.
+3. Redukuj liczbę elementów tablicy dodając pierwszą i ostatnią liczbę do siebie, tak długo, aż zostaną dwie cyfry.
 4. Dwie ostatnie cyfry tworzą wartość procentową dopasowania pary wg. wróżby.
