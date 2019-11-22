@@ -61,9 +61,9 @@ Stwórz listę pomysłów na prezent dla swoich bliskich. Kiedy nadarzy się oka
 PYTHON JEST SUPER
 ```
 
-- lgorytm `secret1.py` zmieni wiadomość w ciąg ”RZUIPO-KFTU-TWRFS”
-- wymyśl własny algorytm kodujący jako `secret2.py`
-- napisz program `secret3.py`, które odkoduje wiadomość
+- stwórz plik `secret1.py` zaawierający algorytm, który zmieni powyższą wiadomość w ciąg ”RZUIPO-KFTU-TWRFS”
+- wymyśl własny algorytm kodujący (możesz skorzystać z istniejących np. klasyczne/harcerskie) jako `secret2.py`
+- napisz program `secret3.py`, które odkoduje twoją wiadomość
 
 ### 7. Śledź robota 🤖
 Robot porusza się w płaszczyźnie zaczynając od pierwotnego punktu (0,0). Robot może poruszać się w GÓRĘ, W DÓŁ, ​​W LEWO i W PRAWO, wykonując określone kroki. Ślad ruchu robota pokazano następująco:
