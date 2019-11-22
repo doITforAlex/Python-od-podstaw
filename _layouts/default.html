@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {% include step-nav.html %}
-        {{ content }}
-      </div>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {% include step-nav.html %}
+      {{ content }}
+    </div>
 
-    </main>
+  </main>
 
-    {% include footer.html %}
+  {% include footer.html %}
 
-  </body>
+</body>
+<script>
+  $(document).ready(function () {
+    const toHide = document.querySelectorAll("div.solution .toggle.hiding~.highlight");
+
+    for (const element of toHide) {
+      element.classList.add("hidden");
+    }
+  });
+</script>
 
 </html>
