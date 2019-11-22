@@ -56,11 +56,11 @@ print("widać mnie")
 
 ```
 
-#### Zadanie 
+#### Zadanie
 
-Utwórz nowy plik np. `movies.py`. Skopiuj poniższy kod i przeanalizuj. Potraktuj jako bazę do rozwiązania zadania. Dodaj 3 nowe oceny i wylicz srednia z ocen.
+Utwórz nowy plik np. `movies.py`. Skopiuj poniższy kod i przeanalizuj. Potraktuj jako bazę do rozwiązania zadania. Dodaj 3 nowe oceny i wylicz średnią z ocen.
 
-```
+```python
 movie = input("Tytul filmu: ")
 grade = int(input("Ocena filmu w skali 1-10: "))
 

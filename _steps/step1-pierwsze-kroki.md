@@ -33,7 +33,7 @@ Twój terminal po uruchomieniu może być biały. Kolor zmienisz w lewym górnym
 
 ## Linux
 
-U użykowników Linuxa **Terminal** prawdopodobnie jest w:
+U użytkowników Linuxa **Terminal** prawdopodobnie jest w:
 - Applications → Accessories → Terminal
 - Applications → System → Terminal
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,9 +36,9 @@
 </head>
 
 
-  <body>
+<body>
 
-    <header class="site-header" role="banner">
+  <header class="site-header" role="banner">
 
   <div class="wrapper">
     
@@ -70,9 +70,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      
 
 <div class="step-nav">
   <ul class="main">
@@ -143,14 +143,14 @@
       </li>
   
       <li class=''>
-        <a href="/step11/">
-          11 - Zadania
+        <a href="/step10/">
+          10 - Zadania
         </a>
       </li>
   
       <li class=''>
-        <a href="/step12/">
-          12 - Co teraz?
+        <a href="/step11/">
+          11 - Co teraz?
         </a>
       </li>
   
@@ -165,7 +165,7 @@
 
 </div>
 
-        <article class="post">
+      <article class="post">
   
   <header class="post-header">
       
@@ -222,11 +222,11 @@
 
 </article>
 
-      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
 
   <div class="wrapper">
 
@@ -291,6 +291,15 @@
 </footer>
 
 
-  </body>
+</body>
+<script>
+  $(document).ready(function () {
+    const toHide = document.querySelectorAll("div.solution .toggle.hiding~.highlight");
+
+    for (const element of toHide) {
+      element.classList.add("hidden");
+    }
+  });
+</script>
 
 </html>

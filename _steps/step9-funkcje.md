@@ -129,7 +129,7 @@ say_hello(name3)
 print('- Cześć!')
 ```
 
-Widzisz, powtarzenie czynności? Chyba czas użyć pętlę!
+Widzisz, powtarzanie czynności? Chyba czas użyć pętlę!
 
 ```python
 def say_hello(name):

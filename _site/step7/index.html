@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,9 +36,9 @@
 </head>
 
 
-  <body>
+<body>
 
-    <header class="site-header" role="banner">
+  <header class="site-header" role="banner">
 
   <div class="wrapper">
     
@@ -70,9 +70,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      
 
 <div class="step-nav">
   <ul class="main">
@@ -143,14 +143,14 @@
       </li>
   
       <li class=''>
-        <a href="/step11/">
-          11 - Zadania
+        <a href="/step10/">
+          10 - Zadania
         </a>
       </li>
   
       <li class=''>
-        <a href="/step12/">
-          12 - Co teraz?
+        <a href="/step11/">
+          11 - Co teraz?
         </a>
       </li>
   
@@ -165,7 +165,7 @@
 
 </div>
 
-        <article class="post">
+      <article class="post">
   
   <header class="post-header">
       
@@ -179,7 +179,7 @@
 
 <p>Za pomocą <strong>instrukcji warunkowych</strong>.</p>
 
-<p>Tutaj poznajemy wyrażenie <code class="highlighter-rouge">if</code>.</p>
+<p>Tutaj poznajemy wyrażenie <code class="language-plaintext highlighter-rouge">if</code>.</p>
 
 <p>Spójrz na przykład poniżej - sprawdzamy, czy użytkownik podał swoje imię i jeżeli tego nie zrobił, ustawiamy odpowiednią treść wiadomości z błędem.</p>
 
@@ -189,14 +189,14 @@
     <span class="k">print</span><span class="p">(</span><span class="s">'Musisz podać swoje imię!'</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p><code class="highlighter-rouge">if</code> składa się z dwóch części:</p>
+<p><code class="language-plaintext highlighter-rouge">if</code> składa się z dwóch części:</p>
 
 <ul>
   <li>warunku (możesz sobie wyobrazić, że to pytanie, które zadajemy naszemu kodowi, na przykład <em>“Czy imię użytkownika to pusty string?”</em>),</li>
   <li>kodu <strong>po WCIĘCIU</strong> (4 spacje lub 1 tabulacja) zawierającego instrukcje, które mają się wykonać, jeżeli nasz warunek jest prawdziwy (czyli jeżeli odpowiedzią na nasze pytanie jest <em>“Tak”</em>).</li>
 </ul>
 
-<p>Na końcu możesz dodać też <code class="highlighter-rouge">else</code>, który określa, jaki kod się wykona, jeżeli nasz warunek nie zostanie spełniony.</p>
+<p>Na końcu możesz dodać też <code class="language-plaintext highlighter-rouge">else</code>, który określa, jaki kod się wykona, jeżeli nasz warunek nie zostanie spełniony.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Podaj swoje imię: "</span><span class="p">)</span>
 
@@ -207,11 +207,11 @@
 </code></pre></div></div>
 
 <p>Warunki przyjmują wartość wyrażeń logicznych, czyli tzw. <strong>booleanów</strong>.
-Boolean pojawiło się w rozdziale o typach. To takie wyrażenie, którego wartość zostaje oszacowana jako <code class="highlighter-rouge">True</code> (prawdziwa) lub <code class="highlighter-rouge">False</code> (fałszywa) dzięki użyciu <strong>operatorów warunkowych</strong>.</p>
+Boolean pojawiło się w rozdziale o typach. To takie wyrażenie, którego wartość zostaje oszacowana jako <code class="language-plaintext highlighter-rouge">True</code> (prawdziwa) lub <code class="language-plaintext highlighter-rouge">False</code> (fałszywa) dzięki użyciu <strong>operatorów warunkowych</strong>.</p>
 
-<p>Operator warunkowy, którego użyliśmy w powyższym przykładzie to <strong>operator równości</strong>, czyli <strong>A jest równe B</strong>. Jeżeli wartości po jego obu stronach są uznawane za takie same, warunek uznawany jest za prawdziwy (przyjmuje wartość <code class="highlighter-rouge">True</code>). Jeżeli wartości po obu stronach są różne, warunek nie jest uznawany za prawdziwy i przyjmuje wartość <code class="highlighter-rouge">False</code>.</p>
+<p>Operator warunkowy, którego użyliśmy w powyższym przykładzie to <strong>operator równości</strong>, czyli <strong>A jest równe B</strong>. Jeżeli wartości po jego obu stronach są uznawane za takie same, warunek uznawany jest za prawdziwy (przyjmuje wartość <code class="language-plaintext highlighter-rouge">True</code>). Jeżeli wartości po obu stronach są różne, warunek nie jest uznawany za prawdziwy i przyjmuje wartość <code class="language-plaintext highlighter-rouge">False</code>.</p>
 
-<p>Oprócz else, możeby obsłużyć dodatkowy warunek, specjalne zachowanie.</p>
+<p>Oprócz else, możemy obsłużyć dodatkowy warunek, specjalne zachowanie.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Podaj swoje imię: "</span><span class="p">)</span>
 
@@ -228,14 +228,14 @@ Boolean pojawiło się w rozdziale o typach. To takie wyrażenie, którego wart
 <p>Wcięcia mają znaczenie! Stosujemy 4 spacje albo 1 tabulację (i się tego trzymamy w całym pliku)</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">warunek</span><span class="p">:</span>
-   <span class="c"># zrób coś</span>
-<span class="k">elif</span> <span class="n">warunek</span><span class="p">:</span>
-  <span class="c"># jeśli powyższe się nie spełniło, to zrób coś innego</span>
-<span class="k">else</span><span class="p">:</span>
-  <span class="c"># zrób coś jeśli żadne z powyższych się nie wykonało</span>
-</code></pre></div></div>
+   <span class="c1"># zrób coś
+</span><span class="k">elif</span> <span class="n">warunek</span><span class="p">:</span>
+  <span class="c1"># jeśli powyższe się nie spełniło, to zrób coś innego
+</span><span class="k">else</span><span class="p">:</span>
+  <span class="c1"># zrób coś jeśli żadne z powyższych się nie wykonało
+</span></code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = int(input("Podaj liczbę"))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x = int(input("Podaj liczbę"))
 if(x &lt; 0): # nawiasy są opcjonalne
     print("mniej niż zero") # wcięcia są obowiązkowe
 elif(x == 0): # else if
@@ -263,35 +263,35 @@ print("A teraz jestem poza warunkiem")
   </thead>
   <tbody>
     <tr>
-      <td><code class="highlighter-rouge">==</code></td>
+      <td><code class="language-plaintext highlighter-rouge">==</code></td>
       <td>Równość. Obie strony mają te same wartości.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">is</code></td>
+      <td><code class="language-plaintext highlighter-rouge">is</code></td>
       <td>Równość ścisła. Wartość i typ obu stron musi być taka sama.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">!=</code></td>
+      <td><code class="language-plaintext highlighter-rouge">!=</code></td>
       <td>Brak równości. Strony mają różne wartości.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">is not</code></td>
+      <td><code class="language-plaintext highlighter-rouge">is not</code></td>
       <td>Brak równości ścisłej. Różne wartości ALBO różne typy.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">&lt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;</code></td>
       <td>Mniejszy niż.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt;</code></td>
       <td>Większy niż.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">&lt;=</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;=</code></td>
       <td>Mniejszy lub równy.</td>
     </tr>
     <tr>
-      <td><code class="highlighter-rouge">&gt;=</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&gt;=</code></td>
       <td>Większy lub równy.</td>
     </tr>
   </tbody>
@@ -299,15 +299,15 @@ print("A teraz jestem poza warunkiem")
 
 <p>Większość z nich mówi sama za siebie - z wyjątkiem ścisłej równości i jej braku. Wyjaśnijmy sobie krótko, o co z nimi chodzi.</p>
 
-<p>Jeżeli porównywane wartości będą różnych typów, zwykłe porównania (<code class="highlighter-rouge">==</code> i <code class="highlighter-rouge">!=</code>) najpierw przekonwertują je do tego samego typu, a dopiero potem dokonają porównania. Przykładowo, <code class="highlighter-rouge">12 == 12.0</code> zwróci nam <code class="highlighter-rouge">True</code> (gdyż obie strony równania mają wartość liczbową 12), ale <code class="highlighter-rouge">12 is 12.0</code> zwraca <code class="highlighter-rouge">False</code>, poniważ sprawdzana jest wartość jak i dokładnie ten sam typ.</p>
+<p>Jeżeli porównywane wartości będą różnych typów, zwykłe porównania (<code class="language-plaintext highlighter-rouge">==</code> i <code class="language-plaintext highlighter-rouge">!=</code>) najpierw przekonwertują je do tego samego typu, a dopiero potem dokonają porównania. Przykładowo, <code class="language-plaintext highlighter-rouge">12 == 12.0</code> zwróci nam <code class="language-plaintext highlighter-rouge">True</code> (gdyż obie strony równania mają wartość liczbową 12), ale <code class="language-plaintext highlighter-rouge">12 is 12.0</code> zwraca <code class="language-plaintext highlighter-rouge">False</code>, ponieważ sprawdzana jest wartość jak i dokładnie ten sam typ.</p>
 
 <h2 id="operatory-logiczne">Operatory logiczne</h2>
 
 <p>Umiemy już radzić sobie z porównaniem dwóch rzeczy. Ale co jeżeli mamy dokonać oceny bardziej skomplikowanych warunków? Wtedy z pomocą przychodzą nam <strong>operatory logiczne</strong>.</p>
 
-<p>Spotykać się będziesz głównie z trzema z nich: <code class="highlighter-rouge">and</code>, <code class="highlighter-rouge">or</code> i <code class="highlighter-rouge">not</code></p>
+<p>Spotykać się będziesz głównie z trzema z nich: <code class="language-plaintext highlighter-rouge">and</code>, <code class="language-plaintext highlighter-rouge">or</code> i <code class="language-plaintext highlighter-rouge">not</code></p>
 
-<h3 id="operator-and-koniunkcja-i">Operator <code class="highlighter-rouge">and</code> (<strong>koniunkcja</strong>, <code class="highlighter-rouge">i</code>)</h3>
+<h3 id="operator-and-koniunkcja-i">Operator <code class="language-plaintext highlighter-rouge">and</code> (<strong>koniunkcja</strong>, <code class="language-plaintext highlighter-rouge">i</code>)</h3>
 
 <p>Używamy go, kiedy każdy z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
 
@@ -315,25 +315,25 @@ print("A teraz jestem poza warunkiem")
   <span class="k">print</span><span class="p">(</span><span class="s">"Możesz prowadzić auto"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Używając operatora <code class="highlighter-rouge">and</code> możesz łączyć ze sobą tyle warunków, ile tylko zapragniesz. One następnie będą sprawdzane od lewej do prawej i jeżeli tylko jeden z nich będzie fałszywy (będzie miał wartość <code class="highlighter-rouge">False</code>), całe wyrażenie będzie fałszywe. W przeciwnym razie całe wyrażenie będzie pradziwe (będzie miało wartość <code class="highlighter-rouge">True</code>).</p>
+<p>Używając operatora <code class="language-plaintext highlighter-rouge">and</code> możesz łączyć ze sobą tyle warunków, ile tylko zapragniesz. One następnie będą sprawdzane od lewej do prawej i jeżeli tylko jeden z nich będzie fałszywy (będzie miał wartość <code class="language-plaintext highlighter-rouge">False</code>), całe wyrażenie będzie fałszywe. W przeciwnym razie całe wyrażenie będzie prawdziwe (będzie miało wartość <code class="language-plaintext highlighter-rouge">True</code>).</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">and</span> <span class="n">drive_licence</span> <span class="ow">and</span> <span class="n">enough_money</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"Możesz kupić auto"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<h3 id="operator-or-alternatywa-albo">Operator <code class="highlighter-rouge">or</code> (<strong>alternatywa</strong>, <code class="highlighter-rouge">albo</code>)</h3>
+<h3 id="operator-or-alternatywa-albo">Operator <code class="language-plaintext highlighter-rouge">or</code> (<strong>alternatywa</strong>, <code class="language-plaintext highlighter-rouge">albo</code>)</h3>
 
-<p><code class="highlighter-rouge">||</code> to operator alternatywy - używamy go, kiedy tylko jeden z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
+<p><code class="language-plaintext highlighter-rouge">||</code> to operator alternatywy - używamy go, kiedy tylko jeden z poszczególnych warunków wyrażenia musi być prawdziwy.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">or</span> <span class="n">parent_agree</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"Możesz brać udział w warsztatach"</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Tak samo jak w przypadku operatora <code class="highlighter-rouge">and</code>, używając operatora <code class="highlighter-rouge">or</code> możesz łączyć ze sobą tyle warunków, ile chcesz. One również sprawdzane są od lewej do prawej - różnica polega na tym, że w przypadku alternatywy, jeżeli którykolwiek z warunków wyrażenia będzie prawdziwy, prawdziwe będzie też całe wyrażenie.</p>
+<p>Tak samo jak w przypadku operatora <code class="language-plaintext highlighter-rouge">and</code>, używając operatora <code class="language-plaintext highlighter-rouge">or</code> możesz łączyć ze sobą tyle warunków, ile chcesz. One również sprawdzane są od lewej do prawej - różnica polega na tym, że w przypadku alternatywy, jeżeli którykolwiek z warunków wyrażenia będzie prawdziwy, prawdziwe będzie też całe wyrażenie.</p>
 
-<h3 id="operator-not-negacja-nie">Operator <code class="highlighter-rouge">not</code> (<strong>negacja</strong>, <code class="highlighter-rouge">nie</code>)</h3>
+<h3 id="operator-not-negacja-nie">Operator <code class="language-plaintext highlighter-rouge">not</code> (<strong>negacja</strong>, <code class="language-plaintext highlighter-rouge">nie</code>)</h3>
 
-<p>W przeciwieństwie do operatorów <code class="highlighter-rouge">and</code> i <code class="highlighter-rouge">or</code>, negacja logiczna umieszczana jest przed wyrażeniem, żeby odwrócić jego wartość logiczną (z <code class="highlighter-rouge">True</code> na <code class="highlighter-rouge">False</code> albo z <code class="highlighter-rouge">False</code> na <code class="highlighter-rouge">True</code>).</p>
+<p>W przeciwieństwie do operatorów <code class="language-plaintext highlighter-rouge">and</code> i <code class="language-plaintext highlighter-rouge">or</code>, negacja logiczna umieszczana jest przed wyrażeniem, żeby odwrócić jego wartość logiczną (z <code class="language-plaintext highlighter-rouge">True</code> na <code class="language-plaintext highlighter-rouge">False</code> albo z <code class="language-plaintext highlighter-rouge">False</code> na <code class="language-plaintext highlighter-rouge">True</code>).</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">18</span> <span class="ow">or</span> <span class="n">parent_agree</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"Przykro nam, nie możesz wziąć udziału w warsztacie"</span><span class="p">)</span>
@@ -375,15 +375,15 @@ print("A teraz jestem poza warunkiem")
 
 <p>Do kolejnego zadania musisz skorzystać z managera pakietów Pythona, aby zainstalować zewnętrzną bibliotekę. W konsoli (terminalu, wierszu poleceń) wykonaj wklej  poniższą komendę i naciśnij enter</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install requests
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install requests
 </code></pre></div></div>
 
 <p>Następnie wykorzystaj poniższy fragment kodu, aby wykonać zadanie</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> <span class="c">#skorzystaj z pakietu request</span>
-
-<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://numbersapi.com/random/year"</span><span class="p">)</span> <span class="c"># odpytujemy API</span>
-<span class="k">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> <span class="c1">#skorzystaj z pakietu request
+</span>
+<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://numbersapi.com/random/year"</span><span class="p">)</span> <span class="c1"># odpytujemy API
+</span><span class="k">print</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 
 <span class="s">"""
 Sprawdź czy pobrany tekst ze strony zawiera liczbę "13"
@@ -392,10 +392,10 @@ Sprawdź czy tekst ze strony zawiera też ciąg zadany przez użytkownika
 """</span>
 </code></pre></div></div>
 
-<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> <span class="c">#skorzystaj z pakietu request</span>
-
-<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://numbersapi.com/random/year"</span><span class="p">)</span> <span class="c"># odpytujemy API</span>
-
+<div class="language-python solution highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span> <span class="c1">#skorzystaj z pakietu request
+</span>
+<span class="n">req</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"http://numbersapi.com/random/year"</span><span class="p">)</span> <span class="c1"># odpytujemy API
+</span>
 <span class="n">sentence</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">text</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
@@ -424,11 +424,11 @@ Sprawdź czy tekst ze strony zawiera też ciąg zadany przez użytkownika
 
 </article>
 
-      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
 
   <div class="wrapper">
 
@@ -493,6 +493,15 @@ Sprawdź czy tekst ze strony zawiera też ciąg zadany przez użytkownika
 </footer>
 
 
-  </body>
+</body>
+<script>
+  $(document).ready(function () {
+    const toHide = document.querySelectorAll("div.solution .toggle.hiding~.highlight");
+
+    for (const element of toHide) {
+      element.classList.add("hidden");
+    }
+  });
+</script>
 
 </html>

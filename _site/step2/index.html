@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Python: Interpreter Pythona</title>
-  <meta name="description" content="W tej części rozpoczniemy zabawę z Pythonem, na razie w trybie interkatywnym czyli w konsolowym interpreterze.">
+  <meta name="description" content="W tej części rozpoczniemy zabawę z Pythonem, na razie w trybie interaktywnym czyli w konsolowym interpreterze.">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   
   <link rel="stylesheet" href="/assets/main.css">
@@ -36,9 +36,9 @@
 </head>
 
 
-  <body>
+<body>
 
-    <header class="site-header" role="banner">
+  <header class="site-header" role="banner">
 
   <div class="wrapper">
     
@@ -70,9 +70,9 @@
 </header>
 
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      
 
 <div class="step-nav">
   <ul class="main">
@@ -143,14 +143,14 @@
       </li>
   
       <li class=''>
-        <a href="/step11/">
-          11 - Zadania
+        <a href="/step10/">
+          10 - Zadania
         </a>
       </li>
   
       <li class=''>
-        <a href="/step12/">
-          12 - Co teraz?
+        <a href="/step11/">
+          11 - Co teraz?
         </a>
       </li>
   
@@ -165,7 +165,7 @@
 
 </div>
 
-        <article class="post">
+      <article class="post">
   
   <header class="post-header">
       
@@ -173,22 +173,22 @@
     </header>
 
   <div class="post-content">
-    <p>W tej części rozpoczniemy zabawę z Pythonem, na razie w trybie interkatywnym czyli w konsolowym interpreterze.</p>
+    <p>W tej części rozpoczniemy zabawę z Pythonem, na razie w trybie interaktywnym czyli w konsolowym interpreterze.</p>
 
 <p>Otwórz interpreter Pythona w wierszu poleceń na swoim komputerze.
-Wpisz komendę <code class="highlighter-rouge">python</code>:</p>
+Wpisz komendę <code class="language-plaintext highlighter-rouge">python</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python
 Python 3.7.2 (...)
 Type "help", "copyright", "credits" or "license" for more information.
 &gt;&gt;&gt;
 </code></pre></div></div>
 
-<p>Wcześniej pracowaliśmy w linii poleceń <code class="highlighter-rouge">/</code> konsoli systemu operacyjnego i mogliśmy wydawać polecenia. Znak zachęty był oznaczany jako <code class="highlighter-rouge">~ $</code> lub <code class="highlighter-rouge">&gt;</code>. Po uruchomieniu polecenia python zachęta zmieniła się na <code class="highlighter-rouge">&gt;&gt;&gt;</code>. Dla nas oznacza to, że w tym możemy używać tylko poleceń z języka Python.</p>
+<p>Wcześniej pracowaliśmy w linii poleceń <code class="language-plaintext highlighter-rouge">/</code> konsoli systemu operacyjnego i mogliśmy wydawać polecenia. Znak zachęty był oznaczany jako <code class="language-plaintext highlighter-rouge">~ $</code> lub <code class="language-plaintext highlighter-rouge">&gt;</code>. Po uruchomieniu polecenia python zachęta zmieniła się na <code class="language-plaintext highlighter-rouge">&gt;&gt;&gt;</code>. Dla nas oznacza to, że w tym możemy używać tylko poleceń z języka Python.</p>
 
 <h2 id="pierwszy-kod-w-pythonie">Pierwszy kod w Pythonie</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Python 3.7.2 (...)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Python 3.7.2 (...)
 Type "help", "copyright", "credits" or "license" for more information.
 &gt;&gt;&gt; print("Hello World")
 Hello World
@@ -200,39 +200,39 @@ Hello World
 
 <p><strong>Operacje arytmetyczne</strong> pozwalają nam na wykonywanie na danych działań matematycznych, takich jak dodawanie, odejmowanie, dzielenie, itd.</p>
 
-<p><strong>Operatory</strong> to z kolei symbole, których używamy do przeprowadzania tych operacji, takie jak <code class="highlighter-rouge">+</code>, <code class="highlighter-rouge">-</code>, <code class="highlighter-rouge">=</code>, itd.</p>
+<p><strong>Operatory</strong> to z kolei symbole, których używamy do przeprowadzania tych operacji, takie jak <code class="language-plaintext highlighter-rouge">+</code>, <code class="language-plaintext highlighter-rouge">-</code>, <code class="language-plaintext highlighter-rouge">=</code>, itd.</p>
 
 <p><strong>Wyrażeniem</strong> jest łączenie kilku danych i przeprowadzanie na nich działań matematycznych, by dostać nową wartość.</p>
 
-<p>To wszystko jest nam znane od podstówki, każda i każdy z nas potrafi wykonać podstawowe operacje matematyczne, ale czy potrafi je też Python?</p>
+<p>To wszystko jest nam znane od podstawówki, każda i każdy z nas potrafi wykonać podstawowe operacje matematyczne, ale czy potrafi je też Python?</p>
 
 <h2 id="operacje-arytmetyczne">Operacje arytmetyczne</h2>
 
-<p>Wpisz w konsoli liczbę <code class="highlighter-rouge">205</code> i wciśnij enter.</p>
+<p>Wpisz w konsoli liczbę <code class="language-plaintext highlighter-rouge">205</code> i wciśnij enter.</p>
 
-<p>Jak widzisz, liczba <code class="highlighter-rouge">205</code> została wyświetlona po raz kolejny. To konsola wykonuje działanie na liczbie, którą w niej wpisujesz i wyświetla wynik. Tak więc, jeżeli wpiszesz w niej po prostu pojedynczą liczbę, to właśnie ta liczba jest wynikiem działania, bo nie wykonujesz na niej żadnych operacji.</p>
+<p>Jak widzisz, liczba <code class="language-plaintext highlighter-rouge">205</code> została wyświetlona po raz kolejny. To konsola wykonuje działanie na liczbie, którą w niej wpisujesz i wyświetla wynik. Tak więc, jeżeli wpiszesz w niej po prostu pojedynczą liczbę, to właśnie ta liczba jest wynikiem działania, bo nie wykonujesz na niej żadnych operacji.</p>
 
-<p>Spróbujmy teraz <code class="highlighter-rouge">205 + 103</code></p>
+<p>Spróbujmy teraz <code class="language-plaintext highlighter-rouge">205 + 103</code></p>
 
-<p>W konsoli wyświetliła się liczba <code class="highlighter-rouge">308</code>. W tym wyrażeniu przeprowadziliśmy operację arytmetyczną z użyciem operatora <code class="highlighter-rouge">+</code>, czyli dodawania.</p>
+<p>W konsoli wyświetliła się liczba <code class="language-plaintext highlighter-rouge">308</code>. W tym wyrażeniu przeprowadziliśmy operację arytmetyczną z użyciem operatora <code class="language-plaintext highlighter-rouge">+</code>, czyli dodawania.</p>
 
 <p>Głównymi operatorami matematycznymi są:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">+</code>: dodawanie</li>
-  <li><code class="highlighter-rouge">-</code>: odejmowanie</li>
-  <li><code class="highlighter-rouge">*</code>: mnożenie</li>
-  <li><code class="highlighter-rouge">/</code>: dzielenie</li>
-  <li><code class="highlighter-rouge">%</code>: modulo, czyli reszta z dzielenia</li>
+  <li><code class="language-plaintext highlighter-rouge">+</code>: dodawanie</li>
+  <li><code class="language-plaintext highlighter-rouge">-</code>: odejmowanie</li>
+  <li><code class="language-plaintext highlighter-rouge">*</code>: mnożenie</li>
+  <li><code class="language-plaintext highlighter-rouge">/</code>: dzielenie</li>
+  <li><code class="language-plaintext highlighter-rouge">%</code>: modulo, czyli reszta z dzielenia</li>
 </ul>
 
-<p>I tak samo jak w matematyce, stosujemy tu <strong>kolejność wykonywania działań</strong> i możemy używać nawiasów <code class="highlighter-rouge">(</code> i <code class="highlighter-rouge">)</code>.</p>
+<p>I tak samo jak w matematyce, stosujemy tu <strong>kolejność wykonywania działań</strong> i możemy używać nawiasów <code class="language-plaintext highlighter-rouge">(</code> i <code class="language-plaintext highlighter-rouge">)</code>.</p>
 
 <p>I tak, na przykład:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">100+50*2</code> to <code class="highlighter-rouge">200</code>, ale</li>
-  <li><code class="highlighter-rouge">(100+50)*2</code> to <code class="highlighter-rouge">300</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">100+50*2</code> to <code class="language-plaintext highlighter-rouge">200</code>, ale</li>
+  <li><code class="language-plaintext highlighter-rouge">(100+50)*2</code> to <code class="language-plaintext highlighter-rouge">300</code>.</li>
 </ul>
 
 <p>A teraz pobaw się trochę - powpisuj różne wartości w konsoli i zobacz, jakie dostaniesz wyniki.</p>
@@ -241,7 +241,7 @@ Hello World
 
 <p>Takiego operatora w szkole nie było, spójrzmy jak zachowuje się modulo:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt;  print(5 % 2)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt;  print(5 % 2)
 &gt;&gt;&gt;  print(5 % 3)
 &gt;&gt;&gt;  print(5 % 4)
 </code></pre></div></div>
@@ -255,17 +255,17 @@ Hello World
   <li>Ile skrzydeł ma dwanaście tuzinów ważek?</li>
 </ol>
 
-<h3 id="ciekawostka-o-co-chodzi-z--i-">Ciekawostka: o co chodzi z <code class="highlighter-rouge">*</code> i <code class="highlighter-rouge">/</code>?</h3>
+<h3 id="ciekawostka-o-co-chodzi-z--i-">Ciekawostka: o co chodzi z <code class="language-plaintext highlighter-rouge">*</code> i <code class="language-plaintext highlighter-rouge">/</code>?</h3>
 
-<p>Dlaczego używamy <code class="highlighter-rouge">*</code> i <code class="highlighter-rouge">/</code> zamiast zwykłych symboli mnożenia i dzielenia?</p>
+<p>Dlaczego używamy <code class="language-plaintext highlighter-rouge">*</code> i <code class="language-plaintext highlighter-rouge">/</code> zamiast zwykłych symboli mnożenia i dzielenia?</p>
 
 <p>Pierwsze klawiatury komputerowe były wzorowane na mechanicznych maszynach do pisania.</p>
 
-<p>Osoby, które korzystły z takich maszyn nie potrzebowały ani symbolu mnożenia (bo mogły po prostu używać znaku <code class="highlighter-rouge">x</code>), ani symbolu dzielenia (bo mogły wpisać po prostu <code class="highlighter-rouge">-</code> i potem nadpisać na nim <code class="highlighter-rouge">:</code>, albo po prostu użyć samego znaku <code class="highlighter-rouge">:</code>). Ułamki z kolei zapisywano jako <code class="highlighter-rouge">1/2</code> czy <code class="highlighter-rouge">3/4</code>.</p>
+<p>Osoby, które korzystały z takich maszyn nie potrzebowały ani symbolu mnożenia (bo mogły po prostu używać znaku <code class="language-plaintext highlighter-rouge">x</code>), ani symbolu dzielenia (bo mogły wpisać po prostu <code class="language-plaintext highlighter-rouge">-</code> i potem nadpisać na nim <code class="language-plaintext highlighter-rouge">:</code>, albo po prostu użyć samego znaku <code class="language-plaintext highlighter-rouge">:</code>). Ułamki z kolei zapisywano jako <code class="language-plaintext highlighter-rouge">1/2</code> czy <code class="language-plaintext highlighter-rouge">3/4</code>.</p>
 
 <p>(Co prawda, maszyny z wyższej półki miewały specjalne klawisze z symbolami mnożenia i dzielenia, ale jakoś nigdy się to nie przyjęło).</p>
 
-<p>Tak więc kiedy zaczęliśmy używać klawiatur komputerowych, “odziedziczyliśmy” to ograniczenie i wymyśliliśmy sposób, żeby je obejść - do ułamków i dzielenia używając znaku <code class="highlighter-rouge">/</code>, a do mnożenia <code class="highlighter-rouge">*</code>.</p>
+<p>Tak więc kiedy zaczęliśmy używać klawiatur komputerowych, “odziedziczyliśmy” to ograniczenie i wymyśliliśmy sposób, żeby je obejść - do ułamków i dzielenia używając znaku <code class="language-plaintext highlighter-rouge">/</code>, a do mnożenia <code class="language-plaintext highlighter-rouge">*</code>.</p>
 
 <h3 id="typy-danych">Typy danych</h3>
 
@@ -278,17 +278,17 @@ Hello World
 <p>Czy Python poradzi sobie z operacjami porównania?</p>
 
 <ul>
-  <li><code class="highlighter-rouge">==</code>:    równa się</li>
-  <li><code class="highlighter-rouge">!=</code>:    nie równa się</li>
-  <li><code class="highlighter-rouge">&gt;</code>:    większe od</li>
-  <li><code class="highlighter-rouge">&lt;</code>:    mniejsze od</li>
-  <li><code class="highlighter-rouge">&gt;=</code>:    większe lub równe</li>
-  <li><code class="highlighter-rouge">&lt;=</code>:    mniejsze lub równe</li>
+  <li><code class="language-plaintext highlighter-rouge">==</code>:    równa się</li>
+  <li><code class="language-plaintext highlighter-rouge">!=</code>:    nie równa się</li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;</code>:    większe od</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;</code>:    mniejsze od</li>
+  <li><code class="language-plaintext highlighter-rouge">&gt;=</code>:    większe lub równe</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;=</code>:    mniejsze lub równe</li>
 </ul>
 
 <p>Od razu przetestujmy:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt;  print(5 == 4)     
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt;  print(5 == 4)     
 &gt;&gt;&gt;  print(5 != 4)     
 &gt;&gt;&gt;  print(5 &gt; 2)    
 &gt;&gt;&gt;  print(5 &lt; 3)    
@@ -324,11 +324,11 @@ Hello World
 
 </article>
 
-      </div>
+    </div>
 
-    </main>
+  </main>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
 
   <div class="wrapper">
 
@@ -393,6 +393,15 @@ Hello World
 </footer>
 
 
-  </body>
+</body>
+<script>
+  $(document).ready(function () {
+    const toHide = document.querySelectorAll("div.solution .toggle.hiding~.highlight");
+
+    for (const element of toHide) {
+      element.classList.add("hidden");
+    }
+  });
+</script>
 
 </html>

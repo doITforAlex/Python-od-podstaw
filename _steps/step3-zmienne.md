@@ -13,7 +13,7 @@ Zmienne to służą do przechowywania danych. Możesz wyobrażać je sobie jako 
 
 Każda zmienna ma nazwę, wartość oraz miejsce przechowywania w pamięci komputera.
 
-Spórz na przykład przypisania wartości do zmiennej:
+Spójrz na przykład przypisania wartości do zmiennej:
 
 ```
 >>> sentence = "Hello world"
