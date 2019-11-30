@@ -51,7 +51,7 @@ Narysuj choinkę:
 
 ### 4. Literki 🔠
 
-Pobierz od użytkownika dowolny tekst i wyświetl tylko te znaki, które są na pozycjach parzystych. Wykonaj zadanie na dwa sposoby - za pomocą pętli oraz przez sting slicing ( ‘abrakadabra’ -> ‘baaar’).
+Pobierz od użytkownika dowolny tekst i wyświetl tylko te znaki, które są na pozycjach parzystych. Wykonaj zadanie na dwa sposoby - za pomocą pętli oraz przez string slicing ( ‘abrakadabra’ -> ‘baaar’).
 
 ### 5. Co na prezent? 🎁
 Stwórz listę pomysłów na prezent dla swoich bliskich. Kiedy nadarzy się okazja, aby dać im prezent (święta, urodziny, rocznicę), program losowo wybierze jeden (i być może miejsca, w których możesz go zdobyć).
@@ -73,7 +73,7 @@ DOWN 3
 LEFT 3
 RIGHT 2
 ```
-Liczby po kierunku są krokami. Napisz program do odczytu wskazówek podanych jak wyżej i oblicz odległość od aktualnej do startowej pozycji. Jeśli odległość jest liczbą dziesiętną wyświetl, po prostu najbliższą liczbę całkowitą.
+Liczby po kierunku są krokami. Napisz program do odczytu wskazówek podanych jak wyżej i oblicz odległość od aktualnej do startowej pozycji. Jeśli odległość jest liczbą dziesiętną, wyświetl po prostu najbliższą liczbę całkowitą.
 
 Przykład:
 ```

@@ -155,7 +155,7 @@ my_mood(user_mood)
 ```
 ### Return
 
-Zaczniemy od kodu porównamy kod funkcji, która **wyświetla** odpowiedź, z kodem funkcji, która **zwraca** odpowiedź. 
+Zaczniemy od kodu - porównamy kod funkcji, która **wyświetla** odpowiedź, z kodem funkcji, która **zwraca** odpowiedź. 
 
 Co to oznacza?
 
@@ -185,14 +185,14 @@ for g in girls:
 
 #### Zadanie 1
 
-Utwórz funkcję, która przyjmuje argument - liczbę punktów ze sprawdzianu na 50 i oblicza procentowy wynik. Poproś kilku użytkowników o podanie ich wyniku. Wyświetl im ile procent uzyskali ze sprawdzianu
+Utwórz funkcję, która przyjmuje argument - liczbę punktów ze sprawdzianu na max.50 punktów i oblicza procentowy wynik. Poproś kilku użytkowników o podanie ich wyniku. Wyświetl im ile procent uzyskali ze sprawdzianu
 
 ```python
 def test_result(points):
   return round(points/50, 2) # metoda round zaokrągla wynik
 
 
-students = input(input("Podaj liczbę studentów: "))
+students = int(input("Podaj liczbę studentów: "))
 
 for s in range(students):
   student_points = int(input("Podaj wynik punktowy ze egzaminu: "))
@@ -215,13 +215,13 @@ Rozszerz zadanie 1 o wyświetlenie oceny na podstawie skali ocen:
 ```python
 def test_result(points):
   result = round(points/50, 2) 
-  if result > 90:
+  if result > 0.90:
     return "bdb"
-  elif result > 70:
+  elif result > 0.70:
     return "db"
-  elif result > 50:
+  elif result > 0.50:
     return "dost"
-  elif result > 30:
+  elif result > 0.30:
     return "dop"
   else: 
     return "ndst"
@@ -232,7 +232,7 @@ students = input(input("Podaj liczbę studentów: "))
 for s in range(students):
   student_points = int(input("Podaj wynik punktowy ze egzaminu: "))
   grade = test_result(student_points)
-  print(f"Student {s+1}, uzyskał ocenę: {grade}")
+  print(f"Student {s+1} uzyskał ocenę: {grade}")
 ```
 {: .solution }
 

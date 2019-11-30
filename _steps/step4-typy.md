@@ -5,7 +5,7 @@ title: Typy danych
 permalink: step4/
 ---
 
-Tworzyliśmy zmienne, które przechowywały dane, ale jakie dane? Gdy patrzymy na napis wiemy, że jest napisem, czy na cyfry, mózg wie, żeby je potraktować jako policzalne wartości. Skąd wie to Python? Otóż dla komputera istnieją typy danych. W tym rozdziale poznasz podstawowe typy. *W czasie warsztatu nie poruszamy wszystkim typów, które są dostępne w Pythonie.*
+Tworzyliśmy zmienne, które przechowywały dane, ale jakie dane? Gdy patrzymy na napis wiemy, że jest napisem, czy na cyfry, mózg wie, żeby je potraktować jako policzalne wartości. Skąd wie to Python? Otóż dla komputera istnieją typy danych. W tym rozdziale poznasz podstawowe typy. *W czasie warsztatu nie omawiamy wszystkich typów, które są dostępne w Pythonie.*
 
 Pierwsza rzecz na jaką trzeba zwrócić uwagę to dynamiczna zmiana typu:
 
@@ -34,7 +34,7 @@ Przetestuj poniższy kod
 >>> type(welcome)
 ```
 
-Typ podpowiedziało nam z jakim typem danych pracujemy.
+"type" podpowiedziało nam z jakim typem danych pracujemy.
 
 ---
 
@@ -371,12 +371,12 @@ Poćwicz i pobaw się wartościami logicznymi wpisując następujące instrukcje
 >>> True or 1 == 1
 >>> False or 1 == 1
 >>> 1 != 2
->>> NOT True
+>>> not True
 ```
 
 ---
 
-Inne typy dostępne w Pythonie, których dzisiaj nie omówmy:
+Inne typy dostępne w Pythonie, których dzisiaj nie omówimy:
 
 - krotki - tuple, 
 - zestawy - set, 

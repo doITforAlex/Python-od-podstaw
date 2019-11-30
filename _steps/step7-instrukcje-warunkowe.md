@@ -131,7 +131,7 @@ if age >= 18 and drive_licence and enough_money:
 
 ### Operator `or` (**alternatywa**, `albo`)
 
-`||` to operator alternatywy - używamy go, kiedy tylko jeden z poszczególnych warunków wyrażenia musi być prawdziwy.
+`or` to operator alternatywy - używamy go, kiedy tylko jeden z poszczególnych warunków wyrażenia musi być prawdziwy.
 
 ```python
 if age >= 18 or parent_agree:
