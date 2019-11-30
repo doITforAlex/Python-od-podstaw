@@ -34,7 +34,7 @@ Przetestuj poniższy kod
 >>> type(welcome)
 ```
 
-Typ podpowiedziało nam z jakim typem danych pracujemy.
+"type" podpowiedziało nam z jakim typem danych pracujemy.
 
 ---
 
@@ -371,12 +371,12 @@ Poćwicz i pobaw się wartościami logicznymi wpisując następujące instrukcje
 >>> True or 1 == 1
 >>> False or 1 == 1
 >>> 1 != 2
->>> NOT True
+>>> not True
 ```
 
 ---
 
-Inne typy dostępne w Pythonie, których dzisiaj nie omówmy:
+Inne typy dostępne w Pythonie, których dzisiaj nie omówimy:
 
 - krotki - tuple, 
 - zestawy - set, 
