@@ -74,7 +74,7 @@ heros = ["Knight"] * 3 + ["Killer"] + ["Wizard"] * 2
 print(heros)  # lista -> ['Knight', 'Knight', 'Knight', 'Killer', 'Wizard', 'Wizard']
 
 for h in heros:
-    if(p == "Killer"):
+    if(h == "Killer"):
         print("Found the killer!")
 ```
 
@@ -113,7 +113,7 @@ else:
 
 ## Pętla `while`
 
-Istnieje też inna pętla, pętla `while`.  W pętle `while` powtarzają pewne działanie określoną liczbę razy, aż do momentu spełnienia warunku albo tak długo jak warunek jest spełniony. 
+Istnieje też inna pętla, pętla `while`.  Powtarza ona pewne działanie określoną liczbę razy, aż do momentu spełnienia warunku albo tak długo jak warunek jest spełniony. 
 
 Od razu przejdźmy do przykładu:
 
